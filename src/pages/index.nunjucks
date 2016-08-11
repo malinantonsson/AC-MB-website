@@ -1,0 +1,12 @@
+<!-- index.nunjucks -->
+{% extends "layout.nunjucks" %}
+
+{% block content %}
+	<div id="outer">
+
+		<!-- Adds the canvas partial -->
+		{% include "partials/canvas.nunjucks" %}
+	</div>
+
+{% endblock %}
+
