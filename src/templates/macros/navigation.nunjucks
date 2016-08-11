@@ -1,0 +1,13 @@
+{% macro active(activePage='home') %}
+	<nav>
+	  
+	  <a href="#" class="{%if activePage == 'company' %} active {% endif %}">Company</a>
+	  <a href="#" class="{%if activePage == 'portfolio' %} active {% endif %}">Portfolio</a>
+	  <a href="#" class="{%if activePage == 'news' %} active {% endif %}">News</a>
+	  <a href="#" class="{%if activePage == 'contact' %} active {% endif %}">Contact</a>
+	  <a href="#" class="{%if activePage == 'login' %} active {% endif %} nav-item--disabled">Login</a>
+	  <!-- Repeat for about and contact -->
+
+	  <a href="#" class="{%if activePage == 'home' %} is-active {% endif %}">Home</a>
+	</nav>
+{% endmacro %}
