@@ -1,12 +1,11 @@
-<!-- index.nunjucks -->
+<!-- company.nunjucks -->
 {% extends "layout.nunjucks" %}
 
 {% block content %}
 
 	 
 	  <div class="gallery__item">
-	    <h1>name: {{name}}"</h1>
-	    <h1>copy: {{copy}}"</h1>
+	    <h1>example: {{example}}"</h1>
 	  </div>
 	 
 
@@ -20,7 +19,7 @@
 
 		{% import 'macros/navigation.nunjucks' as nav %}
 		<!-- Creating the navigation with activePage = 'home' -->
-		{{nav.active('home')}}
+		{{nav.active('company')}}
 	</div>
 
 {% endblock %}

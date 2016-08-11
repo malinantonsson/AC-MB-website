@@ -12,8 +12,10 @@ var sourcemaps = require('gulp-sourcemaps');
 var browserSync = require('browser-sync');
 var reload = browserSync.reload;
 var nunjucksRender = require('gulp-nunjucks-render');
+var data = require('gulp-data');
 var sass = require('gulp-sass');
 var argv = require('yargs').argv;
+var path = require('path');
 
 var plugins = require("gulp-load-plugins")({
     pattern: ['gulp-*', 'gulp.*'],
@@ -33,6 +35,8 @@ var jsSrc = appPath + '/js/*.js';
 var jsVendorSrc = appPath + '/js/vendor/*.js';
 var jsDist = distPath + '/js/';
 var jsVendorDist = distPath + '/js/vendor/';
+
+var dataSrc = appPath + '/data/*.json';
 
 var templatesSrc = appPath + '/templates/';
 var partialsSrc = templatesSrc + '/partials/';
@@ -106,10 +110,27 @@ gulp.task('copy-scripts', function() {
   return gulp.src(jsVendorSrc)
     .pipe(gulp.dest(jsVendorDist));
 });
+
+function getDataForFile(file) {
+  console.log(file);
+  console.log(file.path);
+  console.log(file.relative);
+  console.log(file.base);
+  console.log(file.contents);
+  console.log(file.basename);
+  filename = file.path.replace('.nunjucks', '');
+
+
+  return require('./src/data/' + path.basename(filename) + '.json');
+  /*return {
+    example: 'data loaded for ' + file.relative,
+  };*/
+}
  
 gulp.task('nunjucks', function() {
   // Gets .html and .nunjucks files in pages
   return gulp.src(pagesPath)
+  .pipe(data(getDataForFile))
   // Renders template with nunjucks
   .pipe(nunjucksRender({
       path: [templatesSrc]
