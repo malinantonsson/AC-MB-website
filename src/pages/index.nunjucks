@@ -5,8 +5,8 @@
 
 	 
 	  <div class="gallery__item">
-	    <h1>name: {{name}}"</h1>
-	    <h1>copy: {{copy}}"</h1>
+	    <h1>name: {{name}}</h1>
+	    <h1>copy: {{copy}}</h1>
 	  </div>
 	 
 

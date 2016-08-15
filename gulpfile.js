@@ -31,6 +31,9 @@ var cssVendor = appPath + '/styles/vendor/*.css';
 var sassDist = distPath + '/css/';
 var cssVendorDist = distPath + '/css/';
 
+var fontsSrc = appPath + '/fonts/**/*.{ttf,otf}';
+var fontsDist = sassDist + '/fonts/';
+
 var jsSrc = appPath + '/js/*.js';
 var jsVendorSrc = appPath + '/js/vendor/*.js';
 var jsDist = distPath + '/js/';
@@ -83,6 +86,15 @@ gulp.task('copy-styles', function() {
     }));
 });
 
+gulp.task('copy-fonts', function() {
+  gulp.src(fontsSrc)
+    .pipe(gulp.dest(fontsDist)) // Outputs it in the css folder
+    // Reloading the stream
+    .pipe(browserSync.reload({
+      stream: true
+    }));
+});
+
 var scriptsFinish = lazypipe()
   .pipe(gulp.dest, jsDist)
   .pipe(function () {
@@ -112,12 +124,6 @@ gulp.task('copy-scripts', function() {
 });
 
 function getDataForFile(file) {
-  console.log(file);
-  console.log(file.path);
-  console.log(file.relative);
-  console.log(file.base);
-  console.log(file.contents);
-  console.log(file.basename);
   filename = file.path.replace('.nunjucks', '');
 
 
@@ -167,6 +173,7 @@ gulp.task('default', ['clean'], function (cb) {
   runSequence([
       'styles',
       'copy-styles',
+      'copy-fonts',
       'scripts',
       'copy-scripts',
       'nunjucks'

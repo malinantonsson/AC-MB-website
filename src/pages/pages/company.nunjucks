@@ -5,7 +5,7 @@
 
 	 
 	  <div class="gallery__item">
-	    <h1>example: {{example}}"</h1>
+	    <h1>example: {{example}}</h1>
 	  </div>
 	 
 
