@@ -1,6 +1,42 @@
+@font-face {
+  	font-family: "Cardo-Regular";
+  	src: url("fonts/Cardo/Cardo-Regular.ttf");
+}
+
+@font-face {
+  	font-family: "Cardo-Italic";
+  	src: url("fonts/Cardo/Cardo-Italic.ttf");
+}
+
+@font-face {
+  	font-family: "SuisseBPIntl-Medium";
+  	src: url("fonts/SuisseBPIntl/SuisseBPIntl-Medium.otf");
+}
+
+@font-face {
+  	font-family: "SuisseBPIntl-Bold";
+  	src: url("fonts/SuisseBPIntl/SuisseBPIntl-Bold.otf");
+}
+
+@font-face {
+  	font-family: "SuisseBPIntl-Regular";
+  	src: url("fonts/SuisseBPIntl/SuisseBPIntl-Regular.otf");
+}
+
+@font-face {
+  	font-family: "Cormorant-Italic";
+  	src: url("fonts/Cormorant/Cormorant-Italic.ttf");
+}
+
+@font-face {
+  	font-family: "Cormorant-MediumItalic";
+  	src: url("fonts/Cormorant/Cormorant-MediumItalic.ttf");
+}
+
+
 body {
 	-webkit-font-smoothing: antialiased;
-	font-family: "Oswald", sans-serif;
+	font-family: "Cormorant-MediumItalic", sans-serif;
 }
 
 h1,
@@ -9,7 +45,7 @@ h3,
 h4,
 h5,
 h6 {
-	font-family: "Oswald", sans-serif;
+	font-family: "Cormorant-MediumItalic", sans-serif;
 	margin: 0;
 	text-rendering: optimizeLegibility; // Fix the character spacing for headings
 }
@@ -35,19 +71,3 @@ a {
 	color: #ffffff;
 	text-transform: uppercase;
 }
-
-.about-copy {
-	text-transform: none;
-	margin: 7%;
-
-	a {
-		color: $about-card-gray;
-		text-transform: none;		
-	}
-}
-
-.about-card__role {
-	@extend %role;
-	color: $about-card-gray;	
-}
-
