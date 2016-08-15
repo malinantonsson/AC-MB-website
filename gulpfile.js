@@ -26,8 +26,8 @@ var plugins = require("gulp-load-plugins")({
 var appPath = './src';
 var distPath = './dist/';
 
-var sassSrc = appPath + '/styles/*.scss';
-var cssVendor = appPath + '/styles/vendor/*.css';
+var sassSrc = appPath + '/sass/*.scss';
+var cssVendor = appPath + '/sass/vendor/*.css';
 var sassDist = distPath + '/css/';
 var cssVendorDist = distPath + '/css/';
 
