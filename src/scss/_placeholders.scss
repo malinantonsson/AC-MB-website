@@ -1,0 +1,19 @@
+%heading-1 {
+	@include type-format($type-formatting-h1);
+}
+
+%heading-2 {
+	@include type-format($type-formatting-h2);
+}
+
+%heading-3 {
+	@include type-format($type-formatting-h3);
+}
+
+%paragraph {
+	@include type-format($type-formatting-p);
+}
+
+%role {
+	@include type-format($type-formatting-role);
+}

@@ -1,0 +1,53 @@
+body {
+	-webkit-font-smoothing: antialiased;
+	font-family: "Oswald", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: "Oswald", sans-serif;
+	margin: 0;
+	text-rendering: optimizeLegibility; // Fix the character spacing for headings
+}
+
+h1, .heading-1 {
+	@extend %heading-1;
+}
+
+h2, .heading-2 {
+	@extend %heading-2;
+}
+
+h3, .heading-3 {
+	@extend %heading-3;
+}
+
+p, .paragraph {
+	@extend %paragraph;
+}
+
+a {
+	text-decoration: none;
+	color: #ffffff;
+	text-transform: uppercase;
+}
+
+.about-copy {
+	text-transform: none;
+	margin: 7%;
+
+	a {
+		color: $about-card-gray;
+		text-transform: none;		
+	}
+}
+
+.about-card__role {
+	@extend %role;
+	color: $about-card-gray;	
+}
+

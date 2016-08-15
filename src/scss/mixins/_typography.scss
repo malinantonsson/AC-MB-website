@@ -1,0 +1,50 @@
+
+/* http://www.smashingmagazine.com/2015/06/responsive-typography-with-sass-maps/ */
+
+@mixin type-format($map, $breakpoints: $breakpoints) {
+  @each $breakpoint, $type-format in $map {
+    @if $breakpoint == null {
+      @include do-type-format($type-format);
+    }
+    @else {
+      // If $type-format is a key that exists in
+      // $breakpoints, use the value
+      @if map-has-key($breakpoints, $breakpoint) {
+        $breakpoint: map-get($breakpoints, $breakpoint);
+      }
+      @media screen and (min-width: $breakpoint) {
+        @include do-type-format($type-format);
+      }
+    }
+  }
+}
+
+
+// Utility function for mixin font-size
+@mixin do-type-format($type-format) {
+  // If $type-format is a list, include
+  // (size, color, weight, line-height, letter-spacing, text-transform)
+  @if type-of($type-format) == "list" {
+    font-size: nth($type-format, 1);
+    @if (length($type-format) > 1 && nth($type-format, 2) != null) {
+      color: nth($type-format, 2);
+    }
+    @if (length($type-format) > 2 && nth($type-format, 3) != null) {
+      font-weight: nth($type-format, 3);
+    }
+    @if (length($type-format) > 3 && nth($type-format, 4) != null) {
+      line-height: nth($type-format, 4);
+    }
+    @if (length($type-format) > 4 && nth($type-format, 5) != null) {
+      letter-spacing: nth($type-format, 5);
+    }
+    @if (length($type-format) > 5 && nth($type-format, 6) != null) {
+      text-transform: nth($type-format, 6);
+    }
+  }
+  @else {
+    font-size: $type-format;
+  }
+}
+
+

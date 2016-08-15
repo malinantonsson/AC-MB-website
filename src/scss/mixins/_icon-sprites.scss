@@ -1,0 +1,44 @@
+// Gets an attribute from the sass map
+@function sprite-attr($icon, $attr) {
+    $newIcon: map-get($icons, $icon);
+    @if $newIcon == null {
+        @warn "Can't find an icon with the name #{$icon}";
+    }
+    @return map-get($newIcon, $attr);
+}
+
+@function icon-attr($icon) {
+    $attr: (
+        width: sprite-attr($icon, width),
+        height: sprite-attr($icon, height),
+        x: sprite-attr($icon, backgroundX),
+        y: sprite-attr($icon, backgroundY)
+    );
+
+    @return $attr;
+}
+
+// For use with the gulp sprite plugin
+@mixin sprite($icon: colour, $type: all) {
+    @if $type == all {
+        // Shares the backgrounds
+        @extend %sprite;
+    }
+
+    $iconMap: icon-attr($icon);
+
+    // Outputs dimensions in em
+    @if $type == all or $type == size {
+        width: map-get($iconMap, width) + 1;
+        height: map-get($iconMap, height) + 1;
+    }
+
+    // Outputs background position in em
+    @if $type == all or $type == bg {
+        background-position: map-get($iconMap, x) map-get($iconMap, y);
+    }
+
+    // Add ie fallback
+    //@include ie-sprite($icon, $type);
+
+}

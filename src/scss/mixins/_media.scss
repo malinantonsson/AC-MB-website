@@ -1,0 +1,55 @@
+
+@mixin mq($mediaType, $from: null, $to: null) {
+	
+	$min-width: null;
+	$max-width: null;
+
+	@if map-has-key($breakpoints, $from) {
+	  $min-width: map-get($breakpoints, $from);
+	}
+	@if map-has-key($breakpoints, $to) {
+	  $max-width: map-get($breakpoints, $to);
+	}
+
+	@if $min-width != null {
+			@if $mediaType == from {
+
+			  	// @include breakpoint($min-width) {
+			  	//   	@content;
+			  	// }
+			  	@include media(min-width $min-width) {
+			  	    @content;
+			  	}
+
+			} @else if $mediaType == upto {
+				
+				// @include breakpoint( max-width ($min-width - 1) ) {
+				//   	@content;
+				// }
+				@include media( max-width ($min-width - 1) ) {
+				    @content;
+				}
+
+			} @else if $mediaType == between {
+
+			  	@if $max-width {
+					// @include breakpoint( min-width ($min-width) max-width ($next-bp - 1) ) {
+					//   	@content;
+					// }
+					@include media( min-width $min-width max-width ($max-width - 1) ) {
+					    @content;
+					}
+		  		} @else {
+					// @include breakpoint( min-width ($min-width) max-width 100% ) {
+					//   	@content;
+					// }
+					@include media(min-width $min-width) {
+					    @content;
+					}
+		  		}
+			} 
+	}
+
+
+
+}

@@ -1,3 +1,15 @@
 @import "mixins/bourbon/bourbon"; // adding bourbon lib
-@import "neat-grid-settings";
 @import "mixins/neat/neat"; // adding neat grid cos bootstrap sucks
+@import "base/neat-grid-settings";
+
+@import 'mixins/typography';
+@import 'mixins/map-deep-get';
+@import 'mixins/media';
+@import 'mixins/fluid-image-container';
+@import 'mixins/center-crop-absolute';
+@import 'mixins/icon-sprites';
+@import 'mixins/vertical-align';
+
+@import 'variables';
+@import 'typography';
+@import 'placeholders';

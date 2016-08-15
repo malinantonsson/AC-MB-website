@@ -1,0 +1,129 @@
+$grid-columns: 12;
+
+$breakpoints: (
+	small: 480px,
+	medium: 768px,
+	large: 967px,
+	xlarge: 1024px
+);
+
+$colours: (
+	base: (
+		green: #02583f,
+		red: #a7361d,
+		pink: #ed6171,
+		gray: #606060
+
+	),
+	copy: (
+		green: #868686,
+		red: #454545,
+		pink: #606060
+	),
+	grays: (
+		tabs: #606060,
+		colour-border: #565656,
+		border-is-active: #787878
+	) 
+);
+
+$colour-pink: map-deep-get($colours, base, pink);
+$colour-green: map-deep-get($colours, base, green);
+$colour-red: map-deep-get($colours, base, red);
+
+$colour-selection-border: #565656;
+$about-card-background: #191919;
+$about-card-gray : #757575;
+
+$z-index: (
+	about: 10,
+	tabs-pagination: 2,
+	tabs-pagination-bg: 1
+);
+
+$face-parts: ('crown', 'eyes', 'nose', 'mouth');
+
+$background-min-size: (
+	small: 610px,
+	medium: 760px,
+	large: 760px,
+	xlarge: 760px
+);
+$parts: (
+	crown: (
+		width: 480,
+		height: 210
+	),
+	eyes: (
+		width: 306,
+		height: 110
+	),
+	nose: (
+		width: 306,
+		height: 110
+	),
+	mouth: (
+		width: 306,
+		height: 177
+	)
+);
+
+$max-part-width: (
+	crown: 100%,
+	eyes: 63.75%,
+	nose: 63.75%,
+	mouth: 63.75%
+);
+
+
+/*
+List of font sizes / attributes
+The null key == default styles (no media query)
+Values can be one value (size) as px or a list of type attributes e.g.:
+(size, color, weight, line-height, letter-spacing, text-transform)
+null values in the list will be ommitted
+ */
+$type-formatting: (
+	h1: (
+		null: (34px, null, 400, null, .02em, uppercase),
+		small: 36px,
+		medium: 42px,
+		large: 60px,
+		xlarge: 64px,
+	),
+	h2: (
+		null: (34px, null, 400, null, .02em, uppercase),
+		small: 36px,
+		medium: 42px,
+		large: 46px,
+		xlarge: 50px,
+	),
+	h3: (
+		null: (34px, null, 400, null, .02em, uppercase),
+		small: 36px,
+		medium: 42px,
+		large: 60px,
+		xlarge: 64px,
+	),
+	p: (
+		null: (20px, null, 400, null, .02em, uppercase),
+		small: 20px,
+		medium: 20px,
+		large: 20px,
+		xlarge: 20px,
+	),
+	role: (
+		null: (20px, null, 400, null, .02em, null),
+		small: 20px,
+		medium: 20px,
+		large: 20px,
+		xlarge: 16px,
+	)
+);
+
+/*  Assign to vars - then use in type placeholders _placeholders.scss  */
+$type-formatting-h1: map-get($type-formatting, 'h1');
+$type-formatting-h2: map-get($type-formatting, 'h2');
+$type-formatting-h3: map-get($type-formatting, 'h3');
+$type-formatting-p: map-get($type-formatting, 'p');
+$type-formatting-role: map-get($type-formatting, 'role');
