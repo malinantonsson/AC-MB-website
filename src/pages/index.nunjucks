@@ -1,7 +1,13 @@
 <!-- index.nunjucks -->
 {% extends "layout.nunjucks" %}
 
+	
+
+
 {% block content %}
+	{% import 'macros/navigation.nunjucks' as nav %}
+		<!-- Creating the navigation with activePage = 'home' -->
+		{{nav.active('home')}}
 
 	 
 	  <div class="gallery__item">
@@ -18,9 +24,7 @@
 
 	
 
-		{% import 'macros/navigation.nunjucks' as nav %}
-		<!-- Creating the navigation with activePage = 'home' -->
-		{{nav.active('home')}}
+		
 	</div>
 
 {% endblock %}

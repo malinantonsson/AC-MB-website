@@ -65,6 +65,13 @@ $type-formatting: (
 		medium: 20px,
 		large: 20px,
 		xlarge: 16px,
+	),
+	nav: (
+		null: (20px, null, 400, null, .02em, null),
+		small: 20px,
+		medium: 20px,
+		large: 20px,
+		xlarge: 20px,
 	)
 );
 
@@ -74,3 +81,4 @@ $type-formatting-h2: map-get($type-formatting, 'h2');
 $type-formatting-h3: map-get($type-formatting, 'h3');
 $type-formatting-p: map-get($type-formatting, 'p');
 $type-formatting-role: map-get($type-formatting, 'role');
+$type-formatting-nav: map-get($type-formatting, 'nav');

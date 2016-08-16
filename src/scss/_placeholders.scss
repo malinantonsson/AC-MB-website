@@ -17,3 +17,7 @@
 %role {
 	@include type-format($type-formatting-role);
 }
+
+%nav {
+	@include type-format($type-formatting-nav);
+}

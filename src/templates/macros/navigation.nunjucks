@@ -1,13 +1,51 @@
 {% macro active(activePage='home') %}
-	<nav>
-	  
-	  <a href="#" class="{%if activePage == 'company' %} active {% endif %}">Company</a>
-	  <a href="#" class="{%if activePage == 'portfolio' %} active {% endif %}">Portfolio</a>
-	  <a href="#" class="{%if activePage == 'news' %} active {% endif %}">News</a>
-	  <a href="#" class="{%if activePage == 'contact' %} active {% endif %}">Contact</a>
-	  <a href="#" class="{%if activePage == 'login' %} active {% endif %} nav-item--disabled">Login</a>
-	  <!-- Repeat for about and contact -->
+	<nav class="nav">
+		<ul class="nav-wrapper">  
+		    <li class="nav_item {%if activePage == 'company' %} active {% endif %}">
+			  <a href="#" class="nav_item-link">
+			  	Company
+			  </a>
+			  <ul class="nav_subitem-wrapper">
+			  	<li class="nav_subitem">
+			  		<a href="#" class="nav_subitem-link">
+			  			About us
+			  		</a>
+			  	</li>
+			  	<li class="nav_subitem">
+			  		<a href="#" class="nav_subitem-link">
+			  			Team
+			  		</a>
+			  	</li>
+			  </ul>
+	  		</li>
+		    <li href="#" class="nav_item {%if activePage == 'portfolio' %} active {% endif %}">
+				<a href="#" class="nav_item-link">
+			  		Portfolio
+			  	</a>
+		    </li>
+		    <li href="#" class="nav_item {%if activePage == 'news' %} active {% endif %}">
+		    	<a href="#" class="nav_item-link">
+			  		News
+			  	</a>
+			</li>
+		    <li href="#" class="nav_item {%if activePage == 'contact' %} active {% endif %}">
+				<a href="#" class="nav_item-link">
+			  	Contact
+			  	</a>
+		    </li>
 
-	  <a href="#" class="{%if activePage == 'home' %} is-active {% endif %}">Home</a>
+		    <li href="#" class="nav_item {%if activePage == 'login' %} active {% endif %} nav-item--disabled">
+				<a href="#" class="nav_item-link">
+			  		Login
+			  	</a>
+		    </li>
+	    	
+	    	<!-- Repeat for about and contact -->
+		    <li href="#" class="{%if activePage == 'home' %} is-active {% endif %} nav-item--home">
+				<a href="#" class="nav_item-link">
+				  	home
+				</a>
+		  	</li>
+	    </ul>
 	</nav>
 {% endmacro %}

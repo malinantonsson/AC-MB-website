@@ -1,8 +1,11 @@
 <!-- company.nunjucks -->
 {% extends "layout.nunjucks" %}
 
-{% block content %}
 
+{% block content %}
+	{% import 'macros/navigation.nunjucks' as nav %}
+		<!-- Creating the navigation with activePage = 'company' -->
+		{{nav.active('company')}}
 	 
 	  <div class="gallery__item">
 	    <h1>example: {{example}}</h1>
@@ -13,13 +16,11 @@
 	<div id="outer">
 
 		<!-- Adds the canvas partial -->
-		<h1>This is the index page</h1>
+		<h1>This is the company page</h1>
 
 	
 
-		{% import 'macros/navigation.nunjucks' as nav %}
-		<!-- Creating the navigation with activePage = 'home' -->
-		{{nav.active('company')}}
+		
 	</div>
 
 {% endblock %}
