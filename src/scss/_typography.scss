@@ -77,3 +77,9 @@ a {
   @extend %nav;
   color: #000;
 }
+
+.nav_subitem {
+  font-family: "SuisseBPIntl-Regular";
+  @extend %sub-nav;
+  color: #000;
+}

@@ -21,3 +21,7 @@
 %nav {
 	@include type-format($type-formatting-nav);
 }
+
+%sub-nav {
+	@include type-format($type-formatting-sub-nav);
+}

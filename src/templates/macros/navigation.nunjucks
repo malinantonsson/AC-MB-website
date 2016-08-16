@@ -1,6 +1,6 @@
 {% macro active(activePage='home') %}
 	<nav class="nav">
-		<ul class="nav-wrapper">  
+		<ul class="nav_wrapper">  
 		    <li class="nav_item {%if activePage == 'company' %} active {% endif %}">
 			  <a href="#" class="nav_item-link">
 			  	Company
@@ -41,7 +41,7 @@
 		    </li>
 	    	
 	    	<!-- Repeat for about and contact -->
-		    <li href="#" class="{%if activePage == 'home' %} is-active {% endif %} nav-item--home">
+		    <li href="#" class="nav_item {%if activePage == 'home' %} is-active {% endif %} nav-item--home">
 				<a href="#" class="nav_item-link">
 				  	home
 				</a>
