@@ -1,11 +1,16 @@
 .header {
 	position: relative;
+	overflow: hidden;
 }
 
 .header_img {
-	max-width: 100%;
-	min-height: 559px;
+	@include mq(upto, medium) {
+		min-height: 559px;
+		max-height: 559px;
+		@include center-crop-absolute();
+	}
 
-	position: absolute;
-	@include center-crop-absolute();
+	@include mq(from, medium) {
+		max-width: 100%;
+	}
 }
