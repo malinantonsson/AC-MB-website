@@ -8,6 +8,9 @@
 		  <use xlink:href="icons/sprite.svg#close-white"></use>
 		</svg>
 	</button>
+	<svg class="nav_icon--logo">
+	  <use xlink:href="icons/sprite.svg#logo-white"></use>
+	</svg>
 		<ul class="nav_wrapper">  
 		    <li class="nav_item {%if activePage == 'company' %} active {% endif %}">
 			  <a href="#" class="nav_item-link">

@@ -13,7 +13,7 @@ var site = {
     navToggle: document.getElementById('toggle-nav'),
     nav: document.getElementById('main-navigation')
   },
-  handleNav: function(open) {    
+  handleNav: function(open) {   
     $(this.ui.nav).toggleClass(open);
   }
 
