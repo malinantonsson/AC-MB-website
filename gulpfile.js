@@ -37,6 +37,9 @@ var cssVendorDist = distPath + '/css/';
 var fontsSrc = appPath + '/fonts/**/*.{ttf,otf}';
 var fontsDist = sassDist + '/fonts/';
 
+var imagesSrc = appPath + '/images/**/*.{png,jpg}';
+var imagesDist = distPath + '/images/';
+
 var iconSrc = appPath + '/icons/**/*.svg';
 var iconDist = distPath + '/icons/';
 var iconPngDist = distPath + '/icons/png/';
@@ -85,6 +88,11 @@ gulp.task('icons', function() {
   gulp.src(iconSrc)
       .pipe(svgSprite(svgConfig))
       .pipe(gulp.dest(iconDist));
+});
+
+gulp.task('images', function() {
+  gulp.src(imagesSrc)
+      .pipe(gulp.dest(imagesDist));
 });
 
 
@@ -152,12 +160,7 @@ gulp.task('copy-scripts', function() {
 
 function getDataForFile(file) {
   filename = file.path.replace('.nunjucks', '');
-
-
   return require('./src/data/' + path.basename(filename) + '.json');
-  /*return {
-    example: 'data loaded for ' + file.relative,
-  };*/
 }
  
 gulp.task('nunjucks', function() {
@@ -203,6 +206,7 @@ gulp.task('default', ['clean'], function (cb) {
       'copy-styles',
       'copy-fonts',
       'icons',
+      'images',
       'scripts',
       'copy-scripts',
       'nunjucks'

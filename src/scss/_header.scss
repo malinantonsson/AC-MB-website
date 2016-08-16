@@ -1,0 +1,11 @@
+.header {
+	position: relative;
+}
+
+.header_img {
+	max-width: 100%;
+	min-height: 559px;
+
+	position: absolute;
+	@include center-crop-absolute();
+}

@@ -10,22 +10,25 @@
 		{{nav.active('home')}}
 
 	 
-	  <div class="gallery__item">
-	    <h1>name: {{name}}</h1>
-	    <h1>copy: {{copy}}</h1>
-	  </div>
+	  
 	 
 
 
 	<div id="outer">
-
-		<!-- Adds the canvas partial -->
-		<h1>This is the index page</h1>
+	<header id="header" class="">
+		<img class="header_img" src="/images/homepage/homepage-1.png">
+	</header><!-- /header -->
+		
 
 	
 
 		
 	</div>
+
+	<div class="gallery__item">
+	    <h1>name: {{name}}</h1>
+	    <h1>copy: {{copy}}</h1>
+	  </div>
 
 {% endblock %}
 

@@ -1,24 +1,43 @@
 .nav {
 	position: absolute;
-	background-color: blue;
     width: 100%;
     height: 20%;
+    z-index: 10;
+    overflow: hidden;
 }
 
 .nav_item {
 	font-family: "SuisseBPIntl-Regular", sans-serif;
+
+	@include mq(from, medium) {
+		display: inline-block;
+		padding-left: 2em;
+	}
+
+	@include mq(from, large) {
+		display: inline-block;
+		padding-left: 2.5em;
+	}
 }
 
 .nav_subitem-wrapper {
-	@include mq(from, small) {
+	@include mq(from, medium) {
 		display: none;
 	}
 }
 
 .nav-item--home {
 	display: none;
-	@include mq(from, small) {
+	@include mq(from, medium) {
 		display: inline-block;
+		float: right;
+		padding-left: 0;
+
+		width: 30%;
+	}
+
+	@include mq(from, large) {
+		width: auto;
 	}
 }
 
@@ -34,10 +53,17 @@
 }
 
 .nav_wrapper {
-	display: none;
+	@include mq(upto, medium) {
+		display: none;
 
-	text-align: center;
-	@include vertical-align();
+		text-align: center;
+		@include vertical-align();
+	}
+
+	@include mq(from, medium) {
+		padding-top: 4em;
+
+	}
 }
 
 .nav_button--close {
@@ -46,20 +72,52 @@
 	display: none;
 }
 
-.nav_icon--logo {
+.nav_icon--logo.logo-xs {
 	position: absolute;
 	right: 1.5em;
 	top: 3em;
 	width: 3em;
 	height: 3em;
+
+	@include mq(from, medium) {
+		display: none;
+	}
+}
+
+.nav_icon--logo.logo-xs {
+	position: absolute;
+	right: 1.5em;
+	top: 3em;
+	width: 3em;
+	height: 3em;
+
+	@include mq(from, medium) {
+		display: none;
+	}
+}
+
+.nav_icon--logo.logo-xl {
+	display: none;
+
+	@include mq(from, medium) {
+		display: inline;
+		height: 42px;
+	}
 }
 
 .nav_button {
+	outline: none;
 	position: absolute;
 	left: 1.5em;
     top: 3em;
     width: 2.5em;
 	height: 2.5em;
+	background-color: transparent;
+	border: none;
+
+	@include mq(from, medium) {
+		display: none;
+	}
 }
 
 .nav_icon {
@@ -71,18 +129,20 @@
 }
 
 .nav.is-open {
-	background-color: $dark-gray;
-	height: 100%;
+	@include mq(upto, medium) {
+		background-color: $dark-gray;
+		height: 100%;
 
-	.nav_button--close {
-		display: block;
-	}
+		.nav_button--close {
+			display: block;
+		}
 
-	.nav_button--open {
-		display: none;
-	}
+		.nav_button--open {
+			display: none;
+		}
 
-	.nav_wrapper {
-		display: block;
+		.nav_wrapper {
+			display: block;
+		}
 	}
 }

@@ -8,7 +8,7 @@
 		  <use xlink:href="icons/sprite.svg#close-white"></use>
 		</svg>
 	</button>
-	<svg class="nav_icon--logo">
+	<svg class="nav_icon--logo logo-xs">
 	  <use xlink:href="icons/sprite.svg#logo-white"></use>
 	</svg>
 		<ul class="nav_wrapper">  
@@ -54,7 +54,9 @@
 	    	<!-- Repeat for about and contact -->
 		    <li href="#" class="nav_item {%if activePage == 'home' %} is-active {% endif %} nav-item--home">
 				<a href="#" class="nav_item-link">
-				  	home
+				  	<svg class="nav_icon--logo logo-xl">
+					  <use xlink:href="icons/sprite.svg#xl-logo-white"></use>
+					</svg>
 				</a>
 		  	</li>
 	    </ul>
