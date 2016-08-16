@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="31px" height="30px" viewBox="0 0 31 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Page_Scroll_white">
+            <g id="Close" stroke="#FFFFFF">
+                <path d="M15.2861308,29.9595918 C6.8577676,29.9595918 0,23.2395918 0,14.9797959 C0,6.72 6.8577676,0 15.2861308,0 C23.7138692,0 30.5716368,6.72 30.5716368,14.9797959 C30.5716368,23.2395918 23.7138692,29.9595918 15.2861308,29.9595918" id="Fill-1"></path>
+            </g>
+            <g id="Page-1" transform="translate(15.500000, 14.500000) rotate(90.000000) translate(-15.500000, -14.500000) translate(8.000000, 9.000000)" fill="#FFFFFF">
+                <polygon id="Fill-1" points="0 5.93853333 14.91025 5.93853333 14.91025 4.89091429 0 4.89091429"></polygon>
+                <polygon id="Fill-2" points="10.269225 5.23809522e-05 9.562225 0.740719048 14.222975 5.62340952 14.929975 4.88274286"></polygon>
+                <polygon id="Fill-3" points="9.56205 10.1348238 10.26905 10.8754905 13.25055 7.75201429 12.54355 7.01134762"></polygon>
+            </g>
+            <g id="Page-1-Copy" transform="translate(15.500000, 14.500000) rotate(90.000000) translate(-15.500000, -14.500000) translate(8.000000, 9.000000)" fill="#FFFFFF">
+                <polygon id="Fill-1" points="0 5.93853333 14.91025 5.93853333 14.91025 4.89091429 0 4.89091429"></polygon>
+                <polygon id="Fill-2" points="10.269225 5.23809522e-05 9.562225 0.740719048 14.222975 5.62340952 14.929975 4.88274286"></polygon>
+                <polygon id="Fill-3" points="9.56205 10.1348238 10.26905 10.8754905 13.25055 7.75201429 12.54355 7.01134762"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>

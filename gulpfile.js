@@ -16,6 +16,9 @@ var data = require('gulp-data');
 var sass = require('gulp-sass');
 var argv = require('yargs').argv;
 var path = require('path');
+var svg2png    = require('gulp-svg2png');
+var svgSymbols = require('gulp-svg-symbols');
+var svgSprite = require('gulp-svg-sprite');
 
 var plugins = require("gulp-load-plugins")({
     pattern: ['gulp-*', 'gulp.*'],
@@ -33,6 +36,10 @@ var cssVendorDist = distPath + '/css/';
 
 var fontsSrc = appPath + '/fonts/**/*.{ttf,otf}';
 var fontsDist = sassDist + '/fonts/';
+
+var iconSrc = appPath + '/icons/**/*.svg';
+var iconDist = distPath + '/icons/';
+var iconPngDist = distPath + '/icons/png/';
 
 var jsSrc = appPath + '/js/*.js';
 var jsVendorSrc = appPath + '/js/vendor/*.js';
@@ -60,9 +67,29 @@ var config = {
   minify: argv.minify || false
 };
 
+
+
+var svgConfig = {
+  svg: {
+    namespaceClassnames: false
+  },
+  mode: {
+    symbol: {
+      dest: '.',
+      sprite: 'sprite.svg'
+    }
+  }
+};
+
+gulp.task('icons', function() {
+  gulp.src(iconSrc)
+      .pipe(svgSprite(svgConfig))
+      .pipe(gulp.dest(iconDist));
+});
+
+
 // Clean site directory
 gulp.task('clean', del.bind(null, [distPath], {dot: true}));
-
 
 gulp.task('styles', function() {
   gulp.src(sassSrc)

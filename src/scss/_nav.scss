@@ -38,3 +38,14 @@
 	@include vertical-align();
 }
 
+.nav_button--close {
+	width: 2.5em;
+	height: 2.5em;
+	position: absolute;
+}
+
+.nav_button {
+	position: absolute;
+	left: 1.5em;
+    top: 3em;
+}

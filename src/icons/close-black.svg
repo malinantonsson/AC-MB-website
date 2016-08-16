@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg viewBox="0 0 31 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Close_Black" stroke="#262E2E">
+            <g id="Close">
+                <path d="M15.2861308,29.9595918 C6.8577676,29.9595918 0,23.2395918 0,14.9797959 C0,6.72 6.8577676,0 15.2861308,0 C23.7138692,0 30.5716368,6.72 30.5716368,14.9797959 C30.5716368,23.2395918 23.7138692,29.9595918 15.2861308,29.9595918" id="Fill-1"></path>
+                <path d="M9.28001708,8.91961753 L21.0743566,21.6224078" id="Line" stroke-linecap="square"></path>
+                <path d="M21.629089,9.09604517 L9.49776828,21.4459802" id="Line" stroke-linecap="square"></path>
+            </g>
+        </g>
+    </g>
+</svg>
