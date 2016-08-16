@@ -202,6 +202,7 @@ gulp.task('default', ['clean'], function (cb) {
       'styles',
       'copy-styles',
       'copy-fonts',
+      'icons',
       'scripts',
       'copy-scripts',
       'nunjucks'

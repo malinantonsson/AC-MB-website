@@ -26,10 +26,15 @@
 	
 		<!-- Creating the navigation with activePage = 'home' -->
 		
-	<nav class="nav">
-	<svg class="nav_button nav_button--close">
-	  <use xlink:href="icons/sprite.svg#close-white"></use>
-	</svg>
+	<nav id="main-navigation" class="nav">
+	<button id="toggle-nav" class="nav_button">
+		<svg class="nav_icon nav_button--open">
+		  <use xlink:href="icons/sprite.svg#navicon-white"></use>
+		</svg>
+		<svg class="nav_icon nav_button--close">
+		  <use xlink:href="icons/sprite.svg#close-white"></use>
+		</svg>
+	</button>
 		<ul class="nav_wrapper">  
 		    <li class="nav_item ">
 			  <a href="#" class="nav_item-link">
