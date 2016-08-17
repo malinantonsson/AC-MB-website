@@ -1,0 +1,66 @@
+.times-container {
+    color: $offWhite;
+    z-index: 1;
+    position: absolute;
+    text-align: left;
+    width: 500px;
+    height: 50px;
+    right: -185px;
+    top: 50%;
+    margin-top: -30px;
+    -webkit-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    -o-transform: rotate(-90deg);
+    filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+}
+
+
+.time-line {
+    display: inline-block;
+    position: relative;
+    margin-right: 30px;
+    height: 1px;
+    width: 50px;
+    margin-left: -35%;
+    background: #ffffff;
+    top: 16px;
+    opacity: 0.35;
+    filter: alpha(opacity=35);
+    -moz-opacity:0.35;
+}
+
+.time-title {
+    display: block;
+    font-size: 13px;
+    font-family: 'Cormorant-MediumItalic', Georgia, serif;
+    //font-style: italic;
+    margin-bottom: 0px;
+    margin-left: 1px;
+}
+
+.time-uk-container, 
+.time-paris-container, 
+.time-nyc-container, 
+.time-los-angeles-container {
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 12px;
+    width: 70px;
+    font-size: 18px;
+}
+
+/* .blink {
+  animation: blink-animation 1s steps(5, start) infinite;
+  -webkit-animation: blink-animation 1s steps(5, start) infinite;
+}
+@keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
+}
+@-webkit-keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
+} */
