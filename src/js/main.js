@@ -4,6 +4,11 @@ var site = {
     var self = this;
     var navOpen = 'nav-is-open';
 
+    $('#video').YTPlayer({
+      fitToBackground: true,
+      videoId: 'AHDATlqQcZQ'
+  });
+
     this.ui.navToggle.addEventListener('click', function(e) {
       self.handleNav(navOpen);
     }, false);
