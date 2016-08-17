@@ -2,7 +2,7 @@
 var site = {
   init: function() {
     var self = this;
-    var navOpen = 'is-open';
+    var navOpen = 'nav-is-open';
 
     this.ui.navToggle.addEventListener('click', function(e) {
       self.handleNav(navOpen);
@@ -11,10 +11,11 @@ var site = {
   },
   ui: {
     navToggle: document.getElementById('toggle-nav'),
+    body: document.getElementsByTagName('body')[0],
     nav: document.getElementById('main-navigation')
   },
   handleNav: function(open) {  
-    $(this.ui.nav).toggleClass(open);
+    $(this.ui.body).toggleClass(open);
   }
 
 
