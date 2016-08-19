@@ -18,6 +18,36 @@
 			"copyItalic": "Retail.",
 			"videoId": "AHDATlqQcZQ",
 			"backgroundImg": "../images/homepage/video-placeholder.jpg"
+		},
+		{
+			"id": "featured-project",
+			"name": "featured-project",
+			"image": "/images/homepage/featured-project-1.png",
+			"intro": "Featured Project:",
+			"headline": "The Burlington Arcade",
+			"location": "— London, United Kingdom",
+			"ctaCopy": "View Project",
+			"url": "#"
+		},
+		{
+			"id": "featured-project",
+			"name": "featured-project",
+			"image": "/images/homepage/featured-project-2.png",
+			"intro": "Featured Project:",
+			"headline": "The Bentall Centre",
+			"location": "— Kingston-Upon-Thames, United Kingdom",
+			"ctaCopy": "View Project",
+			"url": "#"
+		},
+		{
+			"id": "featured-project",
+			"name": "featured-project",
+			"image": "/images/homepage/featured-project-3.png",
+			"intro": "Featured Project:",
+			"headline": "Galeria Katowicka",
+			"location": "— Katowice, Poland",
+			"ctaCopy": "View Project",
+			"url": "#"
 		}
 	]
 }

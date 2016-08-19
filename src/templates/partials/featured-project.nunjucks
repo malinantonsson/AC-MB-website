@@ -1,0 +1,18 @@
+<div class="featured-project">
+	<img class="featured-project_image" src={{field.image}}>
+	<div class="featured-project_copy-wrapper">
+		<p class="featured-project_intro-copy">
+			{{field.intro}}
+		</p>
+		<h2 class="featured-project_intro-headline">
+			{{field.headline}}
+		</h2>
+		<p class="featured-project_location">
+			{{field.location}}
+		</p>
+
+		<a href={{field.url}} class="button featured-project_cta">
+			{{field.ctaCopy}}
+		</a>
+	</div>
+</div>

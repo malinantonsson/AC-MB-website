@@ -1,0 +1,41 @@
+.featured-project {
+	position: relative;
+	overflow: hidden;
+}
+
+.featured-project_image {
+	vertical-align: bottom;
+	@include mq(upto, medium) {
+		min-height: 559px;
+		max-height: 559px;
+		@include center-crop-absolute();
+	}
+
+	@include mq(from, medium) {
+		max-width: 100%;
+	}
+}
+
+.featured-project_copy-wrapper {
+	@include vertical-align(absolute);
+	width: 100%;
+	text-align: center;
+	color: $white;
+}
+
+.featured-project_intro-copy {
+	font-size: 14px;
+}
+
+.featured-project_intro-headline {
+	margin-top: 1em;
+}
+
+.featured-project_cta {
+	display: block;
+    width: 150px;
+    border: 1px solid $white;
+    margin: auto;
+    padding: 1em;
+    margin-top: 1.5em;
+}

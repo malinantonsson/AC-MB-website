@@ -19,22 +19,10 @@
 		 	{% if  field.id == 'video-background' %}
 		 		{% include "partials/video.nunjucks" %}
 		 	{% endif %}
+		 	{% if  field.id == 'featured-project' %}
+		 		{% include "partials/featured-project.nunjucks" %}
+		 	{% endif %}
 		{% endfor %}
-	
-
-		<a href="#test-link" title="">
-			<header id="header" class="header">
-				<img class="header_img" src="/images/homepage/homepage-1.png">
-			</header><!-- /header -->
-		</a>
-
 	</main>
-
-	<div class="gallery__item">
-	    <h1>name: {{name}}</h1>
-	    <h1>copy: {{copy}}</h1>
-	    <h1>copy: {{fields[0].name}}</h1>
-	  </div>
-
 {% endblock %}
 
