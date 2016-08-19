@@ -30,4 +30,8 @@
 			<div id="time-paris">20:22</div>
 		</div>
 	</div>
+
+	<svg class="icon icon--scroll">
+	  <use xlink:href="icons/sprite.svg#page_scroll"></use>
+	</svg>
 </div>

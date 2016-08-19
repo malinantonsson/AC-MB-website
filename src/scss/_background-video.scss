@@ -58,3 +58,12 @@ $videoWidth: 1265;
 	.mb-background {display: none;}
 	#video {display: block;}
 }
+
+.icon--scroll {
+	max-width: 2em;
+	position: absolute;
+    bottom: 2em;
+    left: 50%;
+    max-height: 32px;
+    transform: translateX(-50%);
+}
