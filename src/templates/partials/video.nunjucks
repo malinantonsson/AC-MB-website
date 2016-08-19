@@ -1,0 +1,27 @@
+<div class="video-container">
+	<div id="video" data-src={{field.videoId}}></div>
+	<div class="mb-background"></div>
+	<div class="times-container">
+		<div class="time-line"></div>
+
+		<div class="time-los-angeles-container">
+		<div class="time-title">Los Angeles</div>
+		<div id="time-los-angeles">11:22</div>
+		</div>
+
+		<div class="time-nyc-container">
+		<div class="time-title">New York</div>
+		<div id="time-nyc">14:22</div>
+		</div>
+
+		<div class="time-uk-container">
+		<div class="time-title">London</div>
+		<div id="time-uk">19:22</div>
+		</div>
+
+		<div class="time-paris-container">
+			<div class="time-title">Paris</div>
+			<div id="time-paris">20:22</div>
+		</div>
+	</div>
+</div>

@@ -4,10 +4,15 @@ var site = {
     var self = this;
     var navOpen = 'nav-is-open';
 
-    $('#video').YTPlayer({
-      fitToBackground: true,
-      videoId: 'AHDATlqQcZQ'
-    });
+    var video = document.getElementById('video');
+    if(video) {
+      var videoId = video.getAttribute('data-src');
+      
+      $('#video').YTPlayer({
+        fitToBackground: true,
+        videoId: videoId
+      });
+    }
 
     this.initTimezones();
 
@@ -21,6 +26,7 @@ var site = {
     }, false);
 
   },
+
   ui: {
     navToggle: document.getElementById('toggle-nav'),
     body: document.getElementsByTagName('body')[0],
@@ -29,9 +35,11 @@ var site = {
     la: document.getElementById('time-los-angeles'),
     ny: document.getElementById('time-nyc')
   },
+
   handleNav: function(open) {  
     $(this.ui.body).toggleClass(open);
   },
+
   initTimezones: function() {
     moment.tz.add([
         'America/Los_Angeles|PST PDT|80 70|0101|1Lzm0 1zb0 Op0',

@@ -1,5 +1,22 @@
 {
 	"name": "index",
-	"copy": "hola!"
-
+	"copy": "hola!",
+	"fields": [
+		{
+			"id": "hero-image",
+			"name": "hero-image",
+			"copy": "copy"
+		},
+		{
+			"id": "homestory",
+			"name": "homestory"
+		},
+		{
+			"id": "video-background",
+			"name": "video-background",
+			"copy": "Redefining",
+			"copy-italic": "Retail.",
+			"videoId": "AHDATlqQcZQ"
+		}
+	]
 }
