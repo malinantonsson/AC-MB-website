@@ -1,4 +1,8 @@
-/* #video{
+$videoHeight: 909;
+$videoWidth: 1265;
+
+
+#video{
  position: relative;
  background: transparent;
 }
@@ -7,4 +11,9 @@
  position: absolute;
  top: 0;
  z-index: -1;
-} */
+}
+
+.video-container {
+ height: 0;
+ @include fluid-image-container($videoWidth, $videoHeight);
+}

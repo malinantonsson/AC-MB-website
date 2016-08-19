@@ -15,7 +15,9 @@
 
 
 <main id="outer">
-	<div id="video"></div>
+	<div class="video-container">
+		<div id="video"></div>
+	</div>
 	<a href="#test-link" title="">
 	<header id="header" class="header">
 		<img class="header_img" src="/images/homepage/homepage-1.png">
