@@ -40,6 +40,12 @@ $videoWidth: 1265;
 	opacity: 0.75;
 }
 
+.video_headline {
+	@include vertical-align(absolute);
+	width: 100%;
+	text-align: center;
+}
+
 /* Hide video for tablet and mobile screen sizes */
 
 @include mq(from, medium) {

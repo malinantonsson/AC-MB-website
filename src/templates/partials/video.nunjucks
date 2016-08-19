@@ -1,6 +1,12 @@
 <div class="video-container">
 	<div id="video" data-src={{field.videoId}}></div>
 	<div class="mb-background"></div>
+	<h1 class="video_headline">
+		{{field.copy}} 
+		<span class="video_headline--italic">
+			{{field.copyItalic}}
+		</span>
+	</h1>
 	<div class="times-container">
 		<div class="time-line"></div>
 

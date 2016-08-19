@@ -31,7 +31,7 @@ null values in the list will be ommitted
  */
 $type-formatting: (
 	h1: (
-		null: (34px, null, 400, null, .02em, uppercase),
+		null: (34px, null, 400, null, .02em, null),
 		small: 36px,
 		medium: 42px,
 		large: 60px,

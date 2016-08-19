@@ -36,7 +36,7 @@
 
 body {
 	-webkit-font-smoothing: antialiased;
-	font-family: "Cormorant-MediumItalic", sans-serif;
+	font-family: "SuisseBPIntl-Regular", sans-serif;
 }
 
 h1,
@@ -45,13 +45,14 @@ h3,
 h4,
 h5,
 h6 {
-	font-family: "Cormorant-MediumItalic", sans-serif;
+	font-family: "SuisseBPIntl-Regular", sans-serif;
 	margin: 0;
 	text-rendering: optimizeLegibility; // Fix the character spacing for headings
 }
 
 h1, .heading-1 {
 	@extend %heading-1;
+  color: #fff;
 }
 
 h2, .heading-2 {
@@ -70,6 +71,11 @@ a {
 	text-decoration: none;
 	color: #ffffff;
 	//text-transform: uppercase;
+}
+
+.video_headline--italic {
+  font-family: "Cormorant-Italic", sans-serif;
+  font-size: italic;
 }
 
 .nav_item {
