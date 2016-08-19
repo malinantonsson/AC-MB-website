@@ -1,5 +1,5 @@
 .times-container {
-    @include mq(upto, medium) {
+    @media screen and (max-width: 1000px) {
         display: none;
     }
 
@@ -8,7 +8,7 @@
     position: absolute;
     text-align: left;
     width: 500px;
-    height: 50px;
+    height: 24px;
     right: -185px;
     bottom: 75%;
     
@@ -35,7 +35,7 @@
     width: 50px;
     margin-left: -35%;
     background: #ffffff;
-    top: 16px;
+    top: 13px;
     opacity: 0.35;
     filter: alpha(opacity=35);
     -moz-opacity:0.35;
@@ -54,9 +54,26 @@
 .time-paris-container, 
 .time-nyc-container, 
 .time-los-angeles-container {
+    font-family: 'SuisseBPIntl-Medium', Georgia, serif;
     display: inline-block;
     vertical-align: top;
-    margin-right: 12px;
+    margin-right: 10%;
     width: 70px;
-    font-size: 18px;
+    font-size: 14px;
+    position: relative;
+}
+
+.time-los-angeles-container,
+.time-nyc-container,
+.time-uk-container {
+    &:after {
+        content: '';
+        position: absolute;
+        right: -30%;
+        top: 20px;
+        width: 5px;
+        height: 4px;
+        background-color: #fff;
+        border-radius: 100%;
+    }
 }

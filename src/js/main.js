@@ -46,16 +46,16 @@ var site = {
     var currentTime = moment().format();
 
     var ny = moment.tz(currentTime, "America/New_York");
-    var nyTime = ny.format('HH:mm'); 
+    var nyTime = ny.format('hh:mm a'); 
 
     var la = moment.tz(currentTime, "America/Los_Angeles");
-    var laTime = la.format('HH:mm'); 
+    var laTime = la.format('hh:mm a'); 
 
     var paris = moment.tz(currentTime, "Europe/Paris");
-    var parisTime = paris.format('HH:mm'); 
+    var parisTime = paris.format('hh:mm a'); 
 
     var london = moment.tz(currentTime, "Europe/London");
-    var londonTime = london.format('HH:mm'); 
+    var londonTime = london.format('hh:mm a'); 
 
     this.ui.uk.innerHTML = londonTime;
     this.ui.paris.innerHTML = parisTime;
