@@ -1,6 +1,6 @@
 <div class="video-container">
 	<div id="video" data-src={{field.videoId}}></div>
-	<div class="mb-background"></div>
+	<img class="mb-background" src={{field.backgroundImg}}>
 	<h1 class="video_headline">
 		{{field.copy}} 
 		<span class="video_headline--italic">

@@ -16,7 +16,8 @@
 			"name": "video-background",
 			"copy": "Redefining",
 			"copyItalic": "Retail.",
-			"videoId": "AHDATlqQcZQ"
+			"videoId": "AHDATlqQcZQ",
+			"backgroundImg": "../images/homepage/video-placeholder.jpg"
 		}
 	]
 }
