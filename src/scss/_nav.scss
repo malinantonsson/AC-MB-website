@@ -36,12 +36,13 @@
 		display: inline-block;
 		float: right;
 		padding-left: 0;
-
-		width: 30%;
+		padding-right: 4%;
+		//width: 30%;
 	}
 
 	@include mq(from, large) {
-		width: auto;
+		//padding-right: 5%;
+		//width: auto;
 	}
 }
 
@@ -94,6 +95,7 @@
 	@include mq(from, medium) {
 		display: inline;
 		height: 42px;
+		max-width: 102px;
 	}
 }
 

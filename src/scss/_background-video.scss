@@ -3,17 +3,46 @@ $videoWidth: 1265;
 
 
 #video{
- position: relative;
- background: transparent;
+ 	position: relative;
+ 	background: transparent;
+	z-index: -100;
+	background: url(../img/jh.jpg) center no-repeat;
+	background-size: cover;
+	display: none;
 }
 
 .ytplayer-container{
- position: absolute;
- top: 0;
- z-index: -1;
+ 	position: absolute;
+ 	top: 0;
+ 	z-index: -1;
 }
 
 .video-container {
- height: 0;
- @include fluid-image-container($videoWidth, $videoHeight);
+ 	
+ 	@include fluid-image-container($videoWidth, $videoHeight);
+	
+	height: 100%;
+ 	
+ 	@include mq(upto, medium) {
+ 		min-height:  559px;
+ 	}
+
+}
+
+.mb-background {
+	margin: 0 auto;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background: url('../images/homepage/video-placeholder.jpg') center no-repeat;
+	background-size: cover;
+	z-index: 0;
+	opacity: 0.75;
+}
+
+/* Hide video for tablet and mobile screen sizes */
+
+@include mq(from, medium) {
+	.mb-background {display: none;}
+	#video {display: block;}
 }

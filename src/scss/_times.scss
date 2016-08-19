@@ -1,4 +1,8 @@
 .times-container {
+    @include mq(upto, medium) {
+        display: none;
+    }
+
     color: $offWhite;
     z-index: 1;
     position: absolute;
@@ -6,13 +10,20 @@
     width: 500px;
     height: 50px;
     right: -185px;
-    top: 50%;
-    margin-top: -30px;
+    bottom: 75%;
+    
+    //margin-top: -30px;
     -webkit-transform: rotate(-90deg);
     -moz-transform: rotate(-90deg);
     -ms-transform: rotate(-90deg);
     -o-transform: rotate(-90deg);
     filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+    
+    @include mq(from, large) {
+        //width: 500px;
+        bottom: 60%
+        //top: 50%;
+    }
 }
 
 
@@ -49,18 +60,3 @@
     width: 70px;
     font-size: 18px;
 }
-
-/* .blink {
-  animation: blink-animation 1s steps(5, start) infinite;
-  -webkit-animation: blink-animation 1s steps(5, start) infinite;
-}
-@keyframes blink-animation {
-  to {
-    visibility: hidden;
-  }
-}
-@-webkit-keyframes blink-animation {
-  to {
-    visibility: hidden;
-  }
-} */
