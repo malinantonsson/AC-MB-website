@@ -14,13 +14,16 @@
 	 
 
 
-	<main id="outer">
+	<main id="container">
 		{% for field in fields %}
 		 	{% if  field.id == 'video-background' %}
 		 		{% include "partials/video.nunjucks" %}
 		 	{% endif %}
 		 	{% if  field.id == 'featured-project' %}
 		 		{% include "partials/featured-project.nunjucks" %}
+		 	{% endif %}
+		 	{% if  field.id == 'hero-text' %}
+		 		{% include "partials/hero-text.nunjucks" %}
 		 	{% endif %}
 		{% endfor %}
 	</main>

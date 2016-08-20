@@ -8,7 +8,9 @@
 	@include mq(upto, medium) {
 		min-height: 559px;
 		max-height: 559px;
-		@include center-crop-absolute();
+		left: -100%;
+    	right: -100%;
+   	 	position: relative;
 	}
 
 	@include mq(from, medium) {
