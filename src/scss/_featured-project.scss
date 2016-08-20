@@ -1,6 +1,9 @@
 .featured-project {
 	position: relative;
-	overflow: hidden;
+	overflow: visible;
+	@include mq(upto, medium) {
+		min-height: 559px;
+	}
 }
 
 .featured-project_image {
@@ -8,9 +11,8 @@
 	@include mq(upto, medium) {
 		min-height: 559px;
 		max-height: 559px;
-		left: -100%;
-    	right: -100%;
-   	 	position: relative;
+		position: absolute;
+   	 	@include center-crop-absolute();
 	}
 
 	@include mq(from, medium) {
