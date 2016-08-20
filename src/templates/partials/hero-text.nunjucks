@@ -1,9 +1,8 @@
 <div class="hero-text">
-	Hero text
 	<p class="hero-text_copy">
 		{{field.copy}}
 	</p>
-	<a href={{field.url}} class="button featured-project_cta">
+	<a href={{field.url}} class="button hero-copy_cta">
 		{{field.ctaCopy}}
 	</a>
 </div>
