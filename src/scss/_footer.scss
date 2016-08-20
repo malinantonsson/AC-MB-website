@@ -1,0 +1,113 @@
+.footer {
+	background: $dark-gray;
+	overflow: auto;
+
+	font-family: "SuisseBPIntl-Regular", sans-serif;
+	font-size: 13px;
+
+	color: $white;
+}
+
+.footer-container {
+	@include mq(from, medium) {
+		width: 1024px;
+		margin: auto;
+	}
+}
+
+.footer_logo {
+	@include span-columns(4);
+
+	@include mq(from, medium) {
+		@include span-columns(3);
+	}
+}
+
+.footer_icon--logo {
+	max-width: 40%;
+	margin-left: 1em;
+
+	@include mq(from, medium) {
+		max-width: 25%;
+		margin-right: 1em;
+		max-height: 140px;
+	}
+}
+
+.footer_logo-title {
+	font-weight: 600;
+	font-size: 13px;
+	display: inline-block;
+	vertical-align: top;
+    padding-top: 4em;
+
+	@include mq(upto, medium) {
+		display: none;
+	} 
+}
+
+.footer_headline {
+	font-weight: 600;
+	font-size: 13px;
+}
+
+.footer_item-address {
+	font-size: 11px;
+}
+
+.footer_item-copyright {
+	font-size: 11px;
+}
+
+.footer_item-terms {
+	font-size: 11px;
+}
+
+.footer_info {
+	padding-bottom: 4em;
+	overflow: auto;
+	
+	@include mq(upto, medium) {
+		@include span-columns(7);
+		@include shift(1)
+	}
+}
+
+.footer_item-link {
+	display: block;
+	margin-top: 1em;
+
+	.arrow-right {
+		width: .7em;
+    	height: .7em;
+    	margin-left: 1em;
+	}
+}
+
+.footer-info_block-one {
+	margin-top: 5em;
+	@include mq(from, medium) {
+		@include span-columns(3);
+		float: right;
+	}
+}
+
+.footer-info_block-two {
+	.footer_headline {
+		font-size: 11px;
+
+	}
+
+    line-height: 1.5em;
+	margin-top: 4em;
+	@include mq(from, medium) {
+		@include span-columns(3);
+		//float: right;
+	}
+}
+
+.footer-info_block-two .footer_headline {
+	@include mq(from, medium) {
+		display: none;
+	}
+}
