@@ -27,5 +27,7 @@
 		 	{% endif %}
 		{% endfor %}
 	</main>
+
+	{% include "partials/footer.nunjucks" %}
 {% endblock %}
 
