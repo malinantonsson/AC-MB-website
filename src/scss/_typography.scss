@@ -63,9 +63,9 @@ h3, .heading-3 {
 	@extend %heading-3;
 }
 
-p, .paragraph {
-	@extend %paragraph;
-}
+/* p, .paragraph {
+	@extend %paragraph-lead;
+} */
 
 a {
 	text-decoration: none;
@@ -99,4 +99,8 @@ a {
 .hero-text_copy {
   font-family: "Cormorant-Italic", sans-serif;
   font-size: italic;
+}
+
+.page-intro_copy {
+  @extend %paragraph-lead;
 }

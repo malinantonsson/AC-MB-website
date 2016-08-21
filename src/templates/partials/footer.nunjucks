@@ -2,7 +2,7 @@
 	<div class="footer-container">
 		<div class="footer_logo">
 			<svg class="footer_icon--logo logo-xs">
-			  <use xlink:href="icons/sprite.svg#logo-white"></use>
+			  <use xlink:href="/icons/sprite.svg#logo-white"></use>
 			</svg>
 
 			<p class="footer_logo-title">

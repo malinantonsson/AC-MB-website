@@ -10,8 +10,8 @@
 	@include type-format($type-formatting-h3);
 }
 
-%paragraph {
-	@include type-format($type-formatting-p);
+%paragraph-lead {
+	@include type-format($type-formatting-p-lead);
 }
 
 %role {

@@ -1,5 +1,54 @@
 .page-intro {
 	height: 400px;
-	padding: 8em;
+	padding-top: 10em;
 	background-color: $light-gray;
+	color: $dark-gray;
+
+	@include mq(from, medium) {
+		padding-top: 10em;
+	}
+}
+
+.page-intro_container {
+	max-width: 1024px;	
+	margin: auto;
+	//@include mq(upto, medium) {
+		padding: 0 1.5em;
+	//}
+}
+
+.page-intro_headline {
+	@include mq(from, medium) {
+		@include span-columns(3);
+	}
+
+	&:after {
+		display: block;
+		content: '';
+		background-color: $dark-gray;
+		width: 1.5em;
+		height: 1px;
+		margin-top: .5em;
+	}
+}
+
+.headline-xs {
+	@include mq(from, medium) {
+		display: none;
+	}
+}
+
+.headline-lg {
+	display: none;
+
+	@include mq(from, medium) {
+		display: block;
+	}
+}
+
+.page-intro_copy {
+	@include mq(from, medium) {
+		@include span-columns(7);
+		@include shift(1);
+	}
 }

@@ -14,7 +14,7 @@
 	 
 
 
-	<main id="container">
+	<main id="container" class="container">
 		{% for field in fields %}
 		 	{% if  field.id == 'video-background' %}
 		 		{% include "partials/video.nunjucks" %}

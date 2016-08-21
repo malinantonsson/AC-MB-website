@@ -1,10 +1,15 @@
 <div class="page-intro">
-	<div class="page-intro_headline-container">
-		<h1 class="page-intro_headline">
-			{{field.headline}} 
-		</h1>
-	</div>
-	<div class="page-intro_copy">
-		{{ field.copy|safe }} 
+<div class="page-intro_container">
+		<div class="page-intro_headline-container">
+			<h2 class="page-intro_headline headline-lg">
+				{{field.headline}} 
+			</h2>
+			<h2 class="page-intro_headline headline-xs">
+				{{name}} 
+			</h2>
+		</div>
+		<div class="page-intro_copy">
+			{{ field.copy|safe }} 
+		</div>
 	</div>
 </div>

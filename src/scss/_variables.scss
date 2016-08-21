@@ -58,10 +58,10 @@ $type-formatting: (
 		large: 60px,
 		xlarge: 64px,
 	),
-	p: (
-		null: (20px, null, 400, null, .02em, null),
+	p-lead: (
+		null: (20px, null, 400, 1.3em, .02em, null),
 		small: 20px,
-		medium: 20px,
+		medium: 20px, null, 400, null, .02em, null,
 		large: 20px,
 		xlarge: 20px,
 	),
@@ -92,7 +92,7 @@ $type-formatting: (
 $type-formatting-h1: map-get($type-formatting, 'h1');
 $type-formatting-h2: map-get($type-formatting, 'h2');
 $type-formatting-h3: map-get($type-formatting, 'h3');
-$type-formatting-p: map-get($type-formatting, 'p');
+$type-formatting-p-lead: map-get($type-formatting, 'p-lead');
 $type-formatting-role: map-get($type-formatting, 'role');
 $type-formatting-nav: map-get($type-formatting, 'nav');
 $type-formatting-sub-nav: map-get($type-formatting, 'nav-subitem');
