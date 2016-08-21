@@ -1,0 +1,18 @@
+.body-copy--odd {
+	background-color: $light-gray;
+	color: $dark-gray;
+	overflow: auto;
+}
+
+.body-copy--odd_container {
+	max-width: 1024px;	
+	margin: auto;
+	padding: 0 $side-padding;
+}
+
+.body-copy--odd_copy {
+	@include mq(from, medium) {
+		@include span-columns(7);
+		@include shift(4);
+	}
+}

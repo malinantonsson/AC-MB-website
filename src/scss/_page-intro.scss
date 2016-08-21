@@ -1,8 +1,8 @@
 .page-intro {
-	height: 400px;
 	padding-top: 10em;
 	background-color: $light-gray;
 	color: $dark-gray;
+	overflow: auto;
 
 	@include mq(from, medium) {
 		padding-top: 10em;
@@ -12,9 +12,7 @@
 .page-intro_container {
 	max-width: 1024px;	
 	margin: auto;
-	//@include mq(upto, medium) {
-		padding: 0 1.5em;
-	//}
+	padding: 0 $side-padding;
 }
 
 .page-intro_headline {

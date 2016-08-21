@@ -17,9 +17,14 @@
 		 	{% if  field.id == 'page-intro' %}
 		 		{% include "partials/page-intro.nunjucks" %}
 		 	{% endif %}
+		 	{% if  field.id == 'body-copy--odd' %}
+		 		{% include "partials/body-copy--odd.nunjucks" %}
+		 	{% endif %}
 		{% endfor %}
 	</main>
 
 	{% include "partials/footer.nunjucks" %}
 {% endblock %}
+
+
 

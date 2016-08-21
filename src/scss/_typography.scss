@@ -63,9 +63,9 @@ h3, .heading-3 {
 	@extend %heading-3;
 }
 
-/* p, .paragraph {
-	@extend %paragraph-lead;
-} */
+p, .paragraph {
+	@extend %paragraph;
+}
 
 a {
 	text-decoration: none;
@@ -101,6 +101,6 @@ a {
   font-size: italic;
 }
 
-.page-intro_copy {
+.page-intro_copy p {
   @extend %paragraph-lead;
 }

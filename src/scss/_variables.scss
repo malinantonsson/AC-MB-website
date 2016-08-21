@@ -1,5 +1,7 @@
 $grid-columns: 12;
 
+$side-padding: 1.5em;
+
 $breakpoints: (
 	small: 480px,
 	medium: 768px,
@@ -65,6 +67,13 @@ $type-formatting: (
 		large: 20px,
 		xlarge: 20px,
 	),
+	p: (
+		null: (14px, null, 400, 1.5em, .02em, null),
+		small: 14px,
+		medium: 14px,
+		large: 14px,
+		xlarge: 14px,
+	),
 	role: (
 		null: (20px, null, 400, null, .02em, null),
 		small: 20px,
@@ -93,6 +102,7 @@ $type-formatting-h1: map-get($type-formatting, 'h1');
 $type-formatting-h2: map-get($type-formatting, 'h2');
 $type-formatting-h3: map-get($type-formatting, 'h3');
 $type-formatting-p-lead: map-get($type-formatting, 'p-lead');
+$type-formatting-p: map-get($type-formatting, 'p');
 $type-formatting-role: map-get($type-formatting, 'role');
 $type-formatting-nav: map-get($type-formatting, 'nav');
 $type-formatting-sub-nav: map-get($type-formatting, 'nav-subitem');

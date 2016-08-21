@@ -14,6 +14,10 @@
 	@include type-format($type-formatting-p-lead);
 }
 
+%paragraph {
+	@include type-format($type-formatting-p);
+}
+
 %role {
 	@include type-format($type-formatting-role);
 }

@@ -1,0 +1,7 @@
+<div class="body-copy--odd">
+	<div class="body-copy--odd_container">
+		<div class="body-copy--odd_copy">
+			{{ field.copy|safe }} 
+		</div>
+	</div>
+</div>

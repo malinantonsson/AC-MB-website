@@ -1,5 +1,5 @@
 <div class="page-intro">
-<div class="page-intro_container">
+	<div class="page-intro_container">
 		<div class="page-intro_headline-container">
 			<h2 class="page-intro_headline headline-lg">
 				{{field.headline}} 
