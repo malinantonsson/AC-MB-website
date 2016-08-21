@@ -4,6 +4,10 @@
 	@include mq(upto, medium) {
 		min-height: 559px;
 	}
+	
+	@include mq(from, medium) {
+		@include fluid-image-container(map-deep-get($image-sizes, homepage-featured, width), map-deep-get($image-sizes, homepage-featured, height));
+	}
 }
 
 .featured-project_image {

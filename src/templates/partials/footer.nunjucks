@@ -37,14 +37,14 @@
 				</p>
 
 				<p class="footer_item-address">
-					20 Air Street <br>
-					London<br>
-					W1B 5AN
+					<span class="footer_item-address-line">20 Air Street,</span>
+					<span class="footer_item-address-line">London,</span>
+					<span class="footer_item-address-line">W1B 5AN,</span>
 				</p>
 
 				<p class="footer_item-copyright">
-					© 2016 Meyer Bergman. <br>
-					All rights reserved  
+					<span class="footer_item-copyright-line">© 2016 Meyer Bergman.</span>
+					<span class="footer_item-copyright-line">All rights reserved</span>
 				</p>
 
 				<p class="footer_item-terms">

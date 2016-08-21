@@ -160,6 +160,8 @@ gulp.task('copy-scripts', function() {
 
 function getDataForFile(file) {
   filename = file.path.replace('.nunjucks', '');
+  folderName = file.path.replace('/', '-');
+  console.log(folderName);
   return require('./src/data/' + path.basename(filename) + '.json');
 }
  

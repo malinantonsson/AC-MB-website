@@ -10,7 +10,7 @@
 
 .footer-container {
 	@include mq(from, medium) {
-		width: 1024px;
+		max-width: 1024px;
 		margin: auto;
 	}
 }
@@ -103,6 +103,13 @@
 	@include mq(from, medium) {
 		@include span-columns(3);
 		//float: right;
+	}
+}
+
+.footer_item-address-line,
+.footer_item-copyright-line {
+	@include mq(upto, medium) {
+		display: block;
 	}
 }
 

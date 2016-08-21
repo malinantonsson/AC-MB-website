@@ -22,6 +22,13 @@ $background-min-size: (
 );
 
 
+$image-sizes: (
+	homepage-featured: (
+		width: 1265,
+		height: 712
+	)
+);
+
 /*
 List of font sizes / attributes
 The null key == default styles (no media query)
