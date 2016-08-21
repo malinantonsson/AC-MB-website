@@ -1,0 +1,10 @@
+<div class="page-intro">
+	<div class="page-intro_headline-container">
+		<h1 class="page-intro_headline">
+			{{field.headline}} 
+		</h1>
+	</div>
+	<div class="page-intro_copy">
+		{{ field.copy|safe }} 
+	</div>
+</div>

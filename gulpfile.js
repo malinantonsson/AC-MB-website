@@ -159,10 +159,16 @@ gulp.task('copy-scripts', function() {
 });
 
 function getDataForFile(file) {
-  filename = file.path.replace('.nunjucks', '');
-  folderName = file.path.replace('/', '-');
-  console.log(folderName);
-  return require('./src/data/' + path.basename(filename) + '.json');
+  filename = file.relative.replace('.nunjucks', '');
+  //console.log(path.basename(filename));
+  //console.log(file);
+  //console.log(file.path);
+  //console.log(file.relative);
+  //console.log(file.base);
+  //console.log(file.contents);
+  //console.log(file.basename);
+
+  return require('./src/data/' + filename + '.json');
 }
  
 gulp.task('nunjucks', function() {

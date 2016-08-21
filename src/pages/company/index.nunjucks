@@ -1,0 +1,25 @@
+<!-- index.nunjucks -->
+{% extends "layout.nunjucks" %}
+
+
+{% block content %}
+	{% import 'macros/navigation.nunjucks' as nav %}
+		<!-- Creating the navigation with activePage = 'company' -->
+		{{nav.active('company', 'true')}}
+
+
+	  
+	 
+
+
+	<main id="container">
+		{% for field in fields %}
+		 	{% if  field.id == 'page-intro' %}
+		 		{% include "partials/page-intro.nunjucks" %}
+		 	{% endif %}
+		{% endfor %}
+	</main>
+
+	{% include "partials/footer.nunjucks" %}
+{% endblock %}
+
