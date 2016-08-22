@@ -1,0 +1,57 @@
+.body-copy {
+	//padding-top: 10em;
+	background-color: $light-gray;
+	color: $dark-gray;
+	@include component-wrapper()
+}
+
+.body-copy_container {
+	@include container();
+
+	@include mq(upto, medium) {
+		padding: 0 0;
+	}
+
+}
+
+.body-copy_headline-container {
+	@include mq(from, medium) {
+		@include span-columns(3);
+	}
+}
+
+.body-copy_headline {
+	@include mq(upto, medium) {
+		padding: 0 1em; 
+	}
+
+	&:after {
+		display: block;
+		content: '';
+		background-color: $dark-gray;
+		width: 1.5em;
+		height: 1px;
+		margin-top: .5em;
+	}
+}
+
+.body-copy_content {
+	@include mq(from, medium) {
+		@include span-columns(7);
+		@include shift(1);
+	}
+
+	p {
+		@include mq(upto, medium) {
+			padding: 0 20px;
+		}
+	}
+
+	img {
+		width: 100%;
+
+		@include mq(from, medium) {
+			max-width: 100%;
+		}
+	}
+}

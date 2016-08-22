@@ -103,4 +103,8 @@ a {
 
 .page-intro_copy p {
   @extend %paragraph-lead;
+
+  @include mq(from, medium) {
+    margin-top: 0;
+  }
 }

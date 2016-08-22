@@ -7,13 +7,16 @@
 
 .page-intro_container {
 	@include container();
+	overflow: auto;
 }
 
-.page-intro_headline {
+.page-intro_headline-container {
 	@include mq(from, medium) {
 		@include span-columns(3);
 	}
+}
 
+.page-intro_headline {
 	&:after {
 		display: block;
 		content: '';

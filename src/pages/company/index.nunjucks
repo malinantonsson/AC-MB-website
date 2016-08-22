@@ -20,6 +20,9 @@
 		 	{% if  field.id == 'body-copy--odd' %}
 		 		{% include "partials/body-copy--odd.nunjucks" %}
 		 	{% endif %}
+		 	{% if  field.id == 'body-copy' %}
+		 		{% include "partials/body-copy.nunjucks" %}
+		 	{% endif %}
 		{% endfor %}
 	</main>
 
