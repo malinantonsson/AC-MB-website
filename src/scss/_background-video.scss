@@ -19,6 +19,8 @@ $videoWidth: 1895;
 .video-container {
  	@include mq(from, medium) {
  		@include fluid-image-container($videoWidth, $videoHeight);
+
+ 		padding-bottom: 55.99208%;
 	}
 
 	height: 100%;
