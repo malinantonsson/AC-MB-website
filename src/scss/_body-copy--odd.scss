@@ -1,4 +1,5 @@
 .body-copy--odd {
+	@include copy-padding();
 	background-color: $light-gray;
 	color: $dark-gray;
 	@include component-wrapper()

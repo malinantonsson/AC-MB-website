@@ -1,5 +1,9 @@
 .page-intro {
+	@include copy-padding();
 	padding-top: 10em;
+	@include mq(from, medium) {
+		padding-top: 10em;
+	}
 	background-color: $light-gray;
 	color: $dark-gray;
 	@include component-wrapper()
@@ -41,9 +45,16 @@
 	}
 }
 
-.page-intro_copy {
+.page-intro_intro {
 	@include mq(from, medium) {
 		@include span-columns(7);
 		@include shift(1);
+	}
+}
+
+.page-intro_copy {
+	@include mq(from, medium) {
+		@include span-columns(7);
+		@include shift(4);
 	}
 }

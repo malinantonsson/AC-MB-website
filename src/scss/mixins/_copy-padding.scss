@@ -1,0 +1,7 @@
+@mixin copy-padding() {
+	padding: 2em 0;
+
+	@include mq(from, medium) {
+		padding: 3em 0;
+	}
+}

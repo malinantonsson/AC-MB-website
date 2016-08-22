@@ -23,6 +23,9 @@
 		 	{% if  field.id == 'body-copy' %}
 		 		{% include "partials/body-copy.nunjucks" %}
 		 	{% endif %}
+		 	{% if  field.id == 'body-copy--background' %}
+		 		{% include "partials/body-copy--background.nunjucks" %}
+		 	{% endif %}
 		{% endfor %}
 	</main>
 

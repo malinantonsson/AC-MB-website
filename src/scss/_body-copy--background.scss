@@ -1,10 +1,11 @@
-.body-copy {
+.body-copy--background {
 	@include copy-padding();
+	background-color: $accent-colour;
 	color: $dark-gray;
 	@include component-wrapper()
 }
 
-.body-copy_container {
+.body-copy--background_container {
 	@include container();
 
 	@include mq(upto, medium) {
@@ -13,13 +14,13 @@
 
 }
 
-.body-copy_headline-container {
+.body-copy--background_headline-container {
 	@include mq(from, medium) {
 		@include span-columns(3);
 	}
 }
 
-.body-copy_headline {
+.body-copy--background_headline {
 	@include mq(upto, medium) {
 		padding: 0 1em; 
 	}
@@ -34,7 +35,7 @@
 	}
 }
 
-.body-copy_content {
+.body-copy--background_content {
 	@include mq(from, medium) {
 		@include span-columns(7);
 		@include shift(1);

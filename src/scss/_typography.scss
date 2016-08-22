@@ -101,7 +101,7 @@ a {
   font-size: italic;
 }
 
-.page-intro_copy p {
+.page-intro_intro p {
   @extend %paragraph-lead;
 
   @include mq(from, medium) {
