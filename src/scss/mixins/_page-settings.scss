@@ -1,5 +1,6 @@
 @mixin component-wrapper() {
 	overflow: auto;
+	clear: both;
 }
 
 @mixin container() {

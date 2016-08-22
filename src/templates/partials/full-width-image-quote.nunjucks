@@ -1,0 +1,14 @@
+<div class="full-width-image-quote">
+	<img src={{ field.image}} alt="" class="full-width-image-quote_image">
+	<div class="full-width-image-quote_copy-container">
+		<div class="full-width-image-quote_copy-wrapper">
+			<p class="full-width-image-quote_quote">
+				{{ field.quote }}
+			</p>
+
+			<p class="full-width-image-quote_quote-by">
+				{{ field.quoteBy }}
+			</p>
+		</div>	
+	</div>
+</div>

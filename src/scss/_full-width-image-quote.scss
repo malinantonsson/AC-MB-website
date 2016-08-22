@@ -1,0 +1,43 @@
+.full-width-image-quote {
+	color: #fff;
+	@include component-wrapper();
+
+	@include mq(upto, medium) {
+		overflow: hidden;
+		min-height: 232px;
+	}
+
+	position: relative;
+}
+
+.full-width-image-quote_copy-container {
+	@include container();
+}
+
+
+
+.full-width-image-quote_image {
+	@include mq(upto, medium) {
+		@include center-crop-absolute();
+		position: absolute;
+		max-height: 232px;
+	}
+
+	@include mq(from, medium) {
+		width: 100%;
+	}
+}
+
+.full-width-image-quote_copy-wrapper {
+	@include vertical-align(absolute);
+	
+	@include mq(upto, medium) {
+		//padding: 0 1em; 
+		@include span-columns(10);
+	}
+
+	@include mq(from, medium) {	
+		@include span-columns(3);
+		//@include shift(3);
+	}
+}

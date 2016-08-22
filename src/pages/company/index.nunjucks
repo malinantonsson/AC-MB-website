@@ -17,8 +17,8 @@
 		 	{% if  field.id == 'page-intro' %}
 		 		{% include "partials/page-intro.nunjucks" %}
 		 	{% endif %}
-		 	{% if  field.id == 'body-copy--odd' %}
-		 		{% include "partials/body-copy--odd.nunjucks" %}
+		 	{% if  field.id == 'full-width-image-quote' %}
+		 		{% include "partials/full-width-image-quote.nunjucks" %}
 		 	{% endif %}
 		 	{% if  field.id == 'body-copy' %}
 		 		{% include "partials/body-copy.nunjucks" %}

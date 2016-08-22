@@ -75,7 +75,7 @@ a {
 
 .video_headline--italic {
   font-family: "Cormorant-Italic", sans-serif;
-  font-size: italic;
+  font-weight: italic;
 }
 
 .nav_item {
@@ -92,17 +92,35 @@ a {
 
 .featured-project_location {
   font-family: "Cormorant-Italic", sans-serif;
-  font-size: italic;
+  font-weight: italic;
   margin-top: 0;  
 }
 
 .hero-text_copy {
   font-family: "Cormorant-Italic", sans-serif;
-  font-size: italic;
+  font-weight: italic;
 }
 
 .page-intro_intro p {
   @extend %paragraph-lead;
+
+  @include mq(from, medium) {
+    margin-top: 0;
+  }
+}
+
+.full-width-image-quote_quote {
+  @extend %paragraph-quote;
+
+  font-family: "Cormorant-Italic", sans-serif;
+
+  @include mq(from, medium) {
+    margin-top: 0;
+  }
+}
+
+.full-width-image-quote_quote-by {
+  @extend %paragraph-quote-by;
 
   @include mq(from, medium) {
     margin-top: 0;

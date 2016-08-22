@@ -14,8 +14,16 @@
 	@include type-format($type-formatting-p-lead);
 }
 
+%paragraph-quote {
+	@include type-format($type-formatting-p-quote);
+}
+
 %paragraph {
 	@include type-format($type-formatting-p);
+}
+
+%paragraph-quote-by {
+	@include type-format($type-formatting-p-quote-by);
 }
 
 %role {
