@@ -1,0 +1,12 @@
+<div class="hero-image-with-text">
+	<img class="hero-image-with-text_image" src={{field.image}}>
+	<div class="hero-image-with-text_copy-wrapper">
+		<h2 class="hero-image-with-text_intro-headline">
+			{{field.headline}}
+		</h2>
+
+		<a href={{field.url}} class="button hero-image-with-text_cta">
+			{{field.ctaCopy}}
+		</a>
+	</div>
+</div>

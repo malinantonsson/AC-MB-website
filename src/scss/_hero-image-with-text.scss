@@ -1,0 +1,49 @@
+.hero-image-with-text {
+
+}
+
+.hero-image-with-text {
+	position: relative;
+	overflow: visible;
+	@include mq(upto, medium) {
+		min-height: 318px;
+	}
+	
+	@include mq(from, medium) {
+		@include fluid-image-container(map-deep-get($image-sizes, hero-image-with-text, width), map-deep-get($image-sizes, hero-image-with-text, height));
+	}
+}
+
+.hero-image-with-text_image {
+	vertical-align: bottom;
+	@include mq(upto, medium) {
+		min-height: 318px;
+		max-height: 318px;
+		position: absolute;
+   	 	@include center-crop-absolute();
+	}
+
+	@include mq(from, medium) {
+		max-width: 100%;
+	}
+}
+
+.hero-image-with-text_copy-wrapper {
+	@include vertical-align(absolute);
+	width: 100%;
+	text-align: center;
+	color: $white;
+}
+
+.hero-image-with-text_intro-headline {
+	margin-top: 1em;
+}
+
+.hero-image-with-text_cta {
+	display: block;
+    width: 150px;
+    border: 1px solid $white;
+    margin: auto;
+    padding: 1em;
+    margin-top: 1.5em;
+}

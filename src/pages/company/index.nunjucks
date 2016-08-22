@@ -26,6 +26,9 @@
 		 	{% if  field.id == 'body-copy--background' %}
 		 		{% include "partials/body-copy--background.nunjucks" %}
 		 	{% endif %}
+		 	{% if  field.id == 'hero-image-with-text' %}
+		 		{% include "partials/hero-image-with-text.nunjucks" %}
+		 	{% endif %}
 		{% endfor %}
 	</main>
 

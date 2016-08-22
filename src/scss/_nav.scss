@@ -14,12 +14,15 @@
     }
 }
 
-.nav.copy-page .nav_item-link {
-	color: $dark-gray;
-}
 
-.nav.copy-page .nav_subitem-link {
-	color: $dark-gray;
+@include mq(from, medium) {
+	.nav.copy-page .nav_item-link {
+		color: $dark-gray;
+	}
+
+	.nav.copy-page .nav_subitem-link {
+		color: $dark-gray;
+	}
 }
 
 .nav_item {
@@ -41,10 +44,8 @@
 }
 
 .active .nav_subitem-wrapper{
-	display: inline-block;
-	
-
 	@include mq(from, medium) {
+		display: inline-block;
 		position: absolute;
 
 		.nav_subitem {
@@ -52,8 +53,6 @@
 			line-height: 1;
 			position: relative;
 			margin-left: 2em;
-
-
 
 			&:first-child:before {
 				left: -2em;
@@ -80,10 +79,6 @@
 				    @include vertical-align(absolute);
 				}
 			}
-			
-		}
-
-		.nav_subitem-link {
 		}
 	}
 }

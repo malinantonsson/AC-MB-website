@@ -14,12 +14,15 @@ var site = {
       });
     }
 
-    this.initTimezones();
+    var timeZones = document.getElementById('times-container');
+    if(timeZones) {
+      this.initTimezones();
 
-    this.timeZones();
-    setInterval(function() {
-      self.timeZones();
-    }, 500);
+      this.timeZones();
+      setInterval(function() {
+        self.timeZones();
+      }, 500);
+    }
 
     this.ui.navToggle.addEventListener('click', function(e) {
       self.handleNav(navOpen);
