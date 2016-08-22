@@ -7,7 +7,7 @@
 			{{field.copyItalic}}
 		</span>
 	</h1>
-	<div class="times-container">
+	<div id="times-container" class="times-container">
 		<div class="time-line"></div>
 
 		<div class="time-los-angeles-container">

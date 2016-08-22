@@ -53,20 +53,19 @@ var site = {
   },
 
   timeZones: function() {
-    
     var currentTime = moment().format();
 
     var ny = moment.tz(currentTime, "America/New_York");
-    var nyTime = ny.format('hh:mm a'); 
+    var nyTime = ny.format('h:mm a'); 
 
     var la = moment.tz(currentTime, "America/Los_Angeles");
-    var laTime = la.format('hh:mm a'); 
+    var laTime = la.format('h:mm a'); 
 
     var paris = moment.tz(currentTime, "Europe/Paris");
-    var parisTime = paris.format('hh:mm a'); 
+    var parisTime = paris.format('h:mm a'); 
 
     var london = moment.tz(currentTime, "Europe/London");
-    var londonTime = london.format('hh:mm a'); 
+    var londonTime = london.format('h:mm a'); 
 
     this.ui.uk.innerHTML = londonTime;
     this.ui.paris.innerHTML = parisTime;

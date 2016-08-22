@@ -13,7 +13,7 @@
 	</svg>
 		<ul class="nav_wrapper">  
 		    <li class="nav_item {%if activePage == 'company' %} active show-subnav{% endif %}">
-			  <a href="#" class="nav_item-link">
+			  <a href="/company/" class="nav_item-link">
 			  	Company
 			  </a>
 			  <ul class="nav_subitem-wrapper">
@@ -53,7 +53,7 @@
 	    	
 	    	<!-- Repeat for about and contact -->
 		    <li href="#" class="nav_item {%if activePage == 'home' %} is-active {% endif %} nav-item--home">
-				<a href="#" class="nav_item-link">
+				<a href="/" class="nav_item-link">
 				  	<svg class="nav_icon--logo logo-xl">
 					  <use xlink:href="/icons/sprite.svg#xl-logo-white"></use>
 					</svg>
