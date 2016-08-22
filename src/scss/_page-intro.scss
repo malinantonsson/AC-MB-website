@@ -1,6 +1,7 @@
 .page-intro {
 	@include copy-padding();
 	padding-top: 10em;
+
 	@include mq(from, medium) {
 		padding-top: 10em;
 	}
@@ -15,6 +16,8 @@
 }
 
 .page-intro_headline-container {
+	@include span-columns(12);
+
 	@include mq(from, medium) {
 		@include span-columns(3);
 	}
@@ -46,6 +49,8 @@
 }
 
 .page-intro_intro {
+	@include span-columns(12);
+
 	@include mq(from, medium) {
 		@include span-columns(7);
 		@include shift(1);
@@ -53,6 +58,8 @@
 }
 
 .page-intro_copy {
+	@include span-columns(12);
+	
 	@include mq(from, medium) {
 		@include span-columns(7);
 		@include shift(4);
