@@ -2,17 +2,11 @@
 	padding-top: 10em;
 	background-color: $light-gray;
 	color: $dark-gray;
-	overflow: auto;
-
-	@include mq(from, medium) {
-		padding-top: 10em;
-	}
+	@include component-wrapper()
 }
 
 .page-intro_container {
-	max-width: 1024px;	
-	margin: auto;
-	padding: 0 $side-padding;
+	@include container();
 }
 
 .page-intro_headline {

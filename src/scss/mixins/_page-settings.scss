@@ -1,0 +1,9 @@
+@mixin component-wrapper() {
+	overflow: auto;
+}
+
+@mixin container() {
+	max-width: 1024px;	
+	margin: auto;
+	padding: 0 $side-padding;
+}

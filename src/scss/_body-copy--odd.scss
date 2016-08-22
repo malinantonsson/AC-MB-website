@@ -1,13 +1,11 @@
 .body-copy--odd {
 	background-color: $light-gray;
 	color: $dark-gray;
-	overflow: auto;
+	@include component-wrapper()
 }
 
 .body-copy--odd_container {
-	max-width: 1024px;	
-	margin: auto;
-	padding: 0 $side-padding;
+	@include container();
 }
 
 .body-copy--odd_copy {
