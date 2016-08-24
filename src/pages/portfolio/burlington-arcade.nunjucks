@@ -1,0 +1,54 @@
+<!-- index.nunjucks -->
+{% extends "layout.nunjucks" %}
+
+
+{% block content %}
+	{% import 'macros/navigation.nunjucks' as nav %}
+		<!-- Creating the navigation with activePage = 'portfolio' -->
+		{{nav.active('portfolio', 'false')}}
+
+
+	  
+	 
+
+
+	<main id="container">
+		{% for field in fields %}
+			{% if  field.id == 'project-header' %}
+		 		{% include "partials/project-header.nunjucks" %}
+		 	{% endif %}
+		 	{% if  field.id == 'project-info' %}
+		 		{% include "partials/project-info.nunjucks" %}
+		 	{% endif %}
+		 	{% if  field.id == 'page-intro' %}
+		 		{% include "partials/page-intro.nunjucks" %}
+		 	{% endif %}
+		 	{% if  field.id == 'body-copy' %}
+		 		{% include "partials/body-copy.nunjucks" %}
+		 	{% endif %}
+		 	{% if  field.id == 'full-width-image--slim' %}
+		 		{% include "partials/full-width-image--slim.nunjucks" %}
+		 	{% endif %}
+		 	{% if  field.id == 'quote--background' %}
+		 		{% include "partials/quote--background.nunjucks" %}
+		 	{% endif %}
+		 	{% if  field.id == 'image-gallery' %}
+		 		{% include "partials/image-gallery.nunjucks" %}
+		 	{% endif %}
+		 	{% if  field.id == 'map' %}
+		 		{% include "partials/map.nunjucks" %}
+		 	{% endif %}
+		 	{% if  field.id == 'related-projects' %}
+		 		{% include "partials/related-projects.nunjucks" %}
+		 	{% endif %}
+		 	{% if  field.id == 'side-nav' %}
+		 		{% include "partials/side-nav.nunjucks" %}
+		 	{% endif %}
+		{% endfor %}
+	</main>
+
+	{% include "partials/footer.nunjucks" %}
+{% endblock %}
+
+
+
