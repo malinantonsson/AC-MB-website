@@ -1,0 +1,1 @@
+<div class="map" id="map" data-lat={{field.lat}} data-lng={{field.lng}}></div>

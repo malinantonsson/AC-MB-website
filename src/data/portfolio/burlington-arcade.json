@@ -67,8 +67,8 @@
 			"name": "map",
 			"projectName": "The Burlington Arcade",
 			"location": "London, United Kingdom",
-			"lan": "000",
-			"lon": "0000"
+			"lat": "51.50831",
+			"lng": "-0.13959"
 		},
 		{
 			"id": "related-projects",

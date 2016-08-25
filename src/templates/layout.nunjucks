@@ -40,6 +40,11 @@
             <script>svg4everybody();</script>
         <![endif]-->
         
+
+        <script 
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBTNCen_4P1hvj3DGYe0eJPa7y1-0emDeQ">
+        </script> 
+        
         <script src="/js/scripts.js"></script>
 
         <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
