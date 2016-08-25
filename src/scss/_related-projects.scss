@@ -1,0 +1,34 @@
+.related-projects {
+	background-color: $light-gray;
+}
+
+.related-projects_wrapper {
+	@include container();
+	padding-top: 4em;
+	padding-bottom: 4em;
+	overflow: auto;
+}
+
+.related-projects_project {
+	margin-top: 2em;
+	@include span-columns(12);
+
+	@include mq(from, medium) {
+		@include span-columns(6);
+	}
+}
+
+.related-projects_image {
+	width: 100%;
+}
+
+.related-projects_headline {
+	&:after {
+		display: block;
+		content: '';
+		background-color: $dark-gray;
+		width: 1.5em;
+		height: 1px;
+		margin-top: .5em;
+	}
+}

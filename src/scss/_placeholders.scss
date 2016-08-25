@@ -49,3 +49,12 @@
 %map-link {
 	@include type-format($type-formatting-map-link);
 }
+
+%related-project-name {
+	@include type-format($type-formatting-related-project-name);
+}
+
+
+%related-project-location {
+	@include type-format($type-formatting-related-project-location);
+}

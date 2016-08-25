@@ -73,16 +73,17 @@
 		{
 			"id": "related-projects",
 			"name": "related-projects",
+			"headline": "Related Projects",
 			"projects": [
 				{
 					"name": "Galeria Katowicka",
-					"location": "Katowice, Poland",
+					"location": "— Katowice, Poland",
 					"image": "/images/project/related-project-1.png",
 					"url": "#"
 				},
 				{
 					"name": "Promanaden Properties",
-					"location": "Oslo, Norway",
+					"location": "— Oslo, Norway",
 					"image": "/images/project/related-project-2.png",
 					"url": "#"
 				}

@@ -160,3 +160,17 @@ a {
   font-family: "SuisseBPIntl-Regular", sans-serif;
   @extend %map-title;
 }
+
+.related-projects_project-title {
+  @extend %related-project-name;
+  color: $dark-gray;
+  margin-bottom: 0;
+}
+
+.related-projects_project-location {
+  @extend %related-project-location;
+  color: $dark-gray;
+  font-family: "Cormorant-Italic", sans-serif;
+  font-style: italic;
+  margin: 0;
+}
