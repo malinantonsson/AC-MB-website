@@ -84,7 +84,6 @@ var site = {
   initMap: function(mapWrapper) {
     var lat = parseFloat(mapWrapper.getAttribute('data-lat'));
     var lng = parseFloat(mapWrapper.getAttribute('data-lng'));
-    console.log(lat);
 
     var map = new google.maps.Map(mapWrapper, {
         center: {lat: lat, lng: lng},
@@ -231,38 +230,32 @@ var site = {
     for(var i = 0; i < projects.length; i++) {
       var project = projects[i];
 
-      var marker = new google.maps.Marker({
-        position: new google.maps.LatLng(project.lat, project.lng),
+      
+     // var overlay;
+    var initProjectOverlay = function(currentProject) {
+
+      currentProject.marker = new google.maps.Marker({
+        position: new google.maps.LatLng(currentProject.lat, currentProject.lng),
         icon: '/images/map/map.png',
         map: map
       });
 
       var bounds = new google.maps.LatLngBounds(
-        new google.maps.LatLng(project.bounds.start.lat, project.bounds.start.lng),
-        new google.maps.LatLng(project.bounds.end.lat, project.bounds.end.lng));
+        new google.maps.LatLng(currentProject.bounds.start.lat, currentProject.bounds.start.lng),
+        new google.maps.LatLng(currentProject.bounds.end.lat, currentProject.bounds.end.lng));
 
-      var overlay;
+      currentProject.overlay = new mapOverlay(bounds, currentProject, map);
+
+      currentProject.marker.addListener('click', function(){
+        currentProject.overlay.toggle();
+      });
+
+     };
       
-      overlay = new mapOverlay(bounds, project, map);
-      //htmlMarker.setMap(gmap);
+      initProjectOverlay(project);
 
 
     }
-
-   /* var overlay;
-    USGSOverlay.prototype = new google.maps.OverlayView();
-
-    var bounds = new google.maps.LatLngBounds(
-        new google.maps.LatLng(51.50836, -0.14260),
-        new google.maps.LatLng(51.50836, -0.14260));*/
-
-    // The photograph is courtesy of the U.S. Geological Survey.
-    //var srcImage = '/images/map/map-overlay-1.png';
-
-    // The custom USGSOverlay object contains the USGS image,
-    // the bounds of the image, and a reference to the map.
-    //overlay = new USGSOverlay(bounds, srcImage, map);
-
 
     /** @constructor */
       function mapOverlay(bounds, project, map) {
@@ -286,7 +279,6 @@ var site = {
        * added to the map.
        */
       mapOverlay.prototype.onAdd = function() {
-        console.log('hola');
 
         var div = document.createElement('div');
         div.className = 'map_wrapper';
@@ -325,6 +317,30 @@ var site = {
         //site.ui.body.appendChild(div);
       };
 
+      // Set the visibility to 'hidden' or 'visible'.
+      mapOverlay.prototype.hide = function() {
+        if (this.div_) {
+          // The visibility property must be a string enclosed in quotes.
+          this.div_.style.visibility = 'hidden';
+        }
+      };
+
+      mapOverlay.prototype.show = function() {
+        if (this.div_) {
+          this.div_.style.visibility = 'visible';
+        }
+      };
+
+      mapOverlay.prototype.toggle = function() {
+        if (this.div_) {
+          if (this.div_.style.visibility === 'hidden') {
+            this.show();
+          } else {
+            this.hide();
+          }
+        }
+      };
+
       mapOverlay.prototype.draw = function() {
 
         // We use the south-west and north-east
@@ -337,7 +353,6 @@ var site = {
         // We'll use these coordinates to resize the div.
         var sw = overlayProjection.fromLatLngToDivPixel(this.bounds_.getSouthWest());
         var ne = overlayProjection.fromLatLngToDivPixel(this.bounds_.getNorthEast());
-        console.log(sw.x);
 
         // Resize the image's div to fit the indicated dimensions.
         var div = this.div_;
