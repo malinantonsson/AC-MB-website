@@ -226,33 +226,47 @@ var site = {
     ];
 
     mapOverlay.prototype = new google.maps.OverlayView();
+    var isCurrentProject = false;
 
     for(var i = 0; i < projects.length; i++) {
       var project = projects[i];
 
       
-     // var overlay;
-    var initProjectOverlay = function(currentProject) {
+      // var overlay;
+      var initProjectOverlay = function(currentProject) {
 
-      currentProject.marker = new google.maps.Marker({
-        position: new google.maps.LatLng(currentProject.lat, currentProject.lng),
-        icon: '/images/map/map.png',
-        map: map
-      });
+        currentProject.marker = new google.maps.Marker({
+          position: new google.maps.LatLng(currentProject.lat, currentProject.lng),
+          icon: '/images/map/map.png',
+          map: map
+        });
 
-      var bounds = new google.maps.LatLngBounds(
-        new google.maps.LatLng(currentProject.bounds.start.lat, currentProject.bounds.start.lng),
-        new google.maps.LatLng(currentProject.bounds.end.lat, currentProject.bounds.end.lng));
+        var bounds = new google.maps.LatLngBounds(
+          new google.maps.LatLng(currentProject.bounds.start.lat, currentProject.bounds.start.lng),
+          new google.maps.LatLng(currentProject.bounds.end.lat, currentProject.bounds.end.lng));
 
-      currentProject.overlay = new mapOverlay(bounds, currentProject, map);
+        currentProject.overlay = new mapOverlay(bounds, currentProject, map);
 
-      currentProject.marker.addListener('click', function(){
-        currentProject.overlay.toggle();
-      });
 
-     };
-      
-      initProjectOverlay(project);
+
+        currentProject.marker.addListener('click', function(){
+          currentProject.overlay.toggle();
+        });
+
+        
+          setTimeout(function() {
+            if(lat == currentProject.lat) {
+             currentProject.overlay.show();
+            } else {
+              currentProject.overlay.hide();
+            }
+          }, 500);       
+          
+        
+
+       };
+        
+        initProjectOverlay(project);
 
 
     }
