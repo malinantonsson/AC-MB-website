@@ -4,9 +4,11 @@
 
 .project-header_image {
 
-	min-height: 400px;
-	max-height: 400px;
-	@include center-crop-absolute();
+	@include mq(upto, medium) {
+		min-height: 400px;
+		max-height: 400px;
+		@include center-crop-absolute();
+	}
 
 	@include mq(from, medium) {	
 		max-width: 100%;

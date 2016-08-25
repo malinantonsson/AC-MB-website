@@ -1,0 +1,53 @@
+.project-info {
+	position: relative;
+
+	@include mq(upto, medium) {
+	    max-height: 190px;
+	    padding: 0 2em 2em 2em;
+
+		display: flex;
+	    flex-direction: column;
+	    flex-wrap: wrap;
+	}
+	
+	
+
+	&:after {
+		content: '';
+		background-color: $gray;
+		width: calc(100% - 4em);
+		height: 1px;
+		position: absolute;
+		bottom: 0;
+	}
+
+	@include mq(from, medium) {
+		@include span-columns(4);
+
+		&:before {
+			content: '';
+			background-color: $gray;
+			width: calc(100% - 4em);
+			height: 1px;
+			position: absolute;
+			top: 0;
+		}
+	}
+}
+
+.project-info_data-wrapper {
+	width: 50%;
+	margin-top: 1.5em;
+
+	@include mq(from, medium) {
+		&:last-child() {
+			margin-bottom: 1.5em;
+		}
+	}
+}
+
+.project-info_label,
+.project-info_value {
+	margin-bottom: 0;
+    margin-top: 0;
+}

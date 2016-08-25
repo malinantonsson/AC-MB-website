@@ -33,6 +33,7 @@
 @import 'full-width-image-quote';
 @import 'hero-image-with-text';
 @import 'project-header';
+@import 'project-info';
 
 
 body {
@@ -41,4 +42,11 @@ body {
 
 .container {
 	overflow-x: hidden;
+}
+
+.component-wrapper {
+	@include mq(from, medium) {
+		@include container();
+		padding-top: 1.5em;
+	}
 }

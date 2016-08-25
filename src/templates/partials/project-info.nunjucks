@@ -1,0 +1,12 @@
+<section class="project-info">
+	{% for item in field.fields %}
+		<div class="project-info_data-wrapper">
+			<p class="project-info_label">
+				{{ item.label }}
+			</p>
+			<p class="project-info_value">
+				{{ item.value }}
+			</p>
+		</div>
+	{% endfor %}
+</section>

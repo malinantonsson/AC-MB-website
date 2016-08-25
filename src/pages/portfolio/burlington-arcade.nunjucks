@@ -13,19 +13,29 @@
 
 
 	<main id="container">
+			{% for field in fields %}
+				{% if  field.id == 'project-header' %}
+					{% include "partials/project-header.nunjucks" %}
+				{% endif %}
+			{% endfor %}
+		<div class="component-wrapper">
+			{% for field in fields %}
+				{% if  field.id == 'project-info' %}
+			 		{% include "partials/project-info.nunjucks" %}
+			 	{% endif %}
+
+			 	{% if  field.id == 'page-intro' %}
+			 		{% include "partials/page-intro.nunjucks" %}
+			 	{% endif %}
+
+			 	{% if  field.id == 'body-copy' %}
+			 		{% include "partials/body-copy.nunjucks" %}
+			 	{% endif %}
+
+			{% endfor %}	
+		</div>
+
 		{% for field in fields %}
-			{% if  field.id == 'project-header' %}
-		 		{% include "partials/project-header.nunjucks" %}
-		 	{% endif %}
-		 	{% if  field.id == 'project-info' %}
-		 		{% include "partials/project-info.nunjucks" %}
-		 	{% endif %}
-		 	{% if  field.id == 'page-intro' %}
-		 		{% include "partials/page-intro.nunjucks" %}
-		 	{% endif %}
-		 	{% if  field.id == 'body-copy' %}
-		 		{% include "partials/body-copy.nunjucks" %}
-		 	{% endif %}
 		 	{% if  field.id == 'full-width-image--slim' %}
 		 		{% include "partials/full-width-image--slim.nunjucks" %}
 		 	{% endif %}

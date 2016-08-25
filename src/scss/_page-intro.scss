@@ -8,6 +8,21 @@
 	background-color: $light-gray;
 	color: $dark-gray;
 	@include component-wrapper()
+
+
+
+	.component-wrapper & {
+		padding-top: 0;
+		background-color: #fff;
+		clear: none;
+		@include span-columns(8);
+		@include omega();
+
+		.page-intro_intro {
+			width: 100%;
+			margin-left: 0;
+		}
+	}
 }
 
 .page-intro_container {
