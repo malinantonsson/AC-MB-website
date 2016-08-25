@@ -334,7 +334,7 @@ var site = {
 
         // Add the element to the "overlayLayer" pane.
         var panes = this.getPanes();
-        panes.overlayLayer.appendChild(div);
+        panes.overlayImage.appendChild(div);
 
         //site.ui.body.appendChild(div);
       };
