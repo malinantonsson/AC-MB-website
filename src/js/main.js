@@ -223,7 +223,7 @@ var site = {
       }
     ];
 
-    var mapProjects = [];
+    var projectsOnMap = [];
 
     mapOverlay.prototype = new google.maps.OverlayView();
 
@@ -256,13 +256,13 @@ var site = {
 
         currentProject.overlay = new mapOverlay(bounds, currentProject, map);
 
-        mapProjects.push(currentProject);
+        projectsOnMap.push(currentProject);
 
         currentProject.marker.addListener('click', function(){
           currentProject.overlay.toggle();
           currentProject.marker.setIcon(activeMarkerImg); 
 
-          mapProjects.map(function(item){
+          projectsOnMap.map(function(item){
             if(currentProject != item) {
               item.overlay.hide();
               item.marker.setIcon(inactiveMarkerImg); 
@@ -392,7 +392,7 @@ var site = {
         div.style.left = sw.x - 230 + 'px';
         div.style.top = ne.y - 40 + 'px';
         div.style.width = '191px';
-        div.style.height = '201px';
+        div.style.height = '221px';
       };
 
       // The onRemove() method will be called automatically from the API if
