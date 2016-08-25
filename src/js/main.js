@@ -85,6 +85,9 @@ var site = {
     var lat = parseFloat(mapWrapper.getAttribute('data-lat'));
     var lng = parseFloat(mapWrapper.getAttribute('data-lng'));
 
+    var activeMarkerImg = '/images/map/map.png';
+    var inactiveMarkerImg = '/images/map/marker--inactive.png';
+
     var map = new google.maps.Map(mapWrapper, {
         center: {lat: lat, lng: lng},
         zoom: 15,
@@ -179,11 +182,6 @@ var site = {
       ]
     });
 
-    /*var marker = new google.maps.Marker({
-      position: map.getCenter(),
-      icon: '/images/map/map.png',
-      map: map
-    });*/
 
     var projects = [
       {
@@ -231,14 +229,24 @@ var site = {
 
     for(var i = 0; i < projects.length; i++) {
       var project = projects[i];
+      var marker, currentProject;
+
+      if(lat == project.lat) {
+        isCurrentProject = true;
+        marker = activeMarkerImg;
+
+      } else {
+        isCurrentProject = false;
+        marker = inactiveMarkerImg;
+      }
 
       
       // var overlay;
-      var initProjectOverlay = function(currentProject) {
+      var initProjectOverlay = function(currentProject, isCurrentProject) {
 
         currentProject.marker = new google.maps.Marker({
           position: new google.maps.LatLng(currentProject.lat, currentProject.lng),
-          icon: '/images/map/map.png',
+          icon: marker,
           map: map
         });
 
@@ -252,10 +260,12 @@ var site = {
 
         currentProject.marker.addListener('click', function(){
           currentProject.overlay.toggle();
+          currentProject.marker.setIcon(activeMarkerImg); 
 
           mapProjects.map(function(item){
             if(currentProject != item) {
               item.overlay.hide();
+              item.marker.setIcon(inactiveMarkerImg); 
             }
             
           });
@@ -263,7 +273,8 @@ var site = {
 
         
           setTimeout(function() {
-            if(lat == currentProject.lat) {
+            console.log(isCurrentProject);
+            if(isCurrentProject) {
              currentProject.overlay.show();
             } else {
               currentProject.overlay.hide();
@@ -274,7 +285,7 @@ var site = {
 
        };
         
-        initProjectOverlay(project);
+        initProjectOverlay(project, isCurrentProject);
 
 
     }
