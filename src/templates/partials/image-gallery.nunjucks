@@ -1,0 +1,13 @@
+<section class="image-gallery">
+	<div class="image-wrapper image-gallery--lg">
+		<img src={{field.imageLg}} alt="" class="image-gallery_image image-gallery_image--lg">
+	</div>
+
+	<div class="image-wrapper image-gallery--md">
+		<img src={{field.imageMd}} alt="" class="image-gallery_image image-gallery_image--md">
+	</div>
+
+	<div class="image-wrapper image-gallery--sm">
+		<img src={{field.imageSm}} alt="" class="image-gallery_image image-gallery_image--sm">
+	</div>
+</section>
