@@ -193,12 +193,12 @@ var site = {
        lng: -0.13959,
        bounds: {
           start: {
-            lat: 51.50836,
-            lng: -0.14260
+            lat: 51.50831,
+            lng: -0.13959
           }, 
           end: {
-            lat: 51.50836,
-            lng: -0.14260
+            lat: 51.50831,
+            lng: -0.13959
           }
         },
        url: '#',
@@ -356,8 +356,8 @@ var site = {
 
         // Resize the image's div to fit the indicated dimensions.
         var div = this.div_;
-        div.style.left = sw.x + 'px';
-        div.style.top = ne.y + 'px';
+        div.style.left = sw.x - 230 + 'px';
+        div.style.top = ne.y - 40 + 'px';
         div.style.width = '191px';
         div.style.height = '201px';
       };
