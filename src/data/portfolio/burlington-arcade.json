@@ -46,7 +46,8 @@
 		},
 		{
 			"id": "full-width-image--slim",
-			"name": "full-width-image-slim"
+			"name": "full-width-image-slim",
+			"image": "/images/project/project-full-width.png"
 		},
 		{
 			"id": "quote--background",

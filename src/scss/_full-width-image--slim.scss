@@ -1,0 +1,32 @@
+.full-width-image--slim {
+	position: relative;
+
+	@include mq(upto, medium) {
+		min-height: 181px;
+		max-height: 181px;
+	}
+
+	@include mq(upto, medium) {
+		min-height: 250px;
+		max-height: 250px;
+	}
+}
+
+.full-width-image--slim_image {
+	@include mq(upto, medium) {
+		min-height: 181px;
+		max-height: 181px;
+		@include center-crop-absolute();
+		position: absolute;
+	}
+
+	@include mq(upto, medium) {
+		min-height: 250px;
+		max-height: 250px;
+	}
+	
+	@include mq(from, medium) {
+	    max-width: 100%;
+	    vertical-align: middle;
+	}
+}
