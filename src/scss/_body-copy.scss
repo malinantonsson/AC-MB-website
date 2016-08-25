@@ -2,6 +2,22 @@
 	@include copy-padding();
 	color: $dark-gray;
 	@include component-wrapper()
+
+	.component-wrapper & {
+		padding-top: 0;
+		background-color: #fff;
+		clear: none;
+		
+		@include mq(from, medium) {
+			@include span-columns(8);
+		}
+
+		.body-copy_container,
+		.body-copy_content {
+			width: 100%;
+			margin-left: 0;
+		}
+	}
 }
 
 .body-copy_container {
