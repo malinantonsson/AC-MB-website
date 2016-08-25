@@ -192,51 +192,84 @@ var site = {
        location: 'London, United Kingdom',
        lat: 51.50831,
        lng: -0.13959,
+       bounds: {
+          start: {
+            lat: 51.50836,
+            lng: -0.14260
+          }, 
+          end: {
+            lat: 51.50836,
+            lng: -0.14260
+          }
+        },
        url: '#',
-       image: '/images/maps/*.png'
-      },
+       image: '/images/map/map-overlay-1.png'
+      }
+      ,
       {
-       name: 'The Burlington Arcade',
+       name: 'Project 2',
        location: 'London, United Kingdom',
        lat: 51.51050,
        lng: -0.13526,
+       bounds: {
+        start: {
+          lat: 51.51101,
+          lng: -0.13500
+        }, 
+        end: {
+          lat: 51.51101,
+          lng: -0.13500
+        }
+       },
        url: '#',
-       image: '/images/maps/*.png'
+       image: '/images/map/map-overlay-1.png'
       }
     ];
 
+    mapOverlay.prototype = new google.maps.OverlayView();
+
     for(var i = 0; i < projects.length; i++) {
+      var project = projects[i];
 
       var marker = new google.maps.Marker({
-        position: new google.maps.LatLng(projects[i].lat, projects[i].lng),
+        position: new google.maps.LatLng(project.lat, project.lng),
         icon: '/images/map/map.png',
         map: map
       });
 
+      var bounds = new google.maps.LatLngBounds(
+        new google.maps.LatLng(project.bounds.start.lat, project.bounds.start.lng),
+        new google.maps.LatLng(project.bounds.end.lat, project.bounds.end.lng));
+
+      var overlay;
       
+      overlay = new mapOverlay(bounds, project, map);
+      //htmlMarker.setMap(gmap);
+
+
     }
 
-    var overlay;
+   /* var overlay;
     USGSOverlay.prototype = new google.maps.OverlayView();
 
     var bounds = new google.maps.LatLngBounds(
         new google.maps.LatLng(51.50836, -0.14260),
-        new google.maps.LatLng(51.50836, -0.14260));
+        new google.maps.LatLng(51.50836, -0.14260));*/
 
     // The photograph is courtesy of the U.S. Geological Survey.
-    var srcImage = '/images/map/map-overlay-1.png';
+    //var srcImage = '/images/map/map-overlay-1.png';
 
     // The custom USGSOverlay object contains the USGS image,
     // the bounds of the image, and a reference to the map.
-    overlay = new USGSOverlay(bounds, srcImage, map);
+    //overlay = new USGSOverlay(bounds, srcImage, map);
 
 
     /** @constructor */
-      function USGSOverlay(bounds, image, map) {
+      function mapOverlay(bounds, project, map) {
 
         // Initialize all properties.
         this.bounds_ = bounds;
-        this.image_ = image;
+        this.project = project;
         this.map_ = map;
 
         // Define a property to hold the image's div. We'll
@@ -252,7 +285,8 @@ var site = {
        * onAdd is called when the map's panes are ready and the overlay has been
        * added to the map.
        */
-      USGSOverlay.prototype.onAdd = function() {
+      mapOverlay.prototype.onAdd = function() {
+        console.log('hola');
 
         var div = document.createElement('div');
         div.className = 'map_wrapper';
@@ -260,17 +294,17 @@ var site = {
         // Create the img element and attach it to the div.
         var img = document.createElement('img');
         img.className = 'map_image';
-        img.src = this.image_;
+        img.src = this.project.image;
 
         div.appendChild(img);
 
         var title = document.createElement('p');
         title.className = 'map_title';
-        title.textContent = 'The Burlington Arcade';
+        title.textContent = this.project.name;
 
         var location = document.createElement('p');
         location.className = 'map_location';
-        location.textContent = '— Piccadilly, London';
+        location.textContent = this.project.location;
 
         var link = document.createElement('a');
         link.href = '#';
@@ -291,7 +325,7 @@ var site = {
         //site.ui.body.appendChild(div);
       };
 
-      USGSOverlay.prototype.draw = function() {
+      mapOverlay.prototype.draw = function() {
 
         // We use the south-west and north-east
         // coordinates of the overlay to peg it to the correct position and size.
@@ -315,7 +349,7 @@ var site = {
 
       // The onRemove() method will be called automatically from the API if
       // we ever set the overlay's map property to 'null'.
-      USGSOverlay.prototype.onRemove = function() {
+      mapOverlay.prototype.onRemove = function() {
         console.log('removed');
         this.div_.parentNode.removeChild(this.div_);
         this.div_ = null;
