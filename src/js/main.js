@@ -225,8 +225,9 @@ var site = {
       }
     ];
 
+    var mapProjects = [];
+
     mapOverlay.prototype = new google.maps.OverlayView();
-    var isCurrentProject = false;
 
     for(var i = 0; i < projects.length; i++) {
       var project = projects[i];
@@ -247,10 +248,17 @@ var site = {
 
         currentProject.overlay = new mapOverlay(bounds, currentProject, map);
 
-
+        mapProjects.push(currentProject);
 
         currentProject.marker.addListener('click', function(){
           currentProject.overlay.toggle();
+
+          mapProjects.map(function(item){
+            if(currentProject != item) {
+              item.overlay.hide();
+            }
+            
+          });
         });
 
         
