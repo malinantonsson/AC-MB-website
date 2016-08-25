@@ -137,3 +137,26 @@ a {
 .project-info_label {
   font-family: "SuisseBPIntl-Medium", sans-serif;
 }
+
+.map_location {
+  font-family: "Cormorant-Italic", sans-serif;
+  font-style: italic;
+  margin: 0;
+
+  @extend %map-location;
+}
+
+.map_link {
+  font-family: "Cormorant-Italic", sans-serif;
+  font-style: italic;
+  margin: 0;
+  color: $dark-gray;
+
+  @extend %map-link;
+}
+
+.map_title {
+  margin: 0;
+  font-family: "SuisseBPIntl-Regular", sans-serif;
+  @extend %map-title;
+}

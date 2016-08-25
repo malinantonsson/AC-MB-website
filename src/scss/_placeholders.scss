@@ -37,3 +37,15 @@
 %sub-nav {
 	@include type-format($type-formatting-sub-nav);
 }
+
+%map-location {
+	@include type-format($type-formatting-map-location);
+}
+
+%map-title {
+	@include type-format($type-formatting-map-title);
+}
+
+%map-link {
+	@include type-format($type-formatting-map-link);
+}

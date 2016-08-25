@@ -113,6 +113,27 @@ $type-formatting: (
 		medium: 16px,
 		large: 16px,
 		xlarge: 16px,
+	),
+	map-location: (
+		null: (14px, null, 400, 1em, null, null),
+		small: 14px,
+		medium: 14px,
+		large: 14px,
+		xlarge: 14px,
+	),
+	map-title: (
+		null: (16px, null, 400, 1.5em, null, null),
+		small: 16px,
+		medium: 16px,
+		large: 16px,
+		xlarge: 16px,
+	),
+	map-link: (
+		null: (14px, null, 400, 2.5em, null, null),
+		small: 14px,
+		medium: 14px,
+		large: 14px,
+		xlarge: 14px,
 	)
 );
 
@@ -127,3 +148,6 @@ $type-formatting-p-quote-by: map-get($type-formatting, 'p-quote-by');
 $type-formatting-role: map-get($type-formatting, 'role');
 $type-formatting-nav: map-get($type-formatting, 'nav');
 $type-formatting-sub-nav: map-get($type-formatting, 'nav-subitem');
+$type-formatting-map-location: map-get($type-formatting, 'map-location');
+$type-formatting-map-title: map-get($type-formatting, 'map-title');
+$type-formatting-map-link: map-get($type-formatting, 'map-link');
