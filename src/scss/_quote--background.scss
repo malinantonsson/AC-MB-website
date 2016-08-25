@@ -1,0 +1,46 @@
+.quote--background {
+	padding: 2em 0;
+	
+	@include mq(from, medium) {
+		padding: 4em 0;
+	}
+
+	background-color: $accent-colour;
+}
+
+.quote--background_wrapper {
+	@include container();
+	text-align: center;
+}
+
+.quote--background_quote {
+	@include mq(upto, medium) {
+		margin: 0 auto;
+	}
+
+	@include span-columns(10);
+	@include shift(1);
+	float: none;
+}
+
+.quote--background_quote-by {
+	margin: 0;
+}
+
+.quote--backgrund_icon {
+	max-width: 2em;
+	max-height: 3em;
+	
+	@include mq(from, medium) {
+	    max-width: 3em;
+	    max-height: 5em;
+	}
+}
+
+.quote--backgrund_icon--bottom {
+	margin-top: 2em;
+	
+	@include mq(from, medium) {
+		margin-top: 1em;
+	}
+}

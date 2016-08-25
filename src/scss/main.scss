@@ -35,6 +35,7 @@
 @import 'project-header';
 @import 'project-info';
 @import 'full-width-image--slim';
+@import 'quote--background';
 
 
 body {
@@ -47,7 +48,7 @@ body {
 
 .component-wrapper {
 	overflow: auto;
-	
+
 	@include mq(from, medium) {
 		@include container();
 		padding-top: 1.5em;

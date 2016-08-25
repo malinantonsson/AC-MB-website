@@ -111,7 +111,8 @@ a {
   }
 }
 
-.full-width-image-quote_quote {
+.full-width-image-quote_quote,
+.quote--background_quote {
   @extend %paragraph-quote;
 
   font-family: "Cormorant-Italic", sans-serif;
@@ -127,6 +128,10 @@ a {
   @include mq(from, medium) {
     margin-top: 0;
   }
+}
+
+.quote--background_quote-by {
+  font-family: "SuisseBPIntl-Medium", sans-serif;
 }
 
 .project-info_label {
