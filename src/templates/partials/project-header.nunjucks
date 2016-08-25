@@ -1,0 +1,7 @@
+<section class="project-header">
+	<img src={{field.image}} alt="" class="project-header_image">
+	<div class="project-header_copy-wrapper">
+		<h2 class="project-header_headline">{{field.headline}}</h2>
+		<p class="project-header_location">{{field.location}}</p>
+	</div>
+</section>

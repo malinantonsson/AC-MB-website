@@ -1,0 +1,30 @@
+.project-header {
+	position: relative;
+}
+
+.project-header_image {
+
+	min-height: 400px;
+	max-height: 400px;
+	@include center-crop-absolute();
+
+	@include mq(from, medium) {	
+		max-width: 100%;
+	}
+}
+
+.project-header_copy-wrapper {
+	@include container();
+
+	position: absolute;
+	width: 100%;
+	left: 0;
+	right: 0;
+	top: 40%;
+
+	color: #fff;
+
+	@include mq(from, medium) {	
+		top: 63%;
+	}
+}
