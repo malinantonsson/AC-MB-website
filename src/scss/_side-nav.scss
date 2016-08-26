@@ -39,17 +39,15 @@
 }
 
 .side-nav {
-	@media (max-width: 1200px) {
-		display: none;
+	@include mq(from, medium) {
+		clear: both;
+		right: -3em;
+		position: absolute;
+	    top: 100%;
+	    transform: rotate(-90deg);
 	}
-	
-	clear: both;
-	//transform: rotate(-90deg);
-	right: 0;
-	position: absolute;
-    top: 100%;
-    -webkit-transform: rotate(-90deg);
-    transform: rotate(-90deg);
-    -webkit-transform: rotate(-90deg);
-    transform: rotate(-90deg);
+
+	@include mq(from, xlarge) {
+		right: 0;
+	}
 }
