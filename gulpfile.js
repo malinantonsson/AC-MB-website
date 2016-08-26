@@ -201,7 +201,7 @@ gulp.task('dev', ['default', 'setWatch'], function() {
   });
 
   gulp.watch([sassSrc], ['styles', reload]);
-  gulp.watch([sassSrc + '/pages/*.scss'], ['styles', reload]);
+  gulp.watch([sassSrc + '/**/*.scss'], ['styles', reload]);
   gulp.watch([templatesSrc + '**/*.nunjucks'], ['nunjucks', reload]);
   gulp.watch([pagesPath], ['nunjucks', reload]);
   gulp.watch([jsSrc], ['scripts', reload]);
