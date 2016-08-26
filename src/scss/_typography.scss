@@ -174,3 +174,15 @@ a {
   font-style: italic;
   margin: 0;
 }
+
+.side-nav-parent {
+  @extend %side-nav-parent;
+  color: $dark-gray;
+}
+
+.side-nav-current {
+  @extend %side-nav-current;
+  color: $dark-gray;
+  font-family: "Cormorant-Italic", sans-serif;
+  font-style: italic;
+}

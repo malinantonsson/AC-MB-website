@@ -39,6 +39,7 @@
 @import 'image-gallery';
 @import 'maps';
 @import 'related-projects';
+@import 'side-nav';
 
 
 body {
@@ -51,6 +52,7 @@ body {
 
 .component-wrapper {
 	overflow: auto;
+	position: relative;
 
 	@include mq(from, medium) {
 		@include container();

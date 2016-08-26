@@ -5,7 +5,7 @@
 		</h2>
 
 		{% for project in field.projects %}
-			<a class="related-projects_project">
+			<a class="related-projects_project" href={{project.url}}>
 				<img src={{project.image}} alt="" class="related-projects_image">
 				<p class="related-projects_project-title">
 					{{project.name}}

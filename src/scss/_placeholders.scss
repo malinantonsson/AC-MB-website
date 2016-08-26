@@ -54,7 +54,14 @@
 	@include type-format($type-formatting-related-project-name);
 }
 
-
 %related-project-location {
 	@include type-format($type-formatting-related-project-location);
+}
+
+%side-nav-parent {
+	@include type-format($type-formatting-side-nav-parent);
+}
+
+%side-nav-current {
+	@include type-format($type-formatting-side-nav-current);
 }
