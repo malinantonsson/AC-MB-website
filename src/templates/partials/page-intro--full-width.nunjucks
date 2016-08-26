@@ -1,0 +1,26 @@
+<div class="page-intro page-intro--full-width">
+	<div class="page-intro_container">
+		{% if  field.headline %}
+			<div class="page-intro_headline-container">		
+				<h2 class="page-intro_headline headline-lg">
+					{{field.headline}} 
+				</h2>
+				<h2 class="page-intro_headline headline-xs">
+					{{name}} 
+				</h2>
+			</div>
+		{% endif %}
+		
+		{% if  field.introCopy %}
+			<div class="page-intro_intro">
+				{{ field.introCopy|safe }} 
+			</div>
+		{% endif %}
+
+		{% if  field.copy %}
+			<div class="page-intro_copy">
+				{{ field.copy|safe }} 
+			</div>
+		{% endif %}
+	</div>
+</div>

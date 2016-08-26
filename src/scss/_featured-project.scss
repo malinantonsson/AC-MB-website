@@ -8,6 +8,11 @@
 	@include mq(from, medium) {
 		@include fluid-image-container(map-deep-get($image-sizes, homepage-featured, width), map-deep-get($image-sizes, homepage-featured, height));
 	}
+
+	main > &:first-child() { //is header
+		max-height: 540px;
+		overflow: hidden;
+	}
 }
 
 .featured-project_image {

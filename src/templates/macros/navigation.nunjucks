@@ -29,8 +29,8 @@
 			  	</li>
 			  </ul>
 	  		</li>
-		    <li href="#" class="nav_item {%if activePage == 'portfolio' %} active {% endif %}">
-				<a href="#" class="nav_item-link">
+		    <li class="nav_item {%if activePage == 'portfolio' %} active {% endif %}">
+				<a href="/portfolio/" class="nav_item-link">
 			  		Portfolio
 			  	</a>
 		    </li>
