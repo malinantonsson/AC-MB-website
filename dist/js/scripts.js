@@ -179,7 +179,8 @@ var site = {
                   }
               ]
           }
-      ]
+        ],
+        scrollwheel: false
     });
 
 
