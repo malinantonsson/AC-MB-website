@@ -53,6 +53,11 @@
 	.filter--is-open & {
 		display: block;
 	}
+
+	&:hover {
+		text-decoration: underline;
+		cursor: pointer;
+	}
 }
 
 .filter--is-active {
@@ -105,7 +110,7 @@
     align-items: baseline;
     padding: 1em 2em;
     margin-left: -2em;
-    
+
     max-width: 400px;
 
     position: absolute;
