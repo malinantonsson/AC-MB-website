@@ -175,6 +175,22 @@ a {
   margin: 0;
 }
 
+
+.project-list_item-title {
+  @extend %projects-list-name;
+  color: $dark-gray;
+  margin-bottom: 0;
+}
+
+
+.project-list_item-location {
+  @extend %projects-list-location;
+  color: $dark-gray;
+  font-family: "Cormorant-Italic", sans-serif;
+  font-style: italic;
+  margin: 0;
+}
+
 .side-nav-parent {
   @extend %side-nav-parent;
   color: $dark-gray;
@@ -186,3 +202,12 @@ a {
   font-family: "Cormorant-Italic", sans-serif;
   font-style: italic;
 }
+
+.projects-list_filter-button,
+.projects-list_view-link {
+  @extend %paragraph-lead;
+  font-family: "Cormorant-Italic", sans-serif;
+  font-style: italic;
+  color: $dark-gray;
+}
+

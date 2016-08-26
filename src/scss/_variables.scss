@@ -149,6 +149,20 @@ $type-formatting: (
 		large: 20px,
 		xlarge: 20px,
 	),
+	projects-list-name: (
+		null: (18px, null, 400, 1.5em, null, null),
+		small: 18px,
+		medium: 22px,
+		large: 24px,
+		xlarge: 24px,
+	),
+	projects-list-location: (
+		null: (16px, null, 400, 1.5em, null, null),
+		small: 16px,
+		medium: 18px,
+		large: 20px,
+		xlarge: 20px,
+	),
 	side-nav-parent: (
 		null: (14px, null, 400, 1.5em, null, null),
 		small: 14px,
@@ -183,3 +197,6 @@ $type-formatting-related-project-name: map-get($type-formatting, 'related-projec
 $type-formatting-related-project-location: map-get($type-formatting, 'related-project-location');
 $type-formatting-side-nav-parent: map-get($type-formatting, 'side-nav-parent');
 $type-formatting-side-nav-current: map-get($type-formatting, 'side-nav-current');
+
+$type-formatting-projects-list-name: map-get($type-formatting, 'projects-list-name');
+$type-formatting-projects-list-location: map-get($type-formatting, 'projects-list-location');

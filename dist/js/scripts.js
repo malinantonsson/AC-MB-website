@@ -33,6 +33,11 @@ var site = {
       this.initMap(map);
     }
 
+    var projectsFilter = document.getElementsByClassName('projects-list_filter-button');
+     if(projectsFilter) {
+      this.initProjectsFilter(projectsFilter);
+    }
+
   },
   settings: {
     mapApi: 'AIzaSyBTNCen_4P1hvj3DGYe0eJPa7y1-0emDeQ'
@@ -405,6 +410,17 @@ var site = {
       };
 
 
+  },
+
+  initProjectsFilter: function(button) {
+    var projectFilterBtn = button[0];
+    var filterIsOpenClass = 'filter--is-open';
+    var filterWrapper = document.getElementsByClassName('projects-list_filter');
+
+    projectFilterBtn.addEventListener('click', function(e) {
+      e.preventDefault();
+      $(filterWrapper).toggleClass(filterIsOpenClass);
+    }, false);
   }
 
 };
