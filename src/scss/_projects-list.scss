@@ -158,20 +158,6 @@
 	margin-top: .5em;
 }
 
-.filter--uk {
-	.project-list_item-link:not(.project--uk) {
-		display: none;
-	}
-}
-
-.filter--us .project-list_item-link:not(.project--us) {
-	display: none;
-}
-
-.filter--eu .project-list_item-link:not(.project--eu) {
-	display: none;
-}
-
 
 .projects-list .map {
 	opacity: 0;

@@ -472,9 +472,10 @@ var site = {
     var $activeFilter = document.getElementsByClassName(activeFilterClass)[0];
 
     var $projectsWrapper = document.getElementsByClassName('js-filtered-content_wrapper')[0];
-    var projectsWrapperFilterClass = 'filter--all';
+    //var projectsWrapperFilterClass = 'filter--all';
 
     var filterHiddenClass = 'filter--hidden';
+    var $itemsToFilter = '.js-filter-item';
 
 
     
@@ -489,15 +490,13 @@ var site = {
 
     var setFilter = function(item) {
       item.classList.add(activeFilterClass);
-      $projectsWrapper.classList.add(item.id);
 
       //reset filter before adding new
-      $( ".news-teaser" ).removeClass(filterHiddenClass);
+      $( $itemsToFilter).removeClass(filterHiddenClass);
       if(item.id !== 'filter--all') {
-        $( ".news-teaser" ).filter( ":not(.js-" + item.id + ")" ).addClass( filterHiddenClass );
+        $( $itemsToFilter ).filter( ":not(.js-" + item.id + ")" ).addClass( filterHiddenClass );
       }
       //update current filter
-      projectsWrapperFilterClass = item.id;
       $activeFilter = item;
     };
 
@@ -513,7 +512,6 @@ var site = {
           e.preventDefault();
 
           //remove filters
-          $projectsWrapper.classList.remove(projectsWrapperFilterClass);
           $activeFilter.classList.remove(activeFilterClass);
 
           //add new filter

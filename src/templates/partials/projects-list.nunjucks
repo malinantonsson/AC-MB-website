@@ -38,7 +38,7 @@
 
 		<ul class="projects-list_wrapper js-filtered-content_wrapper filter--all">
 			{% for project in field.projects %}
-				<a href={{project.url}} class="project-list_item-link project--{{project.country}}">
+				<a href={{project.url}} class="project-list_item-link js-filter-item js-filter--{{project.country}}">
 					<li class="projects-list_item">
 						<img src={{project.image}} alt="" class="project-list_item-image">
 						<p class="project-list_item-title">

@@ -1,4 +1,4 @@
-<section class="news-teaser {% for tag in article.tags %} js-filter--{{ tag.id }} {% endfor %}">
+<section class="news-teaser js-filter-item {% for tag in article.tags %} js-filter--{{ tag.id }} {% endfor %}">
 	<a href={{article.url}} class="news-teaser_link">
 		<div class="news-teaser_date-wrapper">
 			<p class="news-teaser_date">
