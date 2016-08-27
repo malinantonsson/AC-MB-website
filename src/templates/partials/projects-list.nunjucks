@@ -1,25 +1,11 @@
 <section class="projects-list">
 		<div class="projects-list_settings">
 			<div class="projects-list_settings-wrapper">
-				<div class="projects-list_filter">
-					<a href="#" class="projects-list_filter-button">
-						Show locations in 
-						<svg class="projects-list_filter-icon filter-icon--is-closed">
-						  <use xlink:href="/icons/sprite.svg#chevron-down-dark"></use>
-						</svg>
+				
 
-						<svg class="projects-list_filter-icon filter-icon--is-opened">
-						  <use xlink:href="/icons/sprite.svg#chevron-up-dark"></use>
-						</svg>
-					</a>
-
-					<ul class="projects-list_filter-wrapper">
-						<li id="filter--uk" class="projects-list_filter-item">United Kingdom</li>
-						<li id="filter--us" class="projects-list_filter-item">United States</li>
-						<li id="filter--eu" class="projects-list_filter-item">Europe</li>
-						<li id="filter--all" class="projects-list_filter-item filter--is-active">All Countries</li>
-					</ul>
-				</div>
+				{% if  field.filters %}
+					{% include "partials/filter.nunjucks" %}
+				{% endif %}
 
 				<div class="projects-list_view-toggle">
 					<a href="#" id="view--map" class="projects-list_view-link projects-list_view-link--map">View projects on map
@@ -36,9 +22,10 @@
 			</div>
 		</div>
 
-		<ul class="projects-list_wrapper js-filtered-content_wrapper filter--all">
+		<ul class="projects-list_wrapper js-filtered-content_wrapper">
 			{% for project in field.projects %}
-				<a href={{project.url}} class="project-list_item-link js-filter-item js-filter--{{project.country}}">
+				<a href={{project.url}} class="project-list_item-link js-filter-item {% for tag in project.tags %} js-filter--{{ tag.id }}{% endfor %}
+				">
 					<li class="projects-list_item">
 						<img src={{project.image}} alt="" class="project-list_item-image">
 						<p class="project-list_item-title">

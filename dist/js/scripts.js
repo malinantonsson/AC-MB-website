@@ -472,7 +472,6 @@ var site = {
     var $activeFilter = document.getElementsByClassName(activeFilterClass)[0];
 
     var $projectsWrapper = document.getElementsByClassName('js-filtered-content_wrapper')[0];
-    //var projectsWrapperFilterClass = 'filter--all';
 
     var filterHiddenClass = 'filter--hidden';
     var $itemsToFilter = '.js-filter-item';

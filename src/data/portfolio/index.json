@@ -23,60 +23,120 @@
 			"name": "projects-list",
 			"lat": "51.50831",
 			"lng": "-0.13959",
+			"filterLabel": "Show locations in: ",
+			"filters": [
+				{
+					"label": "United Kingdom",
+					"id": "uk"
+				},
+				{
+					"label": "United States",
+					"id": "us"
+				},
+				{
+					"label": "Europe",
+					"id": "eu"
+				},
+				{
+					"label": "All countries",
+					"id": "all"
+				}
+
+			],
 			"projects": [
 				{
 					"name": "The Burlington Arcade",
 					"location": "— London, United Kingdom",
-					"country": "uk",
+					"tags": [ 
+						{
+							"label": "United Kingdom",
+							"id": "uk"
+						}
+					],
 					"url": "/portfolio/burlington-arcade.html",
 					"image": "/images/portfolio/portfolio-1.png"
 				},
 				{
 					"name": "Europe",
 					"location": "— Oslo, Norway",
-					"country": "eu",
+					"tags": [ 
+						{
+							"label": "Europe",
+							"id": "eu"
+						}
+					],
 					"url": "/portfolio/burlington-arcade.html",
 					"image": "/images/portfolio/portfolio-1.png"
 				},
 				{
 					"name": "The Burlington Arcade",
 					"location": "— London, United Kingdom",
-					"country": "uk",
+					"tags": [ 
+						{
+							"label": "United Kingdom",
+							"id": "uk"
+						}
+					],
 					"url": "/portfolio/burlington-arcade.html",
 					"image": "/images/portfolio/portfolio-1.png"
 				},
 				{
 					"name": "Europe",
 					"location": "— Oslo, Norway",
-					"country": "eu",
+					"tags": [ 
+						{
+							"label": "Europe",
+							"id": "eu"
+						}
+					],
 					"url": "/portfolio/burlington-arcade.html",
 					"image": "/images/portfolio/portfolio-1.png"
 				},
 				{
 					"name": "The Burlington Arcade",
 					"location": "— London, United Kingdom",
-					"country": "uk",
+					"tags": [ 
+						{
+							"label": "United Kingdom",
+							"id": "uk"
+						}
+					],
 					"url": "/portfolio/burlington-arcade.html",
 					"image": "/images/portfolio/portfolio-1.png"
 				},
 				{
 					"name": "Europe",
 					"location": "— Oslo, Norway",
-					"country": "eu",
+					"tags": [ 
+						{
+							"label": "Europe",
+							"id": "eu"
+						}
+					],
 					"url": "/portfolio/burlington-arcade.html",
 					"image": "/images/portfolio/portfolio-1.png"
 				},
 				{
 					"name": "The Burlington Arcade",
 					"location": "— London, United Kingdom",
-					"country": "uk",
+					"tags": [ 
+						{
+							"label": "United Kingdom",
+							"id": "uk"
+						}
+					],
 					"url": "/portfolio/burlington-arcade.html",
 					"image": "/images/portfolio/portfolio-1.png"
 				},
 				{
 					"name": "United States",
 					"location": "— London, United States",
-					"country": "us",
+					"tags": [ 
+						{
+							"label": "United States",
+							"id": "us"
+						}
+					],
 					"url": "/portfolio/burlington-arcade.html",
 					"image": "/images/portfolio/portfolio-1.png"
 				}
