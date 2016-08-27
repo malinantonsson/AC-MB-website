@@ -79,6 +79,16 @@
 
 .projects-list_view-link--thumbs {
 	display: none;
+
+	.view--thumbs & {
+		display: block;
+	}
+}
+
+.projects-list_view-link--map {
+	.view--thumbs & {
+		display: none;;
+	}
 }
 
 .projects-list_wrapper {
@@ -107,19 +117,6 @@
 	    padding: 0 .5em;
 	}
 }
-
-/* .project-list_item-link {
-
-	@include mq(from, medium) {
-		@include span-columns(6);
-		margin-top: 4em;
-	}
-
-
-	&:nth-child(even) {
-		@include omega();
-	}
-} */
 
 .projects-list_filter {
 	@include span-columns(6);
@@ -170,3 +167,21 @@
 	display: none;
 }
 
+
+.projects-list .map {
+	opacity: 0;
+	position: absolute;
+	z-index: -10;
+}
+
+.projects-list.show--map {
+	.map {
+		opacity: 1;
+		position: relative;
+		z-index: 1;
+	}
+
+	.projects-list_wrapper {
+		display: none;
+	}
+}

@@ -22,12 +22,12 @@
 				</div>
 
 				<div class="projects-list_view-toggle">
-					<a href="#" class="projects-list_view-link projects-list_view-link--map">View projects on map
+					<a href="#" id="view--map" class="projects-list_view-link projects-list_view-link--map">View projects on map
 						<svg class="projects-list_view-link-icon projects-list_view-link--map--icon">
 						  <use xlink:href="/icons/sprite.svg#map-view"></use>
 						</svg>
 					</a>
-					<a href="#" class="projects-list_view-link projects-list_view-link--thumbs">View projects as thumbs
+					<a href="#" id="view--thumbs" class="projects-list_view-link projects-list_view-link--thumbs">View projects as thumbs
 						<svg class="projects-list_view-link-icon projects-list_view-link--thumbs--icon">
 						  <use xlink:href="/icons/sprite.svg#thumb-view"></use>
 						</svg>
@@ -51,4 +51,6 @@
 				</a>
 			{% endfor %}
 		</ul>
+
+		{% include "partials/map.nunjucks" %}
 </section>

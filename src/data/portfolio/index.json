@@ -21,6 +21,8 @@
 		{
 			"id": "projects-list",
 			"name": "projects-list",
+			"lat": "51.50831",
+			"lng": "-0.13959",
 			"projects": [
 				{
 					"name": "The Burlington Arcade",
@@ -85,14 +87,6 @@
 			"name": "quote--background",
 			"quote": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Suspendisse pulvinar, pede eu dictum mollis, lectus augue tristique nulla, ut fringilla lorem metus quis elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos.",
 			"quoteBy": ""
-		},
-		{
-			"id": "map",
-			"name": "map",
-			"projectName": "The Burlington Arcade",
-			"location": "London, United Kingdom",
-			"lat": "51.50831",
-			"lng": "-0.13959"
 		},
 		{
 			"id": "side-nav",

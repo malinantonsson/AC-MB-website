@@ -38,6 +38,11 @@ var site = {
       this.initProjectsFilter(projectsFilter);
     }
 
+    var viewToggle = document.getElementsByClassName('projects-list_view-toggle');
+     if(viewToggle && map) {
+      this.initViewToggle(viewToggle, map);
+    }
+
   },
   settings: {
     mapApi: 'AIzaSyBTNCen_4P1hvj3DGYe0eJPa7y1-0emDeQ'
@@ -456,6 +461,31 @@ var site = {
       e.preventDefault();
       showFilters();
     }, false);
+  },
+
+  initViewToggle: function($wrapper, map) {
+    var viewThumbsClass = 'view--thumbs';
+
+    var $viewLinks = document.getElementsByClassName('projects-list_view-link');
+    var $projectsWrapper = document.getElementsByClassName('projects-list_wrapper')[0];
+
+    var $projectsListContainer = document.getElementsByClassName('projects-list')[0];
+    var showMapClass = 'show--map';
+
+    for(var i = 0; i < $viewLinks.length; i++) {
+      $viewLinks[i].addEventListener('click', function(e) {
+          var self = this;
+          e.preventDefault();
+
+          $($wrapper).toggleClass(viewThumbsClass);
+
+          if(self.id == 'view--map') {
+            $projectsListContainer.classList.add(showMapClass);
+          } else {   
+            $projectsListContainer.classList.remove(showMapClass);
+          }
+        }, false);
+    }
   }
 
 };

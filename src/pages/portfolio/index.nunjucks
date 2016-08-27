@@ -31,10 +31,6 @@
 		 		{% include "partials/quote--background.nunjucks" %}
 		 	{% endif %}
 
-		 	{% if  field.id == 'map' %}
-		 		{% include "partials/map.nunjucks" %}
-		 	{% endif %}
-
 		 	{% if  field.id == 'side-nav' %}
 		 		{% include "partials/side-nav.nunjucks" %}
 		 	{% endif %}
