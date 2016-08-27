@@ -45,7 +45,7 @@
 
 .active .nav_subitem-wrapper{
 	@include mq(from, medium) {
-		display: inline-block;
+		display: block;
 		position: absolute;
 
 		.nav_subitem {

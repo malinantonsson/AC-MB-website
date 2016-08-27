@@ -39,6 +39,8 @@
 }
 
 .side-nav {
+	min-width: 250px;
+	
 	@include mq(from, medium) {
 		clear: both;
 		right: -3em;
