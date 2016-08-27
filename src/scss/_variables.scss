@@ -178,6 +178,13 @@ $type-formatting: (
 		medium: 16px,
 		large: 16px,
 		xlarge: 16px,
+	),
+	news-article-tag: (
+		null: (10px, null, 400, 1.5em, null, null),
+		small: 10px,
+		medium: 10px,
+		large: 10px,
+		xlarge: 10px,
 	)
 );
 
@@ -202,3 +209,5 @@ $type-formatting-side-nav-current: map-get($type-formatting, 'side-nav-current')
 
 $type-formatting-projects-list-name: map-get($type-formatting, 'projects-list-name');
 $type-formatting-projects-list-location: map-get($type-formatting, 'projects-list-location');
+$type-formatting-projects-list-name: map-get($type-formatting, 'projects-list-name');
+$type-formatting-news-article-tag: map-get($type-formatting, 'news-article-tag');

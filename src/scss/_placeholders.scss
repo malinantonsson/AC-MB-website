@@ -73,3 +73,8 @@
 %side-nav-current {
 	@include type-format($type-formatting-side-nav-current);
 }
+
+%news-article-tag {
+	@include type-format($type-formatting-news-article-tag);
+}
+

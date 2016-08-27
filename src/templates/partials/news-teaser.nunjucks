@@ -1,0 +1,21 @@
+<section class="news-teaser {% for tag in article.tags %} news-filter-tag__{{ tag.id }} {% endfor %}">
+	<a href={{article.url}} class="news-teaser_link">
+		<div class="news-teaser_date-wrapper">
+			<p class="news-teaser_date">
+				{{article.dateDisplay}}
+			</p>
+		</div>
+
+		<div class="news-teaser_content">
+			<p class="news-teaser_copy">
+				{{article.copy}}
+			</p>
+			
+			{% for tag in article.tags %}
+				<span class="news-teaser_tag">
+					{{ tag.label }}
+				</span>
+			{% endfor %}
+		</div>
+	</a>
+</section>

@@ -16,6 +16,13 @@
 		 		{% include "partials/news-teaser.nunjucks" %}
 		 	{% endif %}
 
+		 	{% if  field.id == 'articles' %}
+		 		{% for article in field.articles|sort(true, false, 'date') %}
+		 			{% include "partials/news-teaser.nunjucks" %}
+		 		{% endfor %}
+		 	{% endif %}
+
+
 		{% endfor %}
 	</main>
 

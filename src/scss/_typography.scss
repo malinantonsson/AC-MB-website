@@ -211,3 +211,8 @@ a {
   color: $dark-gray;
 }
 
+.news-teaser_tag {
+  @extend %news-article-tag;
+
+}
+
