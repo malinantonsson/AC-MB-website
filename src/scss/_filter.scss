@@ -52,7 +52,9 @@
 
 .filter--is-open {
 	&.js-filter-list_filter {
-		background-color: #fff;
+		@include mq(from, medium) {
+			background-color: #fff;
+		}
 	}	
 
 	.filter-icon--is-closed {

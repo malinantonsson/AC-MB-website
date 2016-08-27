@@ -4,6 +4,10 @@
 }
 
 .page-intro--filter .page-intro_container {
+	@include mq(upto, medium) {
+	    overflow: auto;
+	}
+
 	position: relative;
 	overflow: visible;
 	min-height: 50px;
@@ -13,9 +17,17 @@
 	/* @include span-columns(8);
 	@include shift(4); */
 
-	width: 65.88078%;
-    margin-left: 29%;
+	width: 100%;
+	position: relative;
+	clear: both;
     max-width: 100%;
+
+	@include mq(from, medium) {
+		width: 65.88078%;
+	    margin-left: 29%;
+	    max-width: 100%;
+		position: absolute;
+	}
 }
 
 .page-intro--filter .page-intro_headline-container {

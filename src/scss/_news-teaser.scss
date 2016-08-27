@@ -9,14 +9,20 @@
 }
 
 .news-teaser_date-wrapper {
-	@include span-columns(4);
+	@include span-columns(12);
+	
+	@include mq(from, medium) {
+		@include span-columns(4);
+	}
 }
 
 .news-teaser_date {
 	position: relative;
-    //margin: 0;
     margin-left: 2em;
-    //line-height: 1;
+
+    @include mq(upto, medium) {
+    	margin-bottom: 0;
+    }
 
 	&:before {
 		content: '';
@@ -30,7 +36,11 @@
 }
 
 .news-teaser_content {
-	@include span-columns(8);
+	@include span-columns(12);
+
+	@include mq(from, medium) {
+		@include span-columns(8);
+	}
 
 	&:after {
 		content: '';
