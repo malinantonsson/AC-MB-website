@@ -92,7 +92,7 @@
 		{
 			"id": "side-nav",
 			"name": "side-nav",
-			"field": [
+			"sideNav": [
 				"Portfolio",
 				"Project"
 			]

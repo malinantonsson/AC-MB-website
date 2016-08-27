@@ -80,6 +80,10 @@
 					"url": "#",
 					"image": "/images/portfolio/portfolio-1.png"
 				}
+			],
+			"sideNav": [
+				"Portfolio",
+				"Project thumbs"
 			]
 		},
 		{
@@ -87,14 +91,6 @@
 			"name": "quote--background",
 			"quote": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Suspendisse pulvinar, pede eu dictum mollis, lectus augue tristique nulla, ut fringilla lorem metus quis elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos.",
 			"quoteBy": ""
-		},
-		{
-			"id": "side-nav",
-			"name": "side-nav",
-			"field": [
-				"Portfolio",
-				"Project thumbs"
-			]
 		}
 	]
 }

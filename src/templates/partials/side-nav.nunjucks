@@ -1,5 +1,5 @@
 <div class="side-nav">
-	{% for item in field.field %}
+	{% for item in field.sideNav %}
 		<span class="side-nav_item">
 			{{item}}
 		</span>

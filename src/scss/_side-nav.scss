@@ -51,3 +51,15 @@
 		right: 0;
 	}
 }
+
+.projects-list .side-nav {
+	top: 17em;
+	
+	@media screen and (max-width: 1000px) {
+		display: none;
+	}
+
+	@include mq(from, xlarge) {
+		right: -2em;
+	}
+}

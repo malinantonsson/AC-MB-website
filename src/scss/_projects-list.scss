@@ -1,3 +1,7 @@
+.projects-list {
+	position: relative;
+}
+
 .projects-list_settings {
 	@include mq(upto, medium) {
 		display: none;
@@ -129,6 +133,7 @@
     max-width: 400px;
 
     position: absolute;
+    z-index: map-get($z-index, projects-list-filter);
 }
 
 .projects-list_view-toggle {
@@ -176,12 +181,16 @@
 
 .projects-list.show--map {
 	.map {
-		opacity: 1;
-		position: relative;
-		z-index: 1;
+		@include mq(from, medium) {
+			opacity: 1;
+			position: relative;
+			z-index: map-get($z-index, map-visible);
+		}
 	}
 
 	.projects-list_wrapper {
-		display: none;
+		@include mq(from, medium) {
+			display: none;
+		}
 	}
 }
