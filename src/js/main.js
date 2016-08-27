@@ -279,7 +279,6 @@ var site = {
 
         
           setTimeout(function() {
-            console.log(isCurrentProject);
             if(isCurrentProject) {
              currentProject.overlay.show();
             } else {
@@ -413,13 +412,49 @@ var site = {
   },
 
   initProjectsFilter: function(button) {
-    var projectFilterBtn = button[0];
     var filterIsOpenClass = 'filter--is-open';
-    var filterWrapper = document.getElementsByClassName('projects-list_filter');
+    var activeFilterClass = 'filter--is-active';
 
-    projectFilterBtn.addEventListener('click', function(e) {
+    var $projectFilterBtn = button[0];
+    var $filterWrapper = document.getElementsByClassName('projects-list_filter');    
+    var $filterItems = document.getElementsByClassName('projects-list_filter-item');
+    var $activeFilter = document.getElementsByClassName(activeFilterClass)[0];
+
+    var $projectsWrapper = document.getElementsByClassName('projects-list_wrapper')[0];
+    var projectsWrapperFilterClass = 'filter--all';
+
+    var showFilters = function() {
+      $($filterWrapper).toggleClass(filterIsOpenClass);
+    };
+
+    var setFilter = function(item) {
+      item.classList.add(activeFilterClass);
+      $projectsWrapper.classList.add(item.id);
+
+      //update current filter
+      projectsWrapperFilterClass = item.id;
+      $activeFilter = item;
+    };
+
+    for(var i = 0; i < $filterItems.length; i++) {
+      $filterItems[i].addEventListener('click', function(e) {
+          var self = this;
+          e.preventDefault();
+
+          //remove filters
+          $projectsWrapper.classList.remove(projectsWrapperFilterClass);
+          $activeFilter.classList.remove(activeFilterClass);
+
+          //add new filter
+          setFilter(self);
+          //hide filter box
+          showFilters();
+        }, false);
+    }
+
+    $projectFilterBtn.addEventListener('click', function(e) {
       e.preventDefault();
-      $(filterWrapper).toggleClass(filterIsOpenClass);
+      showFilters();
     }, false);
   }
 

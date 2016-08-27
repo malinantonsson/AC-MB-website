@@ -14,10 +14,10 @@
 					</a>
 
 					<ul class="projects-list_filter-wrapper">
-						<li class="projects-list_filter-item">United Kingdom</li>
-						<li class="projects-list_filter-item">United States</li>
-						<li class="projects-list_filter-item">Europe</li>
-						<li class="projects-list_filter-item filter--is-active">All Countries</li>
+						<li id="filter--uk" class="projects-list_filter-item">United Kingdom</li>
+						<li id="filter--us" class="projects-list_filter-item">United States</li>
+						<li id="filter--eu" class="projects-list_filter-item">Europe</li>
+						<li id="filter--all" class="projects-list_filter-item filter--is-active">All Countries</li>
 					</ul>
 				</div>
 
@@ -36,9 +36,9 @@
 			</div>
 		</div>
 
-		<ul class="projects-list_wrapper">
+		<ul class="projects-list_wrapper filter--all">
 			{% for project in field.projects %}
-				<a href={{project.url}} class="project-list_item-link project--{{field.country}}">
+				<a href={{project.url}} class="project-list_item-link project--{{project.country}}">
 					<li class="projects-list_item">
 						<img src={{project.image}} alt="" class="project-list_item-image">
 						<p class="project-list_item-title">
