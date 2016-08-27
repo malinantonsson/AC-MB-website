@@ -15,6 +15,7 @@ var site = {
     }
 
     var timeZones = document.getElementById('times-container');
+
     if(timeZones) {
       this.initTimezones();
 
@@ -34,7 +35,8 @@ var site = {
     }
 
     var projectsFilter = document.getElementsByClassName('projects-list_filter-button');
-     if(projectsFilter) {
+
+    if(projectsFilter.length > 0) {
       this.initProjectsFilter(projectsFilter);
     }
 
