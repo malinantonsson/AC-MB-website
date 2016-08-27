@@ -36,7 +36,7 @@
 			</div>
 		</div>
 
-		<ul class="projects-list_wrapper filter--all">
+		<ul class="projects-list_wrapper js-filtered-content_wrapper filter--all">
 			{% for project in field.projects %}
 				<a href={{project.url}} class="project-list_item-link project--{{project.country}}">
 					<li class="projects-list_item">

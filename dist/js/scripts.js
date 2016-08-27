@@ -471,8 +471,12 @@ var site = {
     var $filterItems = document.getElementsByClassName('projects-list_filter-item');
     var $activeFilter = document.getElementsByClassName(activeFilterClass)[0];
 
-    var $projectsWrapper = document.getElementsByClassName('projects-list_wrapper')[0];
+    var $projectsWrapper = document.getElementsByClassName('js-filtered-content_wrapper')[0];
     var projectsWrapperFilterClass = 'filter--all';
+
+    var filterHiddenClass = 'filter--hidden';
+
+
     
     if(map) {
       //map defaults to all countries
@@ -487,6 +491,11 @@ var site = {
       item.classList.add(activeFilterClass);
       $projectsWrapper.classList.add(item.id);
 
+      //reset filter before adding new
+      $( ".news-teaser" ).removeClass(filterHiddenClass);
+      if(item.id !== 'filter--all') {
+        $( ".news-teaser" ).filter( ":not(.js-" + item.id + ")" ).addClass( filterHiddenClass );
+      }
       //update current filter
       projectsWrapperFilterClass = item.id;
       $activeFilter = item;

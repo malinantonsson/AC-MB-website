@@ -17,9 +17,11 @@
 		 	{% endif %}
 
 		 	{% if  field.id == 'articles' %}
-		 		{% for article in field.articles|sort(true, false, 'date') %}
-		 			{% include "partials/news-teaser.nunjucks" %}
-		 		{% endfor %}
+			 	<div class="news-teaser_wrapper js-filtered-content_wrapper">
+			 		{% for article in field.articles|sort(true, false, 'date') %}
+			 			{% include "partials/news-teaser.nunjucks" %}
+			 		{% endfor %}
+			 	</div>
 		 	{% endif %}
 
 
@@ -28,6 +30,5 @@
 
 	{% include "partials/footer.nunjucks" %}
 {% endblock %}
-
 
 
