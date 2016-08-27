@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg viewBox="0 0 39 26" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g id="Symbols" stroke="none" stroke-width="1" fill="#ffffff" fill-rule="evenodd">
+        <g id="Navicon_white">
+            <g id="Menu" transform="translate(-1.000000, 3.000000)">
+                <g id="Group">
+                    <path d="M0.431918671,2.31483147 L21.4273938,2.31483147 L21.4273938,0.00713916318 L0.431918671,0.00713916318 L0.431918671,2.31483147 Z M0.431918671,19.8699367 L21.4273938,19.8699367 L21.4273938,17.5622444 L0.431918671,17.5622444 L0.431918671,19.8699367 Z M0.431918671,11.1383398 L28.4258855,11.1383398 L28.4258855,8.83064754 L0.431918671,8.83064754 L0.431918671,11.1383398 Z" id="Menu-Icon"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

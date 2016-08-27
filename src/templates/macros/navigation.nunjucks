@@ -1,15 +1,24 @@
 {% macro active(activePage='home', copyPage='false') %}
 	<nav id="main-navigation" class="nav {%if copyPage == 'true' %} copy-page{% endif %} {%if activePage == 'company' %} has-subnav{% endif %}"">
 	<button id="toggle-nav" class="nav_button">
-		<svg class="nav_icon nav_button--open">
+		<svg class="nav_icon nav_button--open nav nav_icon--white">
 		  <use xlink:href="/icons/sprite.svg#navicon-white"></use>
 		</svg>
+		<svg class="nav_icon nav_button--open nav nav_icon--dark">
+		  <use xlink:href="/icons/sprite.svg#navicon-dark"></use>
+		</svg>
+
+
 		<svg class="nav_icon nav_button--close">
 		  <use xlink:href="/icons/sprite.svg#close-white"></use>
 		</svg>
 	</button>
-	<svg class="nav_icon--logo logo-xs">
+	<svg class="nav_icon--logo logo-xs logo-xs--white">
 	  <use xlink:href="/icons/sprite.svg#logo-white"></use>
+	</svg>
+
+	<svg class="nav_icon--logo logo-xs logo-xs--dark">
+	  <use xlink:href="/icons/sprite.svg#logo-dark"></use>
 	</svg>
 		<ul class="nav_wrapper">  
 		    <li class="nav_item {%if activePage == 'company' %} active show-subnav{% endif %}">
@@ -54,8 +63,12 @@
 	    	<!-- Repeat for about and contact -->
 		    <li href="#" class="nav_item {%if activePage == 'home' %} is-active {% endif %} nav-item--home">
 				<a href="/" class="nav_item-link">
-				  	<svg class="nav_icon--logo logo-xl">
+				  	<svg class="nav_icon--logo logo-xl logo--white">
 					  <use xlink:href="/icons/sprite.svg#xl-logo-white"></use>
+					</svg>
+
+					<svg class="nav_icon--logo logo-xl logo--dark">
+					  <use xlink:href="/icons/sprite.svg#xl-logo-dark"></use>
 					</svg>
 				</a>
 		  	</li>

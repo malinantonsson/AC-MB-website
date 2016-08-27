@@ -84,6 +84,11 @@ var svgConfig = {
   }
 };
 
+gulp.task('copy-icons', function() {
+  gulp.src(iconSrc)
+      .pipe(gulp.dest(iconDist));
+});
+
 gulp.task('icons', function() {
   gulp.src(iconSrc)
       .pipe(svgSprite(svgConfig))
@@ -214,6 +219,7 @@ gulp.task('default', ['clean'], function (cb) {
       'copy-styles',
       'copy-fonts',
       'icons',
+      'copy-icons',
       'images',
       'scripts',
       'copy-scripts',
