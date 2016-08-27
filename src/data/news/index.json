@@ -1,0 +1,79 @@
+{
+	"name": "News",
+	"fields": [
+		{
+			"id": "page-intro--filter",
+			"name": "page-intro--filter",
+			"headline": "News",
+			"introCopy": "",
+			"copy": "",
+			"filterLabel": "Filter By: ",
+			"filters": [
+				{
+					"label": "Investments only",
+					"id": "investments"
+				},
+				{
+					"label": "Europe only",
+					"id": "europe"
+				},
+				{
+					"label": "Global reach",
+					"id": "global"
+				},
+				{
+					"label": "All articles",
+					"id": "all"
+				}
+
+			]
+		},
+		{
+			"id": "news-teaser",
+			"name": "news-teaser",
+			"dateDisplay": "20 July 2016",
+			"date": "20-07-2016",
+			"copy": "Meyer Bergman Fund Sells Czech Shopping Centre to New Europe Property Investments for €82.6 Million",
+			"tags": [ 
+				"Europe",
+				"Investments"
+			],
+			"url": "#"
+		},
+		{
+			"id": "news-teaser",
+			"name": "news-teaser",
+			"dateDisplay": "20 July 2016",
+			"date": "20-07-2016",
+			"copy": "Meyer Bergman Fund Sells Czech Shopping Centre to New Europe Property Investments for €82.6 Million",
+			"tags": [ 
+				"Europe",
+				"Investments"
+			],
+			"url": "#"
+		},
+		{
+			"id": "news-teaser",
+			"name": "news-teaser",
+			"dateDisplay": "19 July 2016",
+			"date": "19-07-2016",
+			"copy": "Meyer Bergman Fund Sells Czech Shopping Centre to New Europe Property Investments for €82.6 Million",
+			"tags": [ 
+				"Europe",
+				"Investments"
+			],
+			"url": "#"
+		},
+		{
+			"id": "news-teaser",
+			"name": "news-teaser",
+			"dateDisplay": "18 July 2016",
+			"date": "18-07-2016",
+			"copy": "Meyer Bergman Fund Sells Czech Shopping Centre to New Europe Property Investments for €82.6 Million",
+			"tags": [ 
+				"Investments"
+			],
+			"url": "#"
+		}
+	]
+}

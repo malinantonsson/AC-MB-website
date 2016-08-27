@@ -1,0 +1,18 @@
+.page-intro--filter {
+	overflow: visible;
+}
+
+.page-intro--filter .page-intro_container {
+	position: relative;
+	overflow: visible;
+	min-height: 50px;
+}
+
+.page-intro--filter .projects-list_filter {
+	/* @include span-columns(8);
+	@include shift(4); */
+
+	width: 65.88078%;
+    margin-left: 34.11922%;
+    max-width: 100%;
+}

@@ -1,0 +1,271 @@
+<!-- layout.nunjucks -->
+
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+        <!-- Place favicon.ico in the root directory -->
+
+        <link rel="stylesheet" href="/css/normalize.css">
+        <link rel="stylesheet" href="/css/main.css">
+        <script src="/js/vendor/modernizr-2.8.3.min.js"></script>
+    </head>
+    <body>
+        <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <!-- You write code for this content block in another file -->
+  		
+	
+		<!-- Creating the navigation with activePage = 'news' -->
+		
+	<nav id="main-navigation" class="nav  copy-page "">
+	<button id="toggle-nav" class="nav_button">
+		<svg class="nav_icon nav_button--open nav nav_icon--white">
+		  <use xlink:href="/icons/sprite.svg#navicon-white"></use>
+		</svg>
+		<svg class="nav_icon nav_button--open nav nav_icon--dark">
+		  <use xlink:href="/icons/sprite.svg#navicon-dark"></use>
+		</svg>
+
+
+		<svg class="nav_icon nav_button--close">
+		  <use xlink:href="/icons/sprite.svg#close-white"></use>
+		</svg>
+	</button>
+	<svg class="nav_icon--logo logo-xs logo-xs--white">
+	  <use xlink:href="/icons/sprite.svg#logo-white"></use>
+	</svg>
+
+	<svg class="nav_icon--logo logo-xs logo-xs--dark">
+	  <use xlink:href="/icons/sprite.svg#logo-dark"></use>
+	</svg>
+		<ul class="nav_wrapper">  
+		    <li class="nav_item ">
+			  <a href="/company/" class="nav_item-link">
+			  	Company
+			  </a>
+			  <ul class="nav_subitem-wrapper">
+			  	<li class="nav_subitem">
+			  		<a href="#" class="nav_subitem-link">
+			  			About us
+			  		</a>
+			  	</li>
+			  	<li class="nav_subitem">
+			  		<a href="#" class="nav_subitem-link">
+			  			Team
+			  		</a>
+			  	</li>
+			  </ul>
+	  		</li>
+		    <li class="nav_item ">
+				<a href="/portfolio/" class="nav_item-link">
+			  		Portfolio
+			  	</a>
+		    </li>
+		    <li href="#" class="nav_item  active ">
+		    	<a href="#" class="nav_item-link">
+			  		News
+			  	</a>
+			</li>
+		    <li href="#" class="nav_item ">
+				<a href="#" class="nav_item-link">
+			  	Contact
+			  	</a>
+		    </li>
+
+		    <li href="#" class="nav_item  nav-item--disabled">
+				<a href="#" class="nav_item-link">
+			  		Login
+			  	</a>
+		    </li>
+	    	
+	    	<!-- Repeat for about and contact -->
+		    <li href="#" class="nav_item  nav-item--home">
+				<a href="/" class="nav_item-link">
+				  	<svg class="nav_icon--logo logo-xl logo--white">
+					  <use xlink:href="/icons/sprite.svg#xl-logo-white"></use>
+					</svg>
+
+					<svg class="nav_icon--logo logo-xl logo--dark">
+					  <use xlink:href="/icons/sprite.svg#xl-logo-dark"></use>
+					</svg>
+				</a>
+		  	</li>
+	    </ul>
+	</nav>
+
+
+	<main id="container">
+		
+		 	
+		 		<div class="page-intro page-intro--filter">
+	<div class="page-intro_container">
+		
+			<div class="page-intro_headline-container">		
+				<h2 class="page-intro_headline">
+					News 
+				</h2>
+			</div>
+		
+
+		
+			<div class="projects-list_filter">
+	<a href="#" class="projects-list_filter-button">
+		Filter By: 
+		<svg class="projects-list_filter-icon filter-icon--is-closed">
+		  <use xlink:href="/icons/sprite.svg#chevron-down-dark"></use>
+		</svg>
+
+		<svg class="projects-list_filter-icon filter-icon--is-opened">
+		  <use xlink:href="/icons/sprite.svg#chevron-up-dark"></use>
+		</svg>
+	</a>
+
+	<ul class="projects-list_filter-wrapper">
+		
+			<li id="filter--investments" class="projects-list_filter-item ">Investments only</li>
+		
+			<li id="filter--europe" class="projects-list_filter-item ">Europe only</li>
+		
+			<li id="filter--global" class="projects-list_filter-item ">Global reach</li>
+		
+			<li id="filter--all" class="projects-list_filter-item  filter--is-active ">All articles</li>
+		
+	</ul>
+</div>
+		
+
+	</div>
+</div>
+		 	
+		 	
+
+		
+		 	
+		 	
+		 		
+		 	
+
+		
+		 	
+		 	
+		 		
+		 	
+
+		
+		 	
+		 	
+		 		
+		 	
+
+		
+		 	
+		 	
+		 		
+		 	
+
+		
+	</main>
+
+	<footer class="footer">
+	<div class="footer-container">
+		<div class="footer_logo">
+			<svg class="footer_icon--logo logo-xs">
+			  <use xlink:href="/icons/sprite.svg#logo-white"></use>
+			</svg>
+
+			<p class="footer_logo-title">
+				Meyer Bergman
+			</p>
+		</div>
+
+		<div class="footer_info">
+			<div class="footer-info_block-one">
+				<p class="footer_headline">
+					Meyer Bergman Affiliates
+				</p>
+
+				<a href="#" class="footer_item-link">
+					Meyer Homes 
+					<svg class="icon arrow-right">
+					  <use xlink:href="/icons/sprite.svg#chevron-right"></use>
+					</svg>
+				</a>
+
+				<a href="#" class="footer_item-link">
+					VIA Outlets
+					<svg class="icon arrow-right">
+					  <use xlink:href="/icons/sprite.svg#chevron-right"></use>
+					</svg>
+				</a>
+			</div>
+		
+			<div class="footer-info_block-two">
+				<p class="footer_headline">
+					Meyer Bergman
+				</p>
+
+				<p class="footer_item-address">
+					<span class="footer_item-address-line">20 Air Street,</span>
+					<span class="footer_item-address-line">London,</span>
+					<span class="footer_item-address-line">W1B 5AN,</span>
+				</p>
+
+				<p class="footer_item-copyright">
+					<span class="footer_item-copyright-line">© 2016 Meyer Bergman.</span>
+					<span class="footer_item-copyright-line">All rights reserved</span>
+				</p>
+
+				<p class="footer_item-terms">
+					<a href="/terms-and-conditions.html" class="footer_item-terms-link">
+						Terms
+					</a> |
+					<a href="/terms-and-conditions.html#Privacy" class="footer_item-terms-link">
+						Privacy
+					</a> 
+				</p>
+			</div>
+		</div>
+	</div>
+</footer>
+
+
+        <script src="https://code.jquery.com/jquery-1.12.2.min.js"></script>
+        <script>window.jQuery || document.write('<script src="/js/vendor/jquery-1.12.2.min.js"><\/script>')</script>
+
+        <script defer src="/js/vendor/svgxuse.min.js"></script>
+        <script defer src="/js/vendor/jquery.youtubebackground.js"></script>
+        
+       <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.14.1/moment.min.js" type="text/javascript" charset="utf-8"></script>
+       <!-- <script src="/js/vendor/moment-timezone.min.js"></script> -->
+       <script src="/js/vendor/moment-timezone-with-data-2010-2020.min.js"></script>
+        <!--<script defer src="https://www.youtube.com/iframe_api"></script>-->
+
+        <!--[if IE 9]>
+            <script defer src="/js/vendor/svg4everybody.min.js"></script>
+            <script>svg4everybody();</script>
+        <![endif]-->
+        
+
+        <script 
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBTNCen_4P1hvj3DGYe0eJPa7y1-0emDeQ">
+        </script> 
+        
+        <script src="/js/scripts.js"></script>
+
+        <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+        <script>
+            window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
+            ga('create','UA-XXXXX-Y','auto');ga('send','pageview')
+        </script>
+        <script src="https://www.google-analytics.com/analytics.js" async defer></script>
+    </body>
+</html>

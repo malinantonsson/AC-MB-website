@@ -1,0 +1,26 @@
+<!-- index.nunjucks -->
+{% extends "layout.nunjucks" %}
+
+
+{% block content %}
+	{% import 'macros/navigation.nunjucks' as nav %}
+		<!-- Creating the navigation with activePage = 'news' -->
+		{{nav.active('news', 'true')}}
+
+	<main id="container">
+		{% for field in fields %}
+		 	{% if  field.id == 'page-intro--filter' %}
+		 		{% include "partials/page-intro--filter.nunjucks" %}
+		 	{% endif %}
+		 	{% if  field.id == 'news-teaser' %}
+		 		{% include "partials/news-teaser.nunjucks" %}
+		 	{% endif %}
+
+		{% endfor %}
+	</main>
+
+	{% include "partials/footer.nunjucks" %}
+{% endblock %}
+
+
+

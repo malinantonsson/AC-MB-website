@@ -37,7 +37,7 @@ var site = {
     var projectsFilter = document.getElementsByClassName('projects-list_filter-button');
 
     if(projectsFilter.length > 0) {
-      this.initProjectsFilter(projectsFilter);
+      this.initProjectsFilter(projectsFilter, map);
     }
 
     var viewToggle = document.getElementsByClassName('projects-list_view-toggle');
@@ -462,7 +462,7 @@ var site = {
 
   
 
-  initProjectsFilter: function(button) {
+  initProjectsFilter: function(button, map) {
     var filterIsOpenClass = 'filter--is-open';
     var activeFilterClass = 'filter--is-active';
 
@@ -474,8 +474,10 @@ var site = {
     var $projectsWrapper = document.getElementsByClassName('projects-list_wrapper')[0];
     var projectsWrapperFilterClass = 'filter--all';
     
-    //map defaults to all countries
-    site.map.moveMap('all');
+    if(map) {
+      //map defaults to all countries
+      site.map.moveMap('all');
+    }
 
     var showFilters = function() {
       $($filterWrapper).toggleClass(filterIsOpenClass);
@@ -494,8 +496,10 @@ var site = {
       $filterItems[i].addEventListener('click', function(e) {
           
           var self = this;
-          var filterId = self.id.replace('filter--', '');
-          site.map.moveMap(filterId);
+          if(map) {
+            var filterId = self.id.replace('filter--', '');
+            site.map.moveMap(filterId);
+          }
 
           e.preventDefault();
 
