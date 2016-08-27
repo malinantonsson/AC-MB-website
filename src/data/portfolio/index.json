@@ -9,7 +9,7 @@
 			"headline": "The Burlington Arcade",
 			"location": "— London, United Kingdom",
 			"ctaCopy": "View Project",
-			"url": "#"
+			"url": "/portfolio/burlington-arcade.html"
 		},
 		{
 			"id": "page-intro--full-width",
@@ -28,56 +28,56 @@
 					"name": "The Burlington Arcade",
 					"location": "— London, United Kingdom",
 					"country": "uk",
-					"url": "#",
+					"url": "/portfolio/burlington-arcade.html",
 					"image": "/images/portfolio/portfolio-1.png"
 				},
 				{
 					"name": "Europe",
 					"location": "— Oslo, Norway",
 					"country": "eu",
-					"url": "#",
+					"url": "/portfolio/burlington-arcade.html",
 					"image": "/images/portfolio/portfolio-1.png"
 				},
 				{
 					"name": "The Burlington Arcade",
 					"location": "— London, United Kingdom",
 					"country": "uk",
-					"url": "#",
+					"url": "/portfolio/burlington-arcade.html",
 					"image": "/images/portfolio/portfolio-1.png"
 				},
 				{
 					"name": "Europe",
 					"location": "— Oslo, Norway",
 					"country": "eu",
-					"url": "#",
+					"url": "/portfolio/burlington-arcade.html",
 					"image": "/images/portfolio/portfolio-1.png"
 				},
 				{
 					"name": "The Burlington Arcade",
 					"location": "— London, United Kingdom",
 					"country": "uk",
-					"url": "#",
+					"url": "/portfolio/burlington-arcade.html",
 					"image": "/images/portfolio/portfolio-1.png"
 				},
 				{
 					"name": "Europe",
 					"location": "— Oslo, Norway",
 					"country": "eu",
-					"url": "#",
+					"url": "/portfolio/burlington-arcade.html",
 					"image": "/images/portfolio/portfolio-1.png"
 				},
 				{
 					"name": "The Burlington Arcade",
 					"location": "— London, United Kingdom",
 					"country": "uk",
-					"url": "#",
+					"url": "/portfolio/burlington-arcade.html",
 					"image": "/images/portfolio/portfolio-1.png"
 				},
 				{
 					"name": "United States",
 					"location": "— London, United States",
 					"country": "us",
-					"url": "#",
+					"url": "/portfolio/burlington-arcade.html",
 					"image": "/images/portfolio/portfolio-1.png"
 				}
 			],
