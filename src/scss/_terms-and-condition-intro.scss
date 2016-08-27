@@ -1,0 +1,9 @@
+.page-intro--terms-and-conditions {
+	@include mq(upto, medium) {
+		background-color: #fff;
+	}
+
+	.page-intro_headline-container {
+		@include span-columns(12);
+	}
+}

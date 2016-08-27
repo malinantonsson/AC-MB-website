@@ -1,0 +1,14 @@
+<div class="body-copy body-copy--privacy">
+	<div class="body-copy_container">
+		<div class="body-copy_headline-container">
+			{% if  field.headline %}
+				<h3 id="{{field.headline}}" class="body-copy_headline">
+					{{field.headline}} 
+				</h3>
+			{% endif %}
+		</div>
+		<div class="body-copy_content">
+			{{ field.copy|safe }} 
+		</div>
+	</div>
+</div>

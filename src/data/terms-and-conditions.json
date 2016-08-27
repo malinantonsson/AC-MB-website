@@ -1,0 +1,24 @@
+{
+	"name": "Terms and conditions",
+	"fields": [
+		{
+			"id": "terms-and-condition-intro",
+			"name": "terms-and-condition-intro",
+			"headline": "Terms & Conditions",
+			"introCopy": "",
+			"copy": ""
+		},
+		{
+			"id": "body-copy--privacy",
+			"name": "body-copy--privacy",
+			"headline": "",
+			"copy": "<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Suspendisse pulvinar, pede eu dictum mollis, lectus augue tristique nulla, ut fringilla lorem metus quis elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Proin quis velit. Vivamus ut purus. Nulla tempor eleifend leo. Nunc non neque. Etiam nibh quam, vulputate ut, scelerisque eu, bibendum et, dolor. Nunc non mi eget neque semper blandit. Nunc ac metus. Morbi aliquet est eu nisi. Maecenas id nisl. Cras eu ipsum quis est consequat volutpat. Curabitur id arcu eu lacus accumsan tempus. Mauris tristique.</p> <p>Donec vitae ligula non augue dapibus elementum. Suspendisse metus. Donec tincidunt nisi et tortor. Aliquam erat volutpat. Duis fermentum. Curabitur et sapien nec risus tempus tempor. Aenean sit amet pede. Sed erat. Nunc fermentum orci ut felis. Aliquam sodales velit id diam. Maecenas tincidunt euismod nibh. Praesent vitae est. Praesent vel erat et mi sollicitudin rhoncus. Morbi scelerisque tincidunt quam. Etiam nec erat ac enim condimentum adipiscing. Ut a augue bibendum odio facilisis pretium.</p><p>Vestibulum cursus ultricies sem. Nulla sit amet pede. Nunc at sem et augue pretium suscipit. Curabitur ut purus at neque molestie accumsan. Etiam malesuada elementum nibh. Suspendisse faucibus. Suspendisse sagittis pulvinar metus. Sed tempus, felis eget cursus sodales, odio arcu bibendum urna, nec porta ante odio eu mi. Nulla iaculis semper erat. Integer varius, enim cursus tristique scelerisque, turpis massa adipiscing lacus, et posuere erat quam vitae ante. Aenean iaculis eleifend quam. Duis interdum tempor diam. Nulla facilisi. Morbi molestie ante semper sapien. Vivamus venenatis. Etiam rutrum ligula a est. Nulla vehicula. Vivamus nulla tortor, dapibus a, pellentesque quis, cursus vel, elit.</p><p>Morbi varius. Curabitur neque turpis, suscipit quis, pellentesque vel, accumsan nec, elit. Proin arcu quam, porttitor et, fringilla eu, aliquet ac, enim. Integer pede nisi, feugiat et, tincidunt vitae, aliquet porttitor, nibh. Morbi et est ultricies est convallis feugiat. Sed quis velit. Fusce consequat, sem malesuada iaculis.</p>"
+		},
+		{
+			"id": "body-copy--privacy",
+			"name": "body-copy--privacy",
+			"headline": "Privacy",
+			"copy": "<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Suspendisse pulvinar, pede eu dictum mollis, lectus augue tristique nulla, ut fringilla lorem metus quis elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Proin quis velit. Vivamus ut purus. Nulla tempor eleifend leo. Nunc non neque. Etiam nibh quam, vulputate ut, scelerisque eu, bibendum et, dolor. Nunc non mi eget neque semper blandit. Nunc ac metus. Morbi aliquet est eu nisi. Maecenas id nisl. Cras eu ipsum quis est consequat volutpat. Curabitur id arcu eu lacus accumsan tempus. Mauris tristique.</p><p>Donec vitae ligula non augue dapibus elementum. Suspendisse metus. Donec tincidunt nisi et tortor. Aliquam erat volutpat. Duis fermentum. Curabitur et sapien nec risus tempus tempor. Aenean sit amet pede. Sed erat. Nunc fermentum orci ut felis. Aliquam sodales velit id diam. Maecenas tincidunt euismod nibh. Praesent vitae est. Praesent vel erat et mi sollicitudin rhoncus. Morbi scelerisque tincidunt quam. Etiam nec erat ac enim condimentum adipiscing. Ut a augue bibendum odio facilisis pretium.</p><p>Vestibulum cursus ultricies sem. Nulla sit amet pede. Nunc at sem et augue pretium suscipit. Curabitur ut purus at neque molestie accumsan. Etiam malesuada elementum nibh. Suspendisse faucibus. Suspendisse sagittis pulvinar metus. Sed tempus, felis eget cursus sodales, odio arcu bibendum urna.</p>"
+		}
+	]
+}

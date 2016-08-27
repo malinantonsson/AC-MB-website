@@ -1,0 +1,17 @@
+.body-copy--privacy {
+	.body-copy_content {
+		@include shift(0);
+	}
+
+	.body-copy_headline-container {
+		@include span-columns(12);
+	}
+
+	.body-copy_headline {
+		margin-bottom: 1em;
+	}
+}
+
+.body-copy--privacy + .body-copy--privacy {
+	padding-top: 0;
+}
