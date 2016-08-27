@@ -1,10 +1,10 @@
-.full-width-image-quote {
+.full-width-image-quote { 
 	color: #fff;
 	@include component-wrapper();
 
-	@include mq(upto, medium) {
+	@media screen and (max-width: 850px) {
 		overflow: hidden;
-		min-height: 232px;
+		min-height: 235px;
 	}
 
 	position: relative;
@@ -17,13 +17,13 @@
 
 
 .full-width-image-quote_image {
-	@include mq(upto, medium) {
+	@media screen and (max-width: 850px) {
 		@include center-crop-absolute();
 		position: absolute;
-		max-height: 232px;
+		max-height: 235px;
 	}
 
-	@include mq(from, medium) {
+	@media screen and (min-width: 851px) {
 		width: 100%;
 	}
 }

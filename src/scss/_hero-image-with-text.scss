@@ -5,25 +5,25 @@
 .hero-image-with-text {
 	position: relative;
 	overflow: visible;
-	@include mq(upto, medium) {
+	@include mq(upto, small) {
 		min-height: 318px;
 	}
 	
-	@include mq(from, medium) {
+	@include mq(from, small) {
 		@include fluid-image-container(map-deep-get($image-sizes, hero-image-with-text, width), map-deep-get($image-sizes, hero-image-with-text, height));
 	}
 }
 
 .hero-image-with-text_image {
 	vertical-align: bottom;
-	@include mq(upto, medium) {
+	@include mq(upto, small) {
 		min-height: 318px;
 		max-height: 318px;
 		position: absolute;
    	 	@include center-crop-absolute();
 	}
 
-	@include mq(from, medium) {
+	@include mq(from, small) {
 		max-width: 100%;
 	}
 }
