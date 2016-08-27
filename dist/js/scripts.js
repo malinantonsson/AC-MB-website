@@ -34,7 +34,7 @@ var site = {
       this.map.initMap(map);
     }
 
-    var projectsFilter = document.getElementsByClassName('projects-list_filter-button');
+    var projectsFilter = document.getElementsByClassName('js-filter-list_filter-button');
 
     if(projectsFilter.length > 0) {
       this.initProjectsFilter(projectsFilter, map);
@@ -467,8 +467,8 @@ var site = {
     var activeFilterClass = 'filter--is-active';
 
     var $projectFilterBtn = button[0];
-    var $filterWrapper = document.getElementsByClassName('projects-list_filter');    
-    var $filterItems = document.getElementsByClassName('projects-list_filter-item');
+    var $filterWrapper = document.getElementsByClassName('js-filter-list_filter');    
+    var $filterItems = document.getElementsByClassName('js-filter-list_filter-item');
     var $activeFilter = document.getElementsByClassName(activeFilterClass)[0];
 
     var $projectsWrapper = document.getElementsByClassName('js-filtered-content_wrapper')[0];

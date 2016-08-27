@@ -9,11 +9,15 @@
 	min-height: 50px;
 }
 
-.page-intro--filter .projects-list_filter {
+.page-intro--filter .js-filter-list_filter {
 	/* @include span-columns(8);
 	@include shift(4); */
 
 	width: 65.88078%;
     margin-left: 29%;
     max-width: 100%;
+}
+
+.page-intro--filter .page-intro_headline-container {
+    padding-top: 1em;
 }

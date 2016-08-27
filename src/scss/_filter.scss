@@ -1,3 +1,79 @@
 .filter--hidden {
 	display: none;
 }
+
+.js-filter-list_filter-button {
+	float: left;
+
+	&:after {
+		display: block;
+		content: '';
+		background-color: $dark-gray;
+		width: 4.5em;
+		height: 1px;
+		margin-top: .5em;
+	}
+}
+
+.filter-list_filter-icon {
+	width: .7em;
+    height: 0.4em;
+    margin-left: .4em;
+}
+
+.filter-list_filter-wrapper {
+	display: inline;
+	margin: 0;
+    margin-left: 3em;
+    padding: 0;
+}
+
+.js-filter-list_filter-item {
+	display: none;
+    margin-bottom: 1em;
+
+	.filter--is-open & {
+		display: block;
+	}
+
+	.filter--is-open &:hover {
+		text-decoration: underline;
+		cursor: pointer;
+	}
+}
+
+.filter--is-active {
+	display: inline;
+}
+
+.filter-icon--is-opened {
+	display: none;
+}
+
+.filter--is-open {
+	&.js-filter-list_filter {
+		background-color: #fff;
+	}	
+
+	.filter-icon--is-closed {
+		display: none;
+	}
+
+	.filter-icon--is-opened {
+		display: inline-block;
+	}
+}
+
+.js-filter-list_filter {
+	@include span-columns(6);
+
+	display: flex;
+    align-items: baseline;
+    padding: 1em 2em;
+    margin-left: -2em;
+
+    max-width: 400px;
+
+    position: absolute;
+    z-index: map-get($z-index, projects-list-filter);
+}
