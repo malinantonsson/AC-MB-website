@@ -557,15 +557,21 @@ var site = {
   },
 
   loadMore: function(button) {
-    console.log(button);
     var $loadMoreButton = button[0];
     var $loadMoreWrapper = $loadMoreButton.closest('.load-more');
-    var maxItemsToDShow = 5;
+    var maxItemsToShow = 5;
+    var currentlyShowing;
 
     var $newsItems = $( 'body' ).find('.js-filter-item');
-    console.log($newsItems);
 
-    if( $newsItems.length > maxItemsToDShow ) {
+    if( $newsItems.length > maxItemsToShow ) {
+      for (var i = 0; i < $newsItems.length; i++) {
+        if (i >= 5) {
+          $newsItems[i].style.display = 'none';
+        }
+      }
+      
+      currentlyShowing = 5;
 
     } else {
       $loadMoreWrapper.style.display = 'none';
@@ -573,8 +579,18 @@ var site = {
 
     $loadMoreButton.addEventListener('click', function(e) {
       e.preventDefault();
+      for (var i = 0; i < $newsItems.length; i++) {
+        if (i <= currentlyShowing + maxItemsToShow ) {
+          $newsItems[i].style.display = 'block';
+        }
+      }
 
-      console.log('load more clicked');
+      currentlyShowing = currentlyShowing + maxItemsToShow;
+
+      if( $newsItems.length < currentlyShowing ) {
+        $loadMoreWrapper.style.display = 'none';
+      }
+      
     });
   }
 
