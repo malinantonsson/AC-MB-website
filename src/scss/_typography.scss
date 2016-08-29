@@ -204,7 +204,8 @@ a {
 }
 
 .js-filter-list_filter-button,
-.projects-list_view-link {
+.projects-list_view-link,
+.load-more_link {
   @extend %paragraph-lead;
   font-family: "Cormorant-Italic", sans-serif;
   font-style: italic;

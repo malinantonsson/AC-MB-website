@@ -12,9 +12,6 @@
 		 	{% if  field.id == 'page-intro--filter' %}
 		 		{% include "partials/page-intro--filter.nunjucks" %}
 		 	{% endif %}
-		 	{% if  field.id == 'news-teaser' %}
-		 		{% include "partials/news-teaser.nunjucks" %}
-		 	{% endif %}
 
 		 	{% if  field.id == 'articles' %}
 			 	<div class="news-teaser_wrapper js-filtered-content_wrapper">
@@ -22,6 +19,10 @@
 			 			{% include "partials/news-teaser.nunjucks" %}
 			 		{% endfor %}
 			 	</div>
+		 	{% endif %}
+
+		 	{% if  field.id == 'load-more' %}
+		 		{% include "partials/load-more.nunjucks" %}
 		 	{% endif %}
 
 

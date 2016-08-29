@@ -1,0 +1,14 @@
+@mixin dot() {
+	position: relative;
+
+	&:before {
+		left: -1.2em;
+	    content: '';
+	    display: block;
+	    width: 4px;
+	    height: 4px;
+	    border-radius: 50%;
+	    background-color: $dark-gray;
+	    @include vertical-align(absolute);
+	}
+}

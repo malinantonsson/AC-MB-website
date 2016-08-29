@@ -2,6 +2,7 @@
 @import "mixins/neat/neat"; // adding neat grid cos bootstrap sucks
 @import "base/neat-grid-settings";
 
+@import 'mixins/dot';
 @import 'mixins/typography';
 @import 'mixins/map-deep-get';
 @import 'mixins/media';
@@ -18,34 +19,44 @@
 @import 'placeholders';
 
 /* components */
-@import 'nav';
-@import 'button';
-@import 'header';
-@import 'footer';
 @import 'background-video';
-@import 'times';
-@import 'featured-project';
-@import 'hero-text';
-@import 'page-intro';
-@import 'page-intro--filter';
-@import 'terms-and-condition-intro';
 @import 'body-copy--odd';
 @import 'body-copy';
 @import 'body-copy--background';
 @import 'body-copy--privacy';
+@import 'button';
+
+@import 'featured-project';
+@import 'filter';
+@import 'footer';
 @import 'full-width-image-quote';
+@import 'full-width-image--slim';
+
+@import 'header';
 @import 'hero-image-with-text';
+@import 'hero-text';
+
+@import 'image-gallery';
+@import 'load-more';
+
+@import 'maps';
+@import 'nav';
+@import 'news-teaser';
+
+@import 'page-intro';
+@import 'page-intro--filter';
 @import 'project-header';
 @import 'project-info';
-@import 'full-width-image--slim';
-@import 'quote--background';
-@import 'image-gallery';
-@import 'maps';
-@import 'related-projects';
-@import 'side-nav';
 @import 'projects-list';
-@import 'news-teaser';
-@import 'filter';
+
+@import 'quote--background';
+
+@import 'related-projects';
+
+@import 'side-nav';
+
+@import 'terms-and-condition-intro';
+@import 'times';
 
 
 body {

@@ -1,0 +1,10 @@
+{% if  field.loadMore %}
+
+	<div class="load-more" data-max-items={{field.maxItemsDisplayed}}>
+		<a role="button" href="#" class="load-more_link">
+			{{field.loadMoreLabel}}
+		</a>
+
+	</div>
+
+{% endif %}

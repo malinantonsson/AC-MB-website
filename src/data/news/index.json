@@ -101,6 +101,13 @@
 					"url": "#"
 				}
 			]
+		},
+		{
+			"id": "load-more",
+			"name": "load-more",
+			"loadMore": true,
+			"maxItemsDisplayed": 5,
+			"loadMoreLabel": "Load more"
 		}
 	]
 }

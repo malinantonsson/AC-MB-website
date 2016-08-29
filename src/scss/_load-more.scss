@@ -1,0 +1,16 @@
+.load-more {
+	background-color: $accent-colour;
+	text-align: center;
+	margin-top: 1em;
+
+	padding: 1em;
+
+	@include mq(from, medium) {
+		padding: 2em;
+	}
+}
+
+.load-more_link {
+	color: $dark-gray;
+	@include dot();
+}

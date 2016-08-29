@@ -45,6 +45,11 @@ var site = {
       this.initViewToggle(viewToggle, map);
     }
 
+    var loadMoreLink = document.getElementsByClassName('load-more_link');
+    if( loadMoreLink.length > 0 ) {
+      this.loadMore(loadMoreLink);
+    }
+
   },
   settings: {
     mapApi: 'AIzaSyBTNCen_4P1hvj3DGYe0eJPa7y1-0emDeQ'
@@ -549,6 +554,28 @@ var site = {
           }
         }, false);
     }
+  },
+
+  loadMore: function(button) {
+    console.log(button);
+    var $loadMoreButton = button[0];
+    var $loadMoreWrapper = $loadMoreButton.closest('.load-more');
+    var maxItemsToDShow = 5;
+
+    var $newsItems = $( 'body' ).find('.js-filter-item');
+    console.log($newsItems);
+
+    if( $newsItems.length > maxItemsToDShow ) {
+
+    } else {
+      $loadMoreWrapper.style.display = 'none';
+    }
+
+    $loadMoreButton.addEventListener('click', function(e) {
+      e.preventDefault();
+
+      console.log('load more clicked');
+    });
   }
 
 };
