@@ -21,8 +21,10 @@ var svgSymbols = require('gulp-svg-symbols');
 var svgSprite = require('gulp-svg-sprite');
 
 var contentful = require('contentful');
+var fm = require('front-matter');
 var path = require('path');
 var fs = require('fs.extra');
+var marked = require('marked');
 
 
 
@@ -64,6 +66,7 @@ var partialsApiSrc = templatesSrc + '/partials-api/';
 
 var pagesPath = appPath + '/pages/**/*.nunjucks';
 var pagesDist = distPath;
+
 
 var config = {
   defaultPort: 3000,
@@ -132,12 +135,37 @@ function getDataForFileApi(file) {
   return require('./src/api/' + filename + '.json');
 }
 
+var manageEnvironment = function(environment) {
+  environment.addFilter('slug', function(str) {
+    return str && str.replace(/\s/g, '-', str).toLowerCase();
+  });
+
+  environment.addFilter('md', function(value ,stripPara) {
+    var result;
+    stripPara = stripPara !== false || undefined;
+    try {
+      result = marked(value).trim();
+      if (stripPara) {
+        result = result.replace(/^<p>|<\/p>$/g, '');
+      }
+      return result;
+    } catch (e) {
+      console.error('Error processing markdown:', e);
+      return value;
+    }
+  });
+
+  environment.addGlobal('globalTitle', 'My global title')
+}
+
 gulp.task('nunjucks:api', function() {
+
   // Gets .html and .nunjucks files in pages
   return gulp.src(appPath + '/pages/portfolio/the-burlington-arcade.nunjucks')
   .pipe(data(require(appPath + '/api/portfolio/the-burlington-arcade.json')))
   // Renders template with nunjucks
   .pipe(nunjucksRender({
+      manageEnv: manageEnvironment,
       path: [templatesSrc]
     }))
   // output files in app folder
@@ -261,6 +289,7 @@ gulp.task('nunjucks', function() {
   .pipe(data(getDataForFile))
   // Renders template with nunjucks
   .pipe(nunjucksRender({
+      manageEnv: manageEnvironment,
       path: [templatesSrc]
     }))
   // output files in app folder

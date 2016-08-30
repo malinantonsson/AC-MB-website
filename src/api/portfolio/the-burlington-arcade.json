@@ -34,8 +34,9 @@
    "text":"The Burlington Arcade",
    "location":"Piccadilly, London",
    "bodycopyHeadline":"Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Suspendisse pulvinar, pede eu dictum mollis, lectus per inceptos hymenaeos.",
-   "bodycopy":"Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Suspendisse pulvinar, pede eu dictum mollis, lectus per inceptos hymenaeos.\nLorem ipsum dolor sit amet, consectetuer adipiscing elit. Suspendisse pulvinar, pede eu dictum mollis, lectus per inceptos hymenaeos.\nLorem ipsum dolor sit amet, consectetuer adipiscing elit. Suspendisse pulvinar, pede eu dictum mollis, lectus per inceptos hymenaeos.\nLorem ipsum dolor sit amet, consectetuer adipiscing elit. Suspendisse pulvinar, pede eu dictum mollis, lectus per inceptos hymenaeos.",
+   "bodycopy":"Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Suspendisse pulvinar, pede eu dictum mollis, lectus per inceptos hymenaeos.\n\nLorem ipsum dolor sit amet, consectetuer adipiscing elit. Suspendisse pulvinar, pede eu dictum mollis, lectus per inceptos hymenaeos.\n\nLorem ipsum dolor sit amet, consectetuer adipiscing elit. Suspendisse pulvinar, pede eu dictum mollis, lectus per inceptos hymenaeos.\n\nLorem ipsum dolor sit amet, consectetuer adipiscing elit. Suspendisse pulvinar, pede eu dictum mollis, lectus per inceptos hymenaeos.",
    "acquisitionDate":"2016-07-06T00:00+01:00",
+   "value":"£60M",
    "numberOfStores":"48",
    "keyOccupants":"Nike, Barbour, Nixon",
    "bodyImage":{  

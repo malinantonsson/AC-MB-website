@@ -13,7 +13,9 @@
 		
 		{% if  bodycopyHeadline %}
 			<div class="page-intro_intro">
-				{{ bodycopyHeadline }} 
+				<p class="page-intro_intro-headline">
+					{{ bodycopyHeadline }} 
+				</p>
 			</div>
 		{% endif %}
 

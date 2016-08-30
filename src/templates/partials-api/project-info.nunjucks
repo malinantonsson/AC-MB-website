@@ -13,7 +13,7 @@
 			Value:
 		</p>
 		<p class="project-info_value">
-			£60m
+			{{ value }}
 		</p>
 	</div>
 

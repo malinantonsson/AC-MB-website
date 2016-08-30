@@ -103,7 +103,8 @@ a {
   font-weight: italic;
 }
 
-.page-intro_intro p {
+.page-intro_intro p,
+.page-intro_intro-headline {
   @extend %paragraph-lead;
 
   @include mq(from, medium) {

@@ -1,3 +1,5 @@
+{% set copy = bodycopy %}
+
 <div class="body-copy">
 	<div class="body-copy_container">
 		<div class="body-copy_headline-container">
@@ -8,7 +10,9 @@
 			{% endif %}
 		</div>
 		<div class="body-copy_content">
-			{{ bodycopy }} 
+			<p class="body-copy_content-text">
+					{{ bodycopy | md | safe}} 
+			</p>
 		</div>
 	</div>
 </div>
