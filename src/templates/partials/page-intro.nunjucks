@@ -13,7 +13,9 @@
 		
 		{% if  field.introCopy %}
 			<div class="page-intro_intro">
-				{{ field.introCopy|safe }} 
+				<p class="page-intro_intro-headline">
+					{{ field.introCopy|safe }} 
+				</p>
 			</div>
 		{% endif %}
 
