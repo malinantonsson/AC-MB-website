@@ -1,0 +1,14 @@
+<div class="body-copy--background">
+	<div class="body-copy--background_container">
+		<div class="body-copy--background_headline-container">
+			{% if  field.headline %}
+				<h3 class="body-copy--background_headline">
+					{{field.headline}} 
+				</h3>
+			{% endif %}
+		</div>
+		<div class="body-copy--background_content">
+			{{ field.copy|safe }} 
+		</div>
+	</div>
+</div>

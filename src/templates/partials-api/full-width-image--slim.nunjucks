@@ -1,0 +1,5 @@
+{% set image = bodyImageFullWidth.fields %}
+
+<section class="full-width-image--slim">
+	<img src={{ image.file.url }} alt="" class="full-width-image--slim_image">
+</section>

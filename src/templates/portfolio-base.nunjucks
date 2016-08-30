@@ -1,0 +1,36 @@
+<!-- index.nunjucks -->
+{% extends "layout.nunjucks" %}
+
+
+{% block content %}
+	{% import 'macros/navigation.nunjucks' as nav %}
+			<!-- Creating the navigation with activePage = 'portfolio' -->
+			{{nav.active('portfolio', 'false')}}
+
+	<main id="container">
+
+		{% include "partials-api/project-header.nunjucks" %}
+
+		<div class="component-wrapper">
+			{% include "partials-api/project-info.nunjucks" %}
+
+			{% include "partials-api/page-intro.nunjucks" %}
+
+			{% include "partials-api/body-copy.nunjucks" %}
+
+		</div>
+
+		{% include "partials-api/full-width-image--slim.nunjucks" %}
+
+		{% include "partials-api/quote--background.nunjucks" %}
+
+		{% include "partials-api/image-gallery.nunjucks" %}
+			
+	</main>
+
+
+	{% include "partials/footer.nunjucks" %}
+{% endblock %}
+
+
+

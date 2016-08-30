@@ -1,0 +1,9 @@
+{% set image = heroImage.fields %}
+
+<section class="project-header">
+	<img src={{image.file.url}} alt="" class="project-header_image">
+	<div class="project-header_copy-wrapper">
+		<h2 class="project-header_headline">{{text}}</h2>
+		<p class="project-header_location">{{location}}</p>
+	</div>
+</section>

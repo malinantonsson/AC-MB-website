@@ -1,0 +1,37 @@
+<div class="video-container">
+	<div id="video" data-src={{field.videoId}}></div>
+	<img class="mb-background" src={{field.backgroundImg}}>
+	<h1 class="video_headline">
+		{{field.copy}} 
+		<span class="video_headline--italic">
+			{{field.copyItalic}}
+		</span>
+	</h1>
+	<div id="times-container" class="times-container">
+		<div class="time-line"></div>
+
+		<div class="time-los-angeles-container">
+		<div class="time-title">Los Angeles</div>
+		<div id="time-los-angeles">11:22</div>
+		</div>
+
+		<div class="time-nyc-container">
+		<div class="time-title">New York</div>
+		<div id="time-nyc">14:22</div>
+		</div>
+
+		<div class="time-uk-container">
+		<div class="time-title">London</div>
+		<div id="time-uk">19:22</div>
+		</div>
+
+		<div class="time-paris-container">
+			<div class="time-title">Paris</div>
+			<div id="time-paris">20:22</div>
+		</div>
+	</div>
+
+	<svg class="icon icon--scroll">
+	  <use xlink:href="icons/sprite.svg#page_scroll"></use>
+	</svg>
+</div>

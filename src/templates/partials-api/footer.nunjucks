@@ -1,0 +1,61 @@
+<footer class="footer">
+	<div class="footer-container">
+		<div class="footer_logo">
+			<svg class="footer_icon--logo logo-xs">
+			  <use xlink:href="/icons/sprite.svg#logo-white"></use>
+			</svg>
+
+			<p class="footer_logo-title">
+				Meyer Bergman
+			</p>
+		</div>
+
+		<div class="footer_info">
+			<div class="footer-info_block-one">
+				<p class="footer_headline">
+					Meyer Bergman Affiliates
+				</p>
+
+				<a href="#" class="footer_item-link">
+					Meyer Homes 
+					<svg class="icon arrow-right">
+					  <use xlink:href="/icons/sprite.svg#chevron-right"></use>
+					</svg>
+				</a>
+
+				<a href="#" class="footer_item-link">
+					VIA Outlets
+					<svg class="icon arrow-right">
+					  <use xlink:href="/icons/sprite.svg#chevron-right"></use>
+					</svg>
+				</a>
+			</div>
+		
+			<div class="footer-info_block-two">
+				<p class="footer_headline">
+					Meyer Bergman
+				</p>
+
+				<p class="footer_item-address">
+					<span class="footer_item-address-line">20 Air Street,</span>
+					<span class="footer_item-address-line">London,</span>
+					<span class="footer_item-address-line">W1B 5AN,</span>
+				</p>
+
+				<p class="footer_item-copyright">
+					<span class="footer_item-copyright-line">© 2016 Meyer Bergman.</span>
+					<span class="footer_item-copyright-line">All rights reserved</span>
+				</p>
+
+				<p class="footer_item-terms">
+					<a href="/terms-and-conditions.html" class="footer_item-terms-link">
+						Terms
+					</a> |
+					<a href="/terms-and-conditions.html#Privacy" class="footer_item-terms-link">
+						Privacy
+					</a> 
+				</p>
+			</div>
+		</div>
+	</div>
+</footer>

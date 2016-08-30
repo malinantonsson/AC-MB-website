@@ -1,0 +1,20 @@
+<section class="related-projects">
+	<div class="related-projects_wrapper">
+		<h2 class="related-projects_headline">
+			{{field.headline}}
+		</h2>
+
+		{% for project in field.projects %}
+			<a class="related-projects_project" href={{project.url}}>
+				<img src={{project.image}} alt="" class="related-projects_image">
+				<p class="related-projects_project-title">
+					{{project.name}}
+				</p>
+
+				<p class="related-projects_project-location">
+					{{project.location}}
+				</p>
+			</a>
+		{% endfor %}
+	</div>
+</section>

@@ -1,0 +1,45 @@
+<section class="projects-list">
+		<div class="projects-list_settings">
+			<div class="projects-list_settings-wrapper">
+				
+
+				{% if  field.filters %}
+					{% include "partials/filter.nunjucks" %}
+				{% endif %}
+
+				<div class="projects-list_view-toggle">
+					<a href="#" id="view--map" class="projects-list_view-link projects-list_view-link--map">View projects on map
+						<svg class="projects-list_view-link-icon projects-list_view-link--map--icon">
+						  <use xlink:href="/icons/sprite.svg#map-view"></use>
+						</svg>
+					</a>
+					<a href="#" id="view--thumbs" class="projects-list_view-link projects-list_view-link--thumbs">View projects as thumbs
+						<svg class="projects-list_view-link-icon projects-list_view-link--thumbs--icon">
+						  <use xlink:href="/icons/sprite.svg#thumb-view"></use>
+						</svg>
+					</a>
+				</div>
+			</div>
+		</div>
+
+		<ul class="projects-list_wrapper js-filtered-content_wrapper">
+			{% for project in field.projects %}
+				<a href={{project.url}} class="project-list_item-link js-filter-item {% for tag in project.tags %} js-filter--{{ tag.id }}{% endfor %}
+				">
+					<li class="projects-list_item">
+						<img src={{project.image}} alt="" class="project-list_item-image">
+						<p class="project-list_item-title">
+							{{project.name}}
+						</p>
+						<p class="project-list_item-location">
+							{{project.location}}
+						</p>
+					</li>
+				</a>
+			{% endfor %}
+		</ul>
+
+		{% include "partials/map.nunjucks" %}
+
+		{% include "partials/side-nav.nunjucks" %}
+</section>

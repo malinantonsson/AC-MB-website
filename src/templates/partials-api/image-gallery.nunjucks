@@ -1,0 +1,17 @@
+{% set supportingImg1 = supportingImage1.fields %}
+{% set supportingImg2 = supportingImage2.fields %}
+{% set supportingImg3 = supportingImage3.fields %}
+
+<section class="image-gallery">
+	<div class="image-wrapper image-gallery--lg">
+		<img src={{supportingImg1.file.url}} alt="" class="image-gallery_image image-gallery_image--lg">
+	</div>
+
+	<div class="image-wrapper image-gallery--md">
+		<img src={{supportingImg2.file.url}} alt="" class="image-gallery_image image-gallery_image--md">
+	</div>
+
+	<div class="image-wrapper image-gallery--sm">
+		<img src={{supportingImg3.file.url}} alt="" class="image-gallery_image image-gallery_image--sm">
+	</div>
+</section>

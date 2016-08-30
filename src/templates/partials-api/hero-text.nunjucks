@@ -1,0 +1,8 @@
+<div class="hero-text">
+	<p class="hero-text_copy">
+		{{field.copy}}
+	</p>
+	<a href={{field.url}} class="button hero-copy_cta">
+		{{field.ctaCopy}}
+	</a>
+</div>

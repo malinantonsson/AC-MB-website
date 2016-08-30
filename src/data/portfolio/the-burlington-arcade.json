@@ -1,0 +1,101 @@
+{
+	"name": "The Burlington Arcade",
+	"fields": [
+		{
+			"id": "project-header",
+			"name": "project-header",
+			"headline": "The Burlington Arcade",
+			"location": "— Piccadilly, London",
+			"image": "/images/project/project-hero.png"
+		},
+		{
+			"id": "project-info",
+			"name": "project-info",
+			"fields": [
+				{
+					"label": "Acquisition date:",
+					"value": "06 July 2016"
+				},
+				{
+					"label": "Value:",
+					"value": "£60m"
+				},
+				{
+					"label": "No. of stores:",
+					"value": "48"
+				},
+				{
+					"label": "Key occupants:",
+					"value": "Nike, Barbour, Nixon"
+				}
+
+			]
+		},
+		{
+			"id": "page-intro",
+			"name": "page-intro",
+			"headline": "",
+			"introCopy": "<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Suspendisse pulvinar, pede eu dictum mollis, lectus per inceptos hymenaeos.</p>",
+			"copy": ""
+		},
+		{
+			"id": "body-copy",
+			"name": "body-copy",
+			"headline": "",
+			"copy": "<img src=\"/images/project/body-copy-image.png\"> <p>Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Proin quis velit. Vivamus ut purus. Nulla tempor eleifend leo. Nunc non neque. Etiam nibh quam, vulputate ut, scelerisque eu, bibendum et, dolor. Nunc non mi eget neque semper blandit. Nunc ac metus. Morbi aliquet est eu nisi. Maecenas id nisl. Cras eu ipsum quis est consequat volutpat. Curabitur id arcu eu lacus accumsan tempus. Mauris tristique. Vivamus ut purus. Nulla tempor eleifend leo. Nunc non neque. Etiam nibh quam, vulputate ut, scelerisque eu, bibendum et, dolor. Nunc non mi eget neque semper blandit. Nunc ac metus. Morbi aliquet est eu nisi. Maecenas id nisl. Cras eu ipsum quis est consequat volutpat. Curabitur id arcu eu lacus accumsan tempus. Mauris tristique. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Suspendisse pulvinar, pede eu dictum mollis, lectus per inceptos hymenaeos.</p> <p>Morbi aliquet est eu nisi. Maecenas id nisl. Cras eu ipsum quis est consequat volutpat. Curabitur id arcu eu lacus accumsan tempus. Mauris tristique.Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Suspendisse pulvinar, pede eu dictum mollis, lectus per inceptos hymenaeos.</p><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Suspendisse pulvinar, pede eu dictum mollis, lectus per inceptos hymenaeos. Vivamus ut purus. Nulla tempor eleifend leo. Nunc non neque. Etiam nibh quam, vulputate ut, scelerisque eu, bibendum et, dolor. Nunc non mi eget neque semper blandit. Nunc ac metus</p>"
+		},
+		{
+			"id": "full-width-image--slim",
+			"name": "full-width-image-slim",
+			"image": "/images/project/project-full-width.png"
+		},
+		{
+			"id": "quote--background",
+			"name": "quote--background",
+			"quote": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Suspendisse pulvinar, pede eu dictum mollis, lectus augue tristique nulla, ut fringilla lorem metus quis elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos.",
+			"quoteBy": "Author name"
+		},
+		{
+			"id": "image-gallery",
+			"name": "image-gallery",
+			"imageLg": "/images/project/project-lg.png",
+			"imageMd": "/images/project/project-md.png",
+			"imageSm": "/images/project/project-sm.png"	
+		},
+		{
+			"id": "map",
+			"name": "map",
+			"projectName": "The Burlington Arcade",
+			"location": "London, United Kingdom",
+			"lat": "51.50831",
+			"lng": "-0.13959"
+		},
+		{
+			"id": "related-projects",
+			"name": "related-projects",
+			"headline": "Related Projects",
+			"projects": [
+				{
+					"name": "Galeria Katowicka",
+					"location": "— Katowice, Poland",
+					"image": "/images/project/related-project-1.png",
+					"url": "#"
+				},
+				{
+					"name": "Promanaden Properties",
+					"location": "— Oslo, Norway",
+					"image": "/images/project/related-project-2.png",
+					"url": "#"
+				}
+			]
+		},
+		{
+			"id": "side-nav",
+			"name": "side-nav",
+			"sideNav": [
+				"Portfolio",
+				"Project"
+			]
+		}
+	]
+}

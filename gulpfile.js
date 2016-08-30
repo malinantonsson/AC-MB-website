@@ -20,6 +20,12 @@ var svg2png    = require('gulp-svg2png');
 var svgSymbols = require('gulp-svg-symbols');
 var svgSprite = require('gulp-svg-sprite');
 
+var contentful = require('contentful');
+var path = require('path');
+var fs = require('fs.extra');
+
+
+
 var plugins = require("gulp-load-plugins")({
     pattern: ['gulp-*', 'gulp.*'],
     replaceString: /\bgulp[\-.]/
@@ -53,6 +59,9 @@ var dataSrc = appPath + '/data/*.json';
 
 var templatesSrc = appPath + '/templates/';
 var partialsSrc = templatesSrc + '/partials/';
+
+var partialsApiSrc = templatesSrc + '/partials-api/';
+
 var pagesPath = appPath + '/pages/**/*.nunjucks';
 var pagesDist = distPath;
 
@@ -69,6 +78,76 @@ var config = {
   version: require('./package.json').version,
   minify: argv.minify || false
 };
+
+
+var client = contentful.createClient({
+  space: 'k3gh61z1i0f4',
+  accessToken: 'eaf78d30eb593c6981143514ad5ba31442b577b372a08b1ca7ec2e0ec0e1e1b9'
+});
+
+// Get the Acts data from the cloud CMS and stash it locally
+gulp.task('get:portfolio', function() {
+
+    client.getEntries({'content_type':'portfolio'})
+      .then(function (entries) {
+          var dataObject = [];
+          //Get each item (i.e each portfolio page)
+          for (var item = 0; item < entries.items.length; item++) {
+            //get the page title and format for url structure
+            var pageName = entries.items[item].fields.text.toLowerCase().replace(/\s+/g, '-');
+            //create a json file for each itme
+            fs.writeFileSync(appPath + '/api/portfolio/' + pageName + '.json', JSON.stringify(entries.items[item].fields));
+            //copy the project base template and create a new nunjucks file for each project 
+            fs.copy(appPath + '/pages/portfolio/portfolio-base.nunjucks', appPath + '/pages/portfolio/' + pageName + '.nunjucks', { replace: true }, function (err) {
+              if (err) {
+                // i.e. file already exists or can't write to directory 
+                throw err;
+              }
+            });
+            dataObject.push(entries.items[item].fields);
+          }
+          fs.writeFileSync(appPath + '/api/portfolio.json', JSON.stringify(dataObject));
+        // log the title for all the entries that might have it
+        // JUST FOR DEV
+        entries.items.forEach(function (entry) {
+          console.log(entry);
+          if(entry.fields.title) {
+            console.log(entry.fields.title)
+          }
+        })
+      })
+
+});
+
+function getDataForFileApi(file) {
+  filename = file.relative.replace('.nunjucks', '');
+  //console.log(path.basename(filename));
+  //console.log(file);
+  //console.log(file.path);
+  //console.log(file.relative);
+  //console.log(file.base);
+  //console.log(file.contents);
+  //console.log(file.basename);
+
+  return require('./src/api/' + filename + '.json');
+}
+
+gulp.task('nunjucks:api', function() {
+  // Gets .html and .nunjucks files in pages
+  return gulp.src(appPath + '/pages/portfolio/the-burlington-arcade.nunjucks')
+  .pipe(data(require(appPath + '/api/portfolio/the-burlington-arcade.json')))
+  // Renders template with nunjucks
+  .pipe(nunjucksRender({
+      path: [templatesSrc]
+    }))
+  // output files in app folder
+  .pipe(gulp.dest(pagesDist))
+});
+
+gulp.task('setWatch', function() {
+  config.isWatching = true;
+});
+
 
 
 

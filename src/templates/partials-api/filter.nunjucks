@@ -1,0 +1,18 @@
+<div class="js-filter-list_filter">
+	<a href="#" class="js-filter-list_filter-button">
+		{{field.filterLabel}}
+		<svg class="filter-list_filter-icon filter-icon--is-closed">
+		  <use xlink:href="/icons/sprite.svg#chevron-down-dark"></use>
+		</svg>
+
+		<svg class="filter-list_filter-icon filter-icon--is-opened">
+		  <use xlink:href="/icons/sprite.svg#chevron-up-dark"></use>
+		</svg>
+	</a>
+
+	<ul class="filter-list_filter-wrapper">
+		{% for filter in field.filters %}
+			<li id="filter--{{filter.id}}" class="js-filter-list_filter-item {% if  filter.id == 'all' %} filter--is-active {% endif %}">{{filter.label}}</li>
+		{% endfor %}
+	</ul>
+</div>
