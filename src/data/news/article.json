@@ -1,0 +1,52 @@
+{
+	"name": "Article",
+	"fields": [
+		{
+			"id": "page-intro",
+			"name": "page-intro",
+			"headline": "20 July 2016",
+			"introCopy": "Meyer Bergman Fund Sells Czech Shopping Centre to New Europe Property Investments for €82.6 Million",
+			"copy": ""
+		},
+		{
+			"id": "body-copy",
+			"name": "body-copy",
+			"headline": "",
+			"copy": "<p>A fund established by real estate investment manager Meyer Bergman has sold Forum Ústi nad Labem shopping centre in the Czech Republic to the listed property company New Europe Property Investments PLC (NEPI) for € 82.6 million.</p> <p>Mark Gamble, Head of Asset Management at Meyer Bergman, said: \"Since acquiring the asset, we have improved the tenant mix and cashflow performance while cementing its position as the dominant shopping centre in Northern Bohemia. This has enabled us to bring in 30 new brands, many of them international, as we carried out the first wave of lease renewals. With the city-centre asset well-established in its catchment area, it was time to crystallise value for our investors.\"</p> <img src=\"/images/project/body-copy-image.png\"><p>Meyer Bergman European Retail Partners (MBERP) acquired the 27,800 sq.m. shopping centre in a portfolio with Forum Nová Karolina in Ostrava in 2011 in partnership with Healthcare of Ontario Pension Plan (HOOPP). UniCredit provided debt financing. </p>",
+		},
+		{
+			"id": "body-copy--quote",
+			"name": "body-copy--quote",
+			"quote": "“We're very pleased to have partnered with Meyer Bergman on this property.”",
+			"quoteBy": "Lisa Lafave, Senior Portfolio Manager in  Real Estate at HOOPP"
+		},
+		{
+			"id": "body-copy",
+			"name": "body-copy",
+			"headline": "",
+			"copy": "<p>Forum Ústi nad Labem is one of the 10 busiest shopping centres in the Czech Republic, attracting 8.6 million visitors a year, even as three other centres have opened in its catchment area since 2013. The property is located in the city centre. Its anchor tenant is the Billa supermarket chain, while other occupiers include Adidas, H&M, C&A, New Yorker, Tommy Hilfiger, Nike, Deichmann and a five-screen Cinema City. Ústi nad Labem is close to the German border, is an important junction in the pan-European railway network and on the route of the main motorway linking Prague to Berlin. </p><p>This is MBERP's second disposition after last year it sold its 50% interest in the Bentall Centre in Kingston-upon-Thames, near London, to an Asian institution. Advising MBERP on the disposition were Cushman Wakefield, Tomsa, and PWC. Advising NEPI on the acquisition were Clifford Chance and E&Y.</p>"
+		},
+		{
+			"id": "tags",
+			"name": "tags",
+			"tags": [
+				"Europe", 
+				"Investments"
+			]
+		},
+		{
+			"id": "social-share",
+			"name": "social-share",
+			"socials": [
+				{
+					"name": "linkedIn",
+					"url": "#"
+				},
+				{
+					"name": "twitter",
+					"url": "#"
+				}
+			]
+		}
+	]
+}
