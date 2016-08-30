@@ -16,10 +16,10 @@
 		background-color: #fff;
 		clear: none;
 
-		@include mq(from, medium) {
+		/* @include mq(from, medium) {
 			@include span-columns(8);
 			@include omega();
-		}
+		} */
 
 		.page-intro_intro {
 			width: 100%;

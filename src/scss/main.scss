@@ -22,6 +22,7 @@
 @import 'background-video';
 @import 'body-copy--odd';
 @import 'body-copy';
+@import 'body-copy-image';
 @import 'body-copy--background';
 @import 'body-copy--privacy';
 @import 'button';
@@ -75,4 +76,8 @@ body {
 		@include container();
 		padding-top: 1.5em;
 	}
+}
+
+.component-copy-wrapper {
+	overflow: auto;
 }

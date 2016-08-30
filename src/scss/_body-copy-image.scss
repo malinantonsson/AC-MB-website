@@ -1,0 +1,29 @@
+.body-copy-image {
+	@include mq(from, medium) {
+	    padding: 0 1.5em;
+	}
+}
+
+.body-copy-image_image {
+	width: 100%;
+
+	@include mq(from, medium) {
+		max-width: 100%;
+	}
+}
+
+/* .component-wrapper & {
+	padding-top: 0;
+	background-color: #fff;
+	clear: none;
+
+	@include mq(from, medium) {
+		@include span-columns(8);
+		@include omega();
+	}
+
+	.page-intro_intro {
+		width: 100%;
+		margin-left: 0;
+	}
+} */

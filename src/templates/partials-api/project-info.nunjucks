@@ -4,7 +4,7 @@
 			Acquisition date:
 		</p>
 		<p class="project-info_value">
-			{{ acquisitionDate }}
+			{{ acquisitionDate | date("DD MMMM YYYY") }}
 		</p>
 	</div>
 

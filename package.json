@@ -54,6 +54,7 @@
     "jshint-stylish": "^1.0.2",
     "lazypipe": "^0.2.4",
     "marked": "^0.3.6",
+    "nunjucks-date-filter": "^0.1.1",
     "nunjucks-markdown-filter": "^0.1.0",
     "path": "^0.12.7",
     "run-sequence": "^1.1.5",

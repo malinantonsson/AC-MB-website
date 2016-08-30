@@ -14,9 +14,14 @@
 		<div class="component-wrapper">
 			{% include "partials-api/project-info.nunjucks" %}
 
-			{% include "partials-api/page-intro.nunjucks" %}
+			<div class="component-copy-wrapper">
 
-			{% include "partials-api/body-copy.nunjucks" %}
+				{% include "partials-api/page-intro.nunjucks" %}
+
+				{% include "partials-api/body-copy-image.nunjucks" %}
+
+				{% include "partials-api/body-copy.nunjucks" %}
+			</div>
 
 		</div>
 

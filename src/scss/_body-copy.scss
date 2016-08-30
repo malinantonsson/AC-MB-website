@@ -9,7 +9,7 @@
 		clear: none;
 		
 		@include mq(from, medium) {
-			@include span-columns(8);
+			//@include span-columns(8);
 		}
 
 		.body-copy_container,

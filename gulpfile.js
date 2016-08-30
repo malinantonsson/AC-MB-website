@@ -25,6 +25,7 @@ var fm = require('front-matter');
 var path = require('path');
 var fs = require('fs.extra');
 var marked = require('marked');
+var dateFilter = require('nunjucks-date-filter');
 
 
 
@@ -139,6 +140,8 @@ var manageEnvironment = function(environment) {
   environment.addFilter('slug', function(str) {
     return str && str.replace(/\s/g, '-', str).toLowerCase();
   });
+
+  environment.addFilter('date', dateFilter);
 
   environment.addFilter('md', function(value ,stripPara) {
     var result;
