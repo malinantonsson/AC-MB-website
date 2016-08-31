@@ -40,9 +40,12 @@ var site = {
       this.initProjectsFilter(projectsFilter, map);
     }
 
-    var viewToggle = document.getElementsByClassName('projects-list_view-toggle');
-     if(viewToggle && map) {
+    var viewToggle = document.getElementsByClassName('projects-list_view-toggle')[0];
+    if(viewToggle && map) {
       this.initViewToggle(viewToggle, map);
+    } 
+    else {
+      viewToggle.style.visibility = 'hidden';
     }
 
     var loadMoreLink = document.getElementsByClassName('load-more_link');
