@@ -17,8 +17,6 @@
 
 	 	{% include "partials-api/quote--background-portfolio.nunjucks" %}
 
-	 	{% include "partials-api/side-nav.nunjucks" %}
-
 	</main>
 
 	{% include "partials/footer.nunjucks" %}

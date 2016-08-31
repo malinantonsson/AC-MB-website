@@ -39,5 +39,5 @@
 
 		{# {% include "partials/map.nunjucks" %} #}
 
-		{% include "partials/side-nav.nunjucks" %}
+		{% include "partials-api/side-nav--portfolio-listing.nunjucks" %}
 </section>
