@@ -152,7 +152,7 @@ gulp.task('get:portfolio', function() {
             console.log(pageName);
             //console.log(JSON.stringify(entries.items[item].fields));
             //create a json file for each itme
-            fs.writeFileSync(appPath + '/api/portfolio/' + pageName + '.json', JSON.stringify(portfolioItem));
+            fs.writeFileSync(appPath + '/data/portfolio/' + pageName + '.json', JSON.stringify(portfolioItem));
             //copy the project base template and create a new nunjucks file for each project 
             fs.copy(appPath + '/pages/portfolio/portfolio-base.nunjucks', appPath + '/pages/portfolio/' + pageName + '.nunjucks', { replace: true }, function (err) {
               if (err) {
