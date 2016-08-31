@@ -94,13 +94,65 @@ gulp.task('get:portfolio', function() {
 
     client.getEntries({'content_type':'portfolio'})
       .then(function (entries) {
+        console.log(entries.total);
+        //console.log(entries);
+
+       /* console.log(entries.items[0].fields.text);
+        console.log(entries.items[0].fields.relatedPortfolioItems);
+
+*/
+          /*console.log('item');
+          console.log(entries.items[0].fields.relatedPortfolioItems[0].fields.relatedPortfolioItems));
+*/
           var dataObject = [];
           //Get each item (i.e each portfolio page)
           for (var item = 0; item < entries.items.length; item++) {
+            var portfolioItem = {
+              text: entries.items[item].fields.text,
+              location: entries.items[item].fields.location,
+              heroImage: entries.items[item].fields.heroImage,
+              bodycopyHeadline: entries.items[item].fields.bodycopyHeadline,
+             bodycopy: entries.items[item].fields.bodycopy,
+             acquisitionDate: entries.items[item].fields.acquisitionDate,
+             value: entries.items[item].fields.value,
+             numberOfStores: entries.items[item].fields.numberOfStores,
+             keyOccupants: entries.items[item].fields.numberOfStores,
+             bodyImage: entries.items[item].fields.numberOfStores,
+             bodyImageFullWidth: entries.items[item].fields.numberOfStores,
+             supportingImage1: entries.items[item].fields.numberOfStores,
+             supportingImage2: entries.items[item].fields.numberOfStores,
+             supportingImage3: entries.items[item].fields.numberOfStores,
+             quote: entries.items[item].fields.quote,
+             quoteAuthor: entries.items[item].fields.quoteAuthor,
+             featuredPortflio: entries.items[item].fields.featuredPortflio,
+             relatedPortfolioItems: [
+              {
+                heroImage: entries.items[item].fields.relatedPortfolioItems[0].fields.heroImage,
+                text: entries.items[item].fields.relatedPortfolioItems[0].fields.text,
+                location: entries.items[item].fields.relatedPortfolioItems[0].fields.location
+              },
+              {
+                heroImage: entries.items[item].fields.relatedPortfolioItems[1].fields.heroImage,
+                text: entries.items[item].fields.relatedPortfolioItems[1].fields.text,
+                location: entries.items[item].fields.relatedPortfolioItems[1].fields.location
+              }
+             ],
+             tagsLocation: entries.items[item].fields.tagsLocation,
+             mapName: entries.items[item].fields.mapName,
+             mapLocation: entries.items[item].fields.mapLocation,
+             mapLat: entries.items[item].fields.mapLat,
+             mapLng: entries.items[item].fields.mapLng,
+             mapPreviewImage: entries.items[item].fields.mapPreviewImage
+            };
+
+            
+
             //get the page title and format for url structure
             var pageName = entries.items[item].fields.text.toLowerCase().replace(/\s+/g, '-');
+            console.log(pageName);
+            //console.log(JSON.stringify(entries.items[item].fields));
             //create a json file for each itme
-            fs.writeFileSync(appPath + '/api/portfolio/' + pageName + '.json', JSON.stringify(entries.items[item].fields));
+            fs.writeFileSync(appPath + '/api/portfolio/' + pageName + '.json', JSON.stringify(portfolioItem));
             //copy the project base template and create a new nunjucks file for each project 
             fs.copy(appPath + '/pages/portfolio/portfolio-base.nunjucks', appPath + '/pages/portfolio/' + pageName + '.nunjucks', { replace: true }, function (err) {
               if (err) {
@@ -108,19 +160,26 @@ gulp.task('get:portfolio', function() {
                 throw err;
               }
             });
-            dataObject.push(entries.items[item].fields);
+            dataObject.push(entries.items[0].fields);
           }
-          fs.writeFileSync(appPath + '/api/portfolio.json', JSON.stringify(dataObject));
+          fs.writeFileSync(appPath + '/api/portfolio.json', JSON.stringify(entries));
         // log the title for all the entries that might have it
         // JUST FOR DEV
-        entries.items.forEach(function (entry) {
-          console.log(entry);
-          if(entry.fields.title) {
-            console.log(entry.fields.title)
-          }
-        })
+
       })
 
+});
+
+gulp.task('get:portfolio-item', function() {
+  client.getEntry('4hfdh7RvraSqMO8mUqwMaE')
+  .then(function (entry) {
+    // logs the entry metadata
+    console.log(entry.fields);
+    fs.writeFileSync(appPath + '/api/portfolio/single-item--2.json', JSON.stringify(entry.fields));
+
+    // logs the field with ID title
+    //console.log(entry.fields.title);
+  })
 });
 
 function getDataForFileApi(file) {

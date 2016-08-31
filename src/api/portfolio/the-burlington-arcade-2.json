@@ -1,5 +1,5 @@
 {  
-   "text":"The Burlington Arcade",
+   "text":"The Burlington Arcade 2",
    "location":"Piccadilly, London",
    "heroImage":{  
       "sys":{  
@@ -81,7 +81,7 @@
                }
             }
          },
-         "text":"The Burlington Arcade 2",
+         "text":"The Burlington Arcade",
          "location":"Piccadilly, London"
       },
       {  
