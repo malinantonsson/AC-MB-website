@@ -144,9 +144,27 @@
 		<section class="projects-list">
 		<div class="projects-list_settings">
 			<div class="projects-list_settings-wrapper">
-				
 
-				
+				<div class="js-filter-list_filter">
+	<a href="#" class="js-filter-list_filter-button">
+		Show locations in:
+		<svg class="filter-list_filter-icon filter-icon--is-closed">
+		  <use xlink:href="/icons/sprite.svg#chevron-down-dark"></use>
+		</svg>
+
+		<svg class="filter-list_filter-icon filter-icon--is-opened">
+		  <use xlink:href="/icons/sprite.svg#chevron-up-dark"></use>
+		</svg>
+	</a>
+
+	<ul class="filter-list_filter-wrapper">
+			<li id="filter--europe" class="js-filter-list_filter-item">Europe</li>
+			<li id="filter--uk" class="js-filter-list_filter-item">United Kingdom</li>
+			<li id="filter--us" class="js-filter-list_filter-item">United States</li>
+			<li id="filter--all" class="js-filter-list_filter-item filter--is-active">All countries</li>
+	</ul>
+</div>
+
 
 				<div class="projects-list_view-toggle">
 					<a href="#" id="view--map" class="projects-list_view-link projects-list_view-link--map">View projects on map

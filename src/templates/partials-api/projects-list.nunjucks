@@ -1,11 +1,9 @@
 <section class="projects-list">
 		<div class="projects-list_settings">
 			<div class="projects-list_settings-wrapper">
-				
 
-				{% if  field.filters %}
-					{% include "partials/filter.nunjucks" %}
-				{% endif %}
+				{% include "partials-api/filter--portfolio-listing.nunjucks" %}
+
 
 				<div class="projects-list_view-toggle">
 					<a href="#" id="view--map" class="projects-list_view-link projects-list_view-link--map">View projects on map

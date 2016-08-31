@@ -1,6 +1,6 @@
 <div class="js-filter-list_filter">
 	<a href="#" class="js-filter-list_filter-button">
-		{{field.filterLabel}}
+		Show locations in:
 		<svg class="filter-list_filter-icon filter-icon--is-closed">
 		  <use xlink:href="/icons/sprite.svg#chevron-down-dark"></use>
 		</svg>
@@ -12,8 +12,8 @@
 
 	<ul class="filter-list_filter-wrapper">
 			<li id="filter--europe" class="js-filter-list_filter-item">Europe</li>
-			<li id="filter--uk" class="js-filter-list_filter-item {% if  filter.id == 'all' %} filter--is-active {% endif %}">United Kingdom</li>
+			<li id="filter--uk" class="js-filter-list_filter-item">United Kingdom</li>
 			<li id="filter--us" class="js-filter-list_filter-item">United States</li>
-			<li id="filter--all" class="js-filter-list_filter-item {% if  filter.id == 'all' %} filter--is-active {% endif %}">All countries</li>
+			<li id="filter--all" class="js-filter-list_filter-item filter--is-active">All countries</li>
 	</ul>
 </div>
