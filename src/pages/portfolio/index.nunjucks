@@ -7,34 +7,18 @@
 		<!-- Creating the navigation with activePage = 'portfolio' -->
 		{{nav.active('portfolio', 'false')}}
 
-
-	  
-	 
-
-
 	<main id="container">
 
-		{% for field in fields %}
-			{% if  field.id == 'featured-project' %}
-			 		{% include "partials/featured-project.nunjucks" %}
-			{% endif %}
+		{% include "partials-api/featured-project.nunjucks" %}
 
-			{% if  field.id == 'page-intro--full-width' %}
-			 		{% include "partials/page-intro--full-width.nunjucks" %}
-			{% endif %}
+		{% include "partials-api/page-intro--full-width.nunjucks" %}
 
-			{% if  field.id == 'projects-list' %}
-			 		{% include "partials/projects-list.nunjucks" %}
-			{% endif %}
+		{% include "partials-api/projects-list.nunjucks" %}
 
-		 	{% if  field.id == 'quote--background' %}
-		 		{% include "partials/quote--background.nunjucks" %}
-		 	{% endif %}
+	 	{% include "partials-api/quote--background-portfolio.nunjucks" %}
 
-		 	{% if  field.id == 'side-nav' %}
-		 		{% include "partials/side-nav.nunjucks" %}
-		 	{% endif %}
-		{% endfor %}
+	 	{% include "partials-api/side-nav.nunjucks" %}
+
 	</main>
 
 	{% include "partials/footer.nunjucks" %}

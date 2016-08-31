@@ -1,18 +1,18 @@
 <div class="featured-project">
-	<img class="featured-project_image" src={{field.image}}>
+	<img class="featured-project_image" src={{featuredPortfolio.heroImage.fields.file.url}}>
 	<div class="featured-project_copy-wrapper">
 		<p class="featured-project_intro-copy">
-			{{field.intro}}
+			Featured Project:
 		</p>
 		<h2 class="featured-project_intro-headline">
-			{{field.headline}}
+			{{featuredPortfolio.text}}
 		</h2>
 		<p class="featured-project_location">
-			{{field.location}}
+			{{featuredPortfolio.location}}
 		</p>
 
-		<a href={{field.url}} class="button featured-project_cta">
-			{{field.ctaCopy}}
+		<a href={{featuredPortfolio.url}} class="button featured-project_cta">
+			View Project
 		</a>
 	</div>
 </div>

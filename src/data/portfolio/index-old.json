@@ -1,0 +1,156 @@
+{
+	"name": "Portfolio",
+	"fields": [
+		{
+			"id": "featured-project",
+			"name": "featured-project",
+			"image": "/images/homepage/featured-project-1.png",
+			"intro": "Featured Project:",
+			"headline": "The Burlington Arcade",
+			"location": "— London, United Kingdom",
+			"ctaCopy": "View Project",
+			"url": "/portfolio/burlington-arcade.html"
+		},
+		{
+			"id": "page-intro--full-width",
+			"name": "page-intro--full-width",
+			"headline": "Portfolio",
+			"introCopy": "<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Suspendisse pulvinar, pede eu dictum mollis, lectus per inceptos hymenaeos.</p>",
+			"copy": ""
+		},
+		{
+			"id": "projects-list",
+			"name": "projects-list",
+			"lat": "51.50831",
+			"lng": "-0.13959",
+			"filterLabel": "Show locations in: ",
+			"filters": [
+				{
+					"label": "United Kingdom",
+					"id": "uk"
+				},
+				{
+					"label": "United States",
+					"id": "us"
+				},
+				{
+					"label": "Europe",
+					"id": "eu"
+				},
+				{
+					"label": "All countries",
+					"id": "all"
+				}
+
+			],
+			"projects": [
+				{
+					"name": "The Burlington Arcade",
+					"location": "— London, United Kingdom",
+					"tags": [ 
+						{
+							"label": "United Kingdom",
+							"id": "uk"
+						}
+					],
+					"url": "/portfolio/burlington-arcade.html",
+					"image": "/images/portfolio/portfolio-1.png"
+				},
+				{
+					"name": "Europe",
+					"location": "— Oslo, Norway",
+					"tags": [ 
+						{
+							"label": "Europe",
+							"id": "eu"
+						}
+					],
+					"url": "/portfolio/burlington-arcade.html",
+					"image": "/images/portfolio/portfolio-1.png"
+				},
+				{
+					"name": "The Burlington Arcade",
+					"location": "— London, United Kingdom",
+					"tags": [ 
+						{
+							"label": "United Kingdom",
+							"id": "uk"
+						}
+					],
+					"url": "/portfolio/burlington-arcade.html",
+					"image": "/images/portfolio/portfolio-1.png"
+				},
+				{
+					"name": "Europe",
+					"location": "— Oslo, Norway",
+					"tags": [ 
+						{
+							"label": "Europe",
+							"id": "eu"
+						}
+					],
+					"url": "/portfolio/burlington-arcade.html",
+					"image": "/images/portfolio/portfolio-1.png"
+				},
+				{
+					"name": "The Burlington Arcade",
+					"location": "— London, United Kingdom",
+					"tags": [ 
+						{
+							"label": "United Kingdom",
+							"id": "uk"
+						}
+					],
+					"url": "/portfolio/burlington-arcade.html",
+					"image": "/images/portfolio/portfolio-1.png"
+				},
+				{
+					"name": "Europe",
+					"location": "— Oslo, Norway",
+					"tags": [ 
+						{
+							"label": "Europe",
+							"id": "eu"
+						}
+					],
+					"url": "/portfolio/burlington-arcade.html",
+					"image": "/images/portfolio/portfolio-1.png"
+				},
+				{
+					"name": "The Burlington Arcade",
+					"location": "— London, United Kingdom",
+					"tags": [ 
+						{
+							"label": "United Kingdom",
+							"id": "uk"
+						}
+					],
+					"url": "/portfolio/burlington-arcade.html",
+					"image": "/images/portfolio/portfolio-1.png"
+				},
+				{
+					"name": "United States",
+					"location": "— London, United States",
+					"tags": [ 
+						{
+							"label": "United States",
+							"id": "us"
+						}
+					],
+					"url": "/portfolio/burlington-arcade.html",
+					"image": "/images/portfolio/portfolio-1.png"
+				}
+			],
+			"sideNav": [
+				"Portfolio",
+				"Project thumbs"
+			]
+		},
+		{
+			"id": "quote--background",
+			"name": "quote--background",
+			"quote": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Suspendisse pulvinar, pede eu dictum mollis, lectus augue tristique nulla, ut fringilla lorem metus quis elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos.",
+			"quoteBy": ""
+		}
+	]
+}

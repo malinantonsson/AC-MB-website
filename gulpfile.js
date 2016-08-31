@@ -106,6 +106,10 @@ gulp.task('get:portfolio', function() {
 */
 
           //console.log(entries.items[0]);
+          //
+          var portfolioListing = {}
+          var portfolioItems = [];
+          var featuredPortfolio;
 
           var dataObject = [];
           //Get each item (i.e each portfolio page)
@@ -116,24 +120,25 @@ gulp.task('get:portfolio', function() {
 
             var portfolioItem = {
               text: entries.items[item].fields.text,
+              url: pageName + '.html',
               teaserImage: entries.items[item].fields.teaserImage,
               location: entries.items[item].fields.location,
               heroImage: entries.items[item].fields.heroImage,
               bodycopyHeadline: entries.items[item].fields.bodycopyHeadline,
-             bodycopy: entries.items[item].fields.bodycopy,
-             acquisitionDate: entries.items[item].fields.acquisitionDate,
-             value: entries.items[item].fields.value,
-             numberOfStores: entries.items[item].fields.numberOfStores,
-             keyOccupants: entries.items[item].fields.keyOccupants,
-             bodyImage: entries.items[item].fields.bodyImage,
-             bodyImageFullWidth: entries.items[item].fields.bodyImageFullWidth,
-             supportingImage1: entries.items[item].fields.supportingImage1,
-             supportingImage2: entries.items[item].fields.supportingImage2,
-             supportingImage3: entries.items[item].fields.supportingImage3,
-             quote: entries.items[item].fields.quote,
-             quoteAuthor: entries.items[item].fields.quoteAuthor,
-             featuredPortflio: entries.items[item].fields.featuredPortflio,
-             relatedPortfolioItems: [
+              bodycopy: entries.items[item].fields.bodycopy,
+              acquisitionDate: entries.items[item].fields.acquisitionDate,
+              value: entries.items[item].fields.value,
+              numberOfStores: entries.items[item].fields.numberOfStores,
+              keyOccupants: entries.items[item].fields.keyOccupants,
+              bodyImage: entries.items[item].fields.bodyImage,
+              bodyImageFullWidth: entries.items[item].fields.bodyImageFullWidth,
+              supportingImage1: entries.items[item].fields.supportingImage1,
+              supportingImage2: entries.items[item].fields.supportingImage2,
+              supportingImage3: entries.items[item].fields.supportingImage3,
+              quote: entries.items[item].fields.quote,
+              quoteAuthor: entries.items[item].fields.quoteAuthor,
+              featuredPortflio: entries.items[item].fields.featuredPortflio,
+              relatedPortfolioItems: [
               {
                 heroImage: entries.items[item].fields.relatedPortfolioItems[0].fields.heroImage,
                 text: entries.items[item].fields.relatedPortfolioItems[0].fields.text,
@@ -158,6 +163,23 @@ gulp.task('get:portfolio', function() {
 
             };
 
+
+
+            portfolioItems.push(portfolioItem);
+
+            if(portfolioItem.featuredPortflio) {
+              console.log('is featured');
+              console.log(portfolioItem.text);
+              featuredPortfolio = {
+                url: portfolioItem.url,
+                text: portfolioItem.text,
+                heroImage: portfolioItem.heroImage,
+                location: portfolioItem.location
+              };
+            }
+
+
+
             //console.log(JSON.stringify(entries.items[item].fields));
             //create a json file for each itme
             fs.writeFileSync(appPath + '/data/portfolio/' + pageName + '.json', JSON.stringify(portfolioItem));
@@ -170,7 +192,10 @@ gulp.task('get:portfolio', function() {
             });
             dataObject.push(entries.items[0].fields);
           }
-          fs.writeFileSync(appPath + '/api/portfolio.json', JSON.stringify(entries));
+          //console.log(portfolioItems);
+          portfolioListing.portfolioItems = portfolioItems;
+          portfolioListing.featuredPortfolio = featuredPortfolio;
+          fs.writeFileSync(appPath + '/data/portfolio/index.json', JSON.stringify(portfolioListing));
         // log the title for all the entries that might have it
         // JUST FOR DEV
 
