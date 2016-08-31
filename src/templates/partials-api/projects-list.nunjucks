@@ -23,13 +23,13 @@
 		</div>
 
 		<ul class="projects-list_wrapper js-filtered-content_wrapper">
-			{% for project in field.projects %}
+			{% for project in portfolioItems %}
 				<a href={{project.url}} class="project-list_item-link js-filter-item {% for tag in project.tags %} js-filter--{{ tag.id }}{% endfor %}
 				">
 					<li class="projects-list_item">
-						<img src={{project.image}} alt="" class="project-list_item-image">
+						<img src={{project.teaserImage.fields.file.url}} alt="" class="project-list_item-image">
 						<p class="project-list_item-title">
-							{{project.name}}
+							{{project.text}}
 						</p>
 						<p class="project-list_item-location">
 							{{project.location}}

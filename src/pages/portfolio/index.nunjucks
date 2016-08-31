@@ -11,7 +11,7 @@
 
 		{% include "partials-api/featured-project.nunjucks" %}
 
-		{% include "partials-api/page-intro--full-width.nunjucks" %}
+		{% include "partials-api/page-intro--full-width-portfolio-listing.nunjucks" %}
 
 		{% include "partials-api/projects-list.nunjucks" %}
 
