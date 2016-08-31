@@ -94,7 +94,7 @@ gulp.task('get:portfolio', function() {
 
     client.getEntries({'content_type':'portfolio'})
       .then(function (entries) {
-        console.log(entries.total);
+        //console.log(entries.total);
         //console.log(entries);
 
        /* console.log(entries.items[0].fields.text);
@@ -104,11 +104,19 @@ gulp.task('get:portfolio', function() {
           /*console.log('item');
           console.log(entries.items[0].fields.relatedPortfolioItems[0].fields.relatedPortfolioItems));
 */
+
+          //console.log(entries.items[0]);
+
           var dataObject = [];
           //Get each item (i.e each portfolio page)
           for (var item = 0; item < entries.items.length; item++) {
+            
+            //get the page title and format for url structure
+            var pageName = entries.items[item].fields.text.toLowerCase().replace(/\s+/g, '-');
+
             var portfolioItem = {
               text: entries.items[item].fields.text,
+              teaserImage: entries.items[item].fields.teaserImage,
               location: entries.items[item].fields.location,
               heroImage: entries.items[item].fields.heroImage,
               bodycopyHeadline: entries.items[item].fields.bodycopyHeadline,
@@ -116,12 +124,12 @@ gulp.task('get:portfolio', function() {
              acquisitionDate: entries.items[item].fields.acquisitionDate,
              value: entries.items[item].fields.value,
              numberOfStores: entries.items[item].fields.numberOfStores,
-             keyOccupants: entries.items[item].fields.numberOfStores,
-             bodyImage: entries.items[item].fields.numberOfStores,
-             bodyImageFullWidth: entries.items[item].fields.numberOfStores,
-             supportingImage1: entries.items[item].fields.numberOfStores,
-             supportingImage2: entries.items[item].fields.numberOfStores,
-             supportingImage3: entries.items[item].fields.numberOfStores,
+             keyOccupants: entries.items[item].fields.keyOccupants,
+             bodyImage: entries.items[item].fields.bodyImage,
+             bodyImageFullWidth: entries.items[item].fields.bodyImageFullWidth,
+             supportingImage1: entries.items[item].fields.supportingImage1,
+             supportingImage2: entries.items[item].fields.supportingImage2,
+             supportingImage3: entries.items[item].fields.supportingImage3,
              quote: entries.items[item].fields.quote,
              quoteAuthor: entries.items[item].fields.quoteAuthor,
              featuredPortflio: entries.items[item].fields.featuredPortflio,
@@ -129,12 +137,16 @@ gulp.task('get:portfolio', function() {
               {
                 heroImage: entries.items[item].fields.relatedPortfolioItems[0].fields.heroImage,
                 text: entries.items[item].fields.relatedPortfolioItems[0].fields.text,
-                location: entries.items[item].fields.relatedPortfolioItems[0].fields.location
+                location: entries.items[item].fields.relatedPortfolioItems[0].fields.location,
+                url: entries.items[item].fields.relatedPortfolioItems[0].fields.text.toLowerCase().replace(/\s+/g, '-') + '.html',
+                teaserImage: entries.items[item].fields.relatedPortfolioItems[0].fields.teaserImage
               },
               {
                 heroImage: entries.items[item].fields.relatedPortfolioItems[1].fields.heroImage,
                 text: entries.items[item].fields.relatedPortfolioItems[1].fields.text,
-                location: entries.items[item].fields.relatedPortfolioItems[1].fields.location
+                location: entries.items[item].fields.relatedPortfolioItems[1].fields.location,
+                url: entries.items[item].fields.relatedPortfolioItems[1].fields.text.toLowerCase().replace(/\s+/g, '-') + '.html',
+                teaserImage: entries.items[item].fields.relatedPortfolioItems[1].fields.teaserImage
               }
              ],
              tagsLocation: entries.items[item].fields.tagsLocation,
@@ -143,13 +155,9 @@ gulp.task('get:portfolio', function() {
              mapLat: entries.items[item].fields.mapLat,
              mapLng: entries.items[item].fields.mapLng,
              mapPreviewImage: entries.items[item].fields.mapPreviewImage
+
             };
 
-            
-
-            //get the page title and format for url structure
-            var pageName = entries.items[item].fields.text.toLowerCase().replace(/\s+/g, '-');
-            console.log(pageName);
             //console.log(JSON.stringify(entries.items[item].fields));
             //create a json file for each itme
             fs.writeFileSync(appPath + '/data/portfolio/' + pageName + '.json', JSON.stringify(portfolioItem));
