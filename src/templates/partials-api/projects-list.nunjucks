@@ -22,7 +22,7 @@
 
 		<ul class="projects-list_wrapper js-filtered-content_wrapper">
 			{% for project in portfolioItems %}
-				<a href={{project.url}} class="project-list_item-link js-filter-item {% for tag in project.tags %} js-filter--{{ tag.id }}{% endfor %}
+				<a href={{project.url}} class="project-list_item-link js-filter-item {% for tag in project.tagsLocation %} js-filter--{{ tag.fields.location|lower }}{% endfor %}
 				">
 					<li class="projects-list_item">
 						<img src={{project.teaserImage.fields.file.url}} alt="" class="project-list_item-image">
@@ -37,7 +37,7 @@
 			{% endfor %}
 		</ul>
 
-		{% include "partials/map.nunjucks" %}
+		{# {% include "partials/map.nunjucks" %} #}
 
 		{% include "partials/side-nav.nunjucks" %}
 </section>
