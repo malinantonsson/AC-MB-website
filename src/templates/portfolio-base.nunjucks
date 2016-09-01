@@ -31,6 +31,8 @@
 
 		{% include "partials-api/image-gallery.nunjucks" %}
 
+		{% include "partials-api/map.nunjucks" %}
+
 		{% include "partials-api/related-projects.nunjucks" %}
 
 		{% include "partials-api/side-nav--portfolio.nunjucks" %}

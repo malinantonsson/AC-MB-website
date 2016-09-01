@@ -43,9 +43,6 @@ var site = {
     var viewToggle = document.getElementsByClassName('projects-list_view-toggle')[0];
     if(viewToggle && map) {
       this.initViewToggle(viewToggle, map);
-    } 
-    else {
-      viewToggle.style.visibility = 'hidden';
     }
 
     var loadMoreLink = document.getElementsByClassName('load-more_link');
@@ -102,6 +99,10 @@ var site = {
   },
 
   map: {
+    settings: {
+      dataUrl: '/js/mapsdata.json'
+    },
+    
     map: {},
 
     filterSettings: {
@@ -120,7 +121,7 @@ var site = {
         },
         zoom: 4
       },
-      eu: {
+      europe: {
         center: {
           lat: 51.12949,
           lng: 14.55199
@@ -139,6 +140,8 @@ var site = {
     initMap: function(mapWrapper) {
       var lat = parseFloat(mapWrapper.getAttribute('data-lat'));
       var lng = parseFloat(mapWrapper.getAttribute('data-lng'));
+
+      console.log(lat, lng);
 
       var activeMarkerImg = '/images/map/map.png';
       var inactiveMarkerImg = '/images/map/marker--inactive.png';
@@ -240,119 +243,99 @@ var site = {
 
       this.map = map;
 
-      var projects = [
-        {
-         name: 'The Burlington Arcade',
-         location: 'London, United Kingdom',
-         lat: 51.50831,
-         lng: -0.13959,
-         bounds: {
-            start: {
-              lat: 51.50831,
-              lng: -0.13959
-            }, 
-            end: {
-              lat: 51.50831,
-              lng: -0.13959
-            }
-          },
-         url: '#',
-         image: '/images/map/map-overlay-1.png'
-        }
-        ,
-        {
-         name: 'Project 2',
-         location: 'London, United Kingdom',
-         lat: 51.51050,
-         lng: -0.13526,
-         bounds: {
-          start: {
-            lat: 51.51101,
-            lng: -0.13500
-          }, 
-          end: {
-            lat: 51.51101,
-            lng: -0.13500
-          }
-         },
-         url: '#',
-         image: '/images/map/map-overlay-1.png'
-        }
-      ];
+      if(window.fetch) {
+        fetch(this.settings.dataUrl, {
+          method: 'get'
+        })
+        .then(function(response) {
+          return response.json();
+        })
+        .then(function(mapsData) {
+          addProjectToMap(mapsData)
+        }); 
+
+      } else { //if fetch is not supported, fallback to Ajax
+        $.ajax(this.settings.dataUrl)
+        .done(function(response) {
+          addProjectToMap(response)
+        });
+      }
 
       var projectsOnMap = [];
 
-      mapOverlay.prototype = new google.maps.OverlayView();
+      var addProjectToMap = function(projects) {
+        for(var i = 0; i < projects.length; i++) {
+          var project = projects[i];
+          var marker, currentProject;
 
-      for(var i = 0; i < projects.length; i++) {
-        var project = projects[i];
-        var marker, currentProject;
+          if(lat == project.lat) { //if this is the current project being shown
+            isCurrentProject = true;
+            marker = activeMarkerImg;
+          } else {
+            isCurrentProject = false;
+            marker = inactiveMarkerImg;
+          }
 
-        if(lat == project.lat) {
-          isCurrentProject = true;
-          marker = activeMarkerImg;
+          var initProjectOverlay = function(currentProject, isCurrentProject) {
 
-        } else {
-          isCurrentProject = false;
-          marker = inactiveMarkerImg;
-        }
-
-        
-        // var overlay;
-        var initProjectOverlay = function(currentProject, isCurrentProject) {
-
-          currentProject.marker = new google.maps.Marker({
-            position: new google.maps.LatLng(currentProject.lat, currentProject.lng),
-            icon: marker,
-            map: map
-          });
-
-          var bounds = new google.maps.LatLngBounds(
-            new google.maps.LatLng(currentProject.bounds.start.lat, currentProject.bounds.start.lng),
-            new google.maps.LatLng(currentProject.bounds.end.lat, currentProject.bounds.end.lng));
-
-          currentProject.overlay = new mapOverlay(bounds, currentProject, map);
-
-          projectsOnMap.push(currentProject);
-
-          currentProject.marker.addListener('click', function(){
-            currentProject.overlay.toggle();
-            currentProject.marker.setIcon(activeMarkerImg); 
-
-            projectsOnMap.map(function(item){
-              if(currentProject != item) {
-                item.overlay.hide();
-                item.marker.setIcon(inactiveMarkerImg); 
-              }
-              
+            currentProject.marker = new google.maps.Marker({
+              position: new google.maps.LatLng(currentProject.lat, currentProject.lng),
+              icon: marker,
+              map: map
             });
-          });
+
+            var bounds = new google.maps.LatLngBounds(
+              new google.maps.LatLng(currentProject.bounds.start.lat, currentProject.bounds.start.lng),
+              new google.maps.LatLng(currentProject.bounds.end.lat, currentProject.bounds.end.lng));
+
+            currentProject.overlay = new mapOverlay(bounds, currentProject, map, isCurrentProject);
+
+            projectsOnMap.push(currentProject);
+
+            currentProject.marker.addListener('click', function(){
+              currentProject.overlay.toggle();
+              currentProject.marker.setIcon(activeMarkerImg); 
+
+              projectsOnMap.map(function(item){
+                if(currentProject != item) {
+                  item.overlay.hide();
+                  item.marker.setIcon(inactiveMarkerImg); 
+                }
+                
+              });
+            });
 
           
-            setTimeout(function() {
+            /*setTimeout(function() {
               if(isCurrentProject) {
+                console.log('show');
                currentProject.overlay.show();
               } else {
+                console.log('hide');
                 currentProject.overlay.hide();
               }
-            }, 500);       
+            }, 2000);   */    
             
           
 
          };
           
           initProjectOverlay(project, isCurrentProject);
+        }
+      } 
 
+      mapOverlay.prototype = new google.maps.OverlayView();
 
-      }
+     
 
       /** @constructor */
-        function mapOverlay(bounds, project, map) {
+        function mapOverlay(bounds, project, map, isCurrentProject) {
 
           // Initialize all properties.
           this.bounds_ = bounds;
           this.project = project;
           this.map_ = map;
+          this.isCurrentProject = isCurrentProject;
 
           // Define a property to hold the image's div. We'll
           // actually create this div upon receipt of the onAdd()
@@ -403,6 +386,12 @@ var site = {
           var panes = this.getPanes();
           panes.overlayImage.appendChild(div);
 
+          if(this.isCurrentProject) {
+            this.project.overlay.show();
+          } else {
+            this.project.overlay.hide();
+          }
+
           //site.ui.body.appendChild(div);
         };
 
@@ -415,6 +404,8 @@ var site = {
         };
 
         mapOverlay.prototype.show = function() {
+          console.log('showing');
+          console.log(this.div_);
           if (this.div_) {
             this.div_.style.visibility = 'visible';
           }

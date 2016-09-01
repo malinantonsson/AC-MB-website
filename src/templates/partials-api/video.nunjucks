@@ -1,10 +1,10 @@
 <div class="video-container">
-	<div id="video" data-src={{field.videoId}}></div>
-	<img class="mb-background" src={{field.backgroundImg}}>
+	<div id="video" data-src={{video.videoId}}></div>
+	<img class="mb-background" src={{video.videoImage.fields.file.url}}>
 	<h1 class="video_headline">
-		{{field.copy}} 
+		Redefining
 		<span class="video_headline--italic">
-			{{field.copyItalic}}
+			Retail
 		</span>
 	</h1>
 	<div id="times-container" class="times-container">

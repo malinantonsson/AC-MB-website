@@ -2,30 +2,22 @@
 {% extends "layout.nunjucks" %}
 
 	
-
-
 {% block content %}
 	{% import 'macros/navigation.nunjucks' as nav %}
 		<!-- Creating the navigation with activePage = 'home' -->
 		{{nav.active('home')}}
 
-
-	  
-	 
-
-
 	<main id="container" class="container">
-		{% for field in fields %}
-		 	{% if  field.id == 'video-background' %}
-		 		{% include "partials/video.nunjucks" %}
-		 	{% endif %}
-		 	{% if  field.id == 'featured-project' %}
-		 		{% include "partials/featured-project.nunjucks" %}
-		 	{% endif %}
-		 	{% if  field.id == 'hero-text' %}
-		 		{% include "partials/hero-text.nunjucks" %}
-		 	{% endif %}
+		
+		{% include "partials-api/video.nunjucks" %}
+		 	
+		{% for featuredPortfolio in portfolioItems %}
+
+		 	{% include "partials-api/featured-project.nunjucks" %}
+
 		{% endfor %}
+
+		{% include "partials-api/hero-text.nunjucks" %}
 	</main>
 
 	{% include "partials/footer.nunjucks" %}

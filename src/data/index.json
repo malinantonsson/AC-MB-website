@@ -1,60 +1,150 @@
-{
-	"name": "index",
-	"copy": "hola!",
-	"fields": [
-		{
-			"id": "hero-image",
-			"name": "hero-image",
-			"copy": "copy"
-		},
-		{
-			"id": "homestory",
-			"name": "homestory"
-		},
-		{
-			"id": "video-background",
-			"name": "video-background",
-			"copy": "Redefining",
-			"copyItalic": "Retail.",
-			"videoId": "AHDATlqQcZQ",
-			"backgroundImg": "../images/homepage/video-placeholder.jpg"
-		},
-		{
-			"id": "featured-project",
-			"name": "featured-project",
-			"image": "/images/homepage/featured-project-1.png",
-			"intro": "Featured Project:",
-			"headline": "The Burlington Arcade",
-			"location": "— London, United Kingdom",
-			"ctaCopy": "View Project",
-			"url": "#"
-		},
-		{
-			"id": "featured-project",
-			"name": "featured-project",
-			"image": "/images/homepage/featured-project-2.png",
-			"intro": "Featured Project:",
-			"headline": "The Bentall Centre",
-			"location": "— Kingston-Upon-Thames, United Kingdom",
-			"ctaCopy": "View Project",
-			"url": "#"
-		},
-		{
-			"id": "featured-project",
-			"name": "featured-project",
-			"image": "/images/homepage/featured-project-3.png",
-			"intro": "Featured Project:",
-			"headline": "Galeria Katowicka",
-			"location": "— Katowice, Poland",
-			"ctaCopy": "View Project",
-			"url": "#"
-		},
-		{
-			"id": "hero-text",
-			"name": "hero-text",
-			"copy": "Meyer Bergman is a European real estate investment and fund management firm with over 35 years of developement experience across the team and over  €7.5 billion in total transactions to date",
-			"ctaCopy": "About Us",
-			"url": "#"
-		}
-	]
+{  
+   "video":{  
+      "videoId":"AHDATlqQcZQ",
+      "videoImage":{  
+         "sys":{  
+            "space":{  
+               "sys":{  
+                  "type":"Link",
+                  "linkType":"Space",
+                  "id":"k3gh61z1i0f4"
+               }
+            },
+            "id":"4TWKoMDA2sC0QW44gi0Sem",
+            "type":"Asset",
+            "createdAt":"2016-08-30T10:04:37.564Z",
+            "updatedAt":"2016-08-30T10:04:37.564Z",
+            "revision":1,
+            "locale":"en-US"
+         },
+         "fields":{  
+            "title":"hero-burlington-arcade",
+            "file":{  
+               "url":"//images.contentful.com/k3gh61z1i0f4/4TWKoMDA2sC0QW44gi0Sem/6d76ff8c7fbb6f1616ffdb72bc4ef4ac/hero-burlington-arcade.png",
+               "details":{  
+                  "size":4437276,
+                  "image":{  
+                     "width":2558,
+                     "height":1080
+                  }
+               },
+               "fileName":"hero-burlington-arcade.png",
+               "contentType":"image/png"
+            }
+         }
+      }
+   },
+   "portfolioItems":[  
+      {  
+         "text":"The Burlington Arcade",
+         "url":"the-burlington-arcade.html",
+         "location":"Piccadilly, London",
+         "heroImage":{  
+            "sys":{  
+               "space":{  
+                  "sys":{  
+                     "type":"Link",
+                     "linkType":"Space",
+                     "id":"k3gh61z1i0f4"
+                  }
+               },
+               "id":"4TWKoMDA2sC0QW44gi0Sem",
+               "type":"Asset",
+               "createdAt":"2016-08-30T10:04:37.564Z",
+               "updatedAt":"2016-08-30T10:04:37.564Z",
+               "revision":1,
+               "locale":"en-US"
+            },
+            "fields":{  
+               "title":"hero-burlington-arcade",
+               "file":{  
+                  "url":"//images.contentful.com/k3gh61z1i0f4/4TWKoMDA2sC0QW44gi0Sem/6d76ff8c7fbb6f1616ffdb72bc4ef4ac/hero-burlington-arcade.png",
+                  "details":{  
+                     "size":4437276,
+                     "image":{  
+                        "width":2558,
+                        "height":1080
+                     }
+                  },
+                  "fileName":"hero-burlington-arcade.png",
+                  "contentType":"image/png"
+               }
+            }
+         }
+      },
+      {  
+         "text":"The Burlington Arcade 2",
+         "url":"the-burlington-arcade-2.html",
+         "location":"Piccadilly, London",
+         "heroImage":{  
+            "sys":{  
+               "space":{  
+                  "sys":{  
+                     "type":"Link",
+                     "linkType":"Space",
+                     "id":"k3gh61z1i0f4"
+                  }
+               },
+               "id":"4TWKoMDA2sC0QW44gi0Sem",
+               "type":"Asset",
+               "createdAt":"2016-08-30T10:04:37.564Z",
+               "updatedAt":"2016-08-30T10:04:37.564Z",
+               "revision":1,
+               "locale":"en-US"
+            },
+            "fields":{  
+               "title":"hero-burlington-arcade",
+               "file":{  
+                  "url":"//images.contentful.com/k3gh61z1i0f4/4TWKoMDA2sC0QW44gi0Sem/6d76ff8c7fbb6f1616ffdb72bc4ef4ac/hero-burlington-arcade.png",
+                  "details":{  
+                     "size":4437276,
+                     "image":{  
+                        "width":2558,
+                        "height":1080
+                     }
+                  },
+                  "fileName":"hero-burlington-arcade.png",
+                  "contentType":"image/png"
+               }
+            }
+         }
+      },
+      {  
+         "text":"The Burlington Arcade 3",
+         "url":"the-burlington-arcade-3.html",
+         "location":"Piccadilly, London",
+         "heroImage":{  
+            "sys":{  
+               "space":{  
+                  "sys":{  
+                     "type":"Link",
+                     "linkType":"Space",
+                     "id":"k3gh61z1i0f4"
+                  }
+               },
+               "id":"4TWKoMDA2sC0QW44gi0Sem",
+               "type":"Asset",
+               "createdAt":"2016-08-30T10:04:37.564Z",
+               "updatedAt":"2016-08-30T10:04:37.564Z",
+               "revision":1,
+               "locale":"en-US"
+            },
+            "fields":{  
+               "title":"hero-burlington-arcade",
+               "file":{  
+                  "url":"//images.contentful.com/k3gh61z1i0f4/4TWKoMDA2sC0QW44gi0Sem/6d76ff8c7fbb6f1616ffdb72bc4ef4ac/hero-burlington-arcade.png",
+                  "details":{  
+                     "size":4437276,
+                     "image":{  
+                        "width":2558,
+                        "height":1080
+                     }
+                  },
+                  "fileName":"hero-burlington-arcade.png",
+                  "contentType":"image/png"
+               }
+            }
+         }
+      }
+   ]
 }

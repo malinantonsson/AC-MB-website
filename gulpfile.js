@@ -57,6 +57,8 @@ var jsSrc = appPath + '/js/*.js';
 var jsVendorSrc = appPath + '/js/vendor/*.js';
 var jsDist = distPath + '/js/';
 var jsVendorDist = distPath + '/js/vendor/';
+var mapsDataSrc = appPath + '/js/mapsdata.json';
+var mapsDataDist = distPath + '/js/';
 
 var dataSrc = appPath + '/data/*.json';
 
@@ -111,6 +113,8 @@ gulp.task('get:portfolio', function() {
           var portfolioItems = [];
           var featuredPortfolio;
 
+          var mapObject = [];
+
           var dataObject = [];
           //Get each item (i.e each portfolio page)
           for (var item = 0; item < entries.items.length; item++) {
@@ -155,21 +159,38 @@ gulp.task('get:portfolio', function() {
               }
              ],
              tagsLocation: entries.items[item].fields.tagsLocation,
+             
              mapName: entries.items[item].fields.mapName,
              mapLocation: entries.items[item].fields.mapLocation,
              mapLat: entries.items[item].fields.mapLat,
              mapLng: entries.items[item].fields.mapLng,
              mapPreviewImage: entries.items[item].fields.mapPreviewImage
-
             };
 
-
+            var dataItem = {
+              name: entries.items[item].fields.mapName,
+              location: entries.items[item].fields.mapLocation,
+              lat: entries.items[item].fields.mapLat,
+              lng: entries.items[item].fields.mapLng,
+              image: entries.items[item].fields.mapPreviewImage.fields.file.url,
+              url: portfolioItem.url,
+              bounds: {
+                start: {
+                  lat: entries.items[item].fields.mapLat,
+                  lng: entries.items[item].fields.mapLng
+                }, 
+                end: {
+                  lat: entries.items[item].fields.mapLat,
+                  lng: entries.items[item].fields.mapLng
+                }
+              }
+            };
 
             portfolioItems.push(portfolioItem);
 
+            mapObject.push(dataItem);
+
             if(portfolioItem.featuredPortflio) {
-              console.log('is featured');
-              console.log(portfolioItem.text);
               featuredPortfolio = {
                 url: portfolioItem.url,
                 text: portfolioItem.text,
@@ -193,9 +214,16 @@ gulp.task('get:portfolio', function() {
             dataObject.push(entries.items[0].fields);
           }
           //console.log(portfolioItems);
+          console.log(mapObject);
+
           portfolioListing.portfolioItems = portfolioItems;
           portfolioListing.featuredPortfolio = featuredPortfolio;
+
+          //create a json file for portfolio listing
           fs.writeFileSync(appPath + '/data/portfolio/index.json', JSON.stringify(portfolioListing));
+
+
+          fs.writeFileSync(appPath + '/js/mapsdata.json', JSON.stringify(mapObject));
         // log the title for all the entries that might have it
         // JUST FOR DEV
 
@@ -203,27 +231,50 @@ gulp.task('get:portfolio', function() {
 
 });
 
-gulp.task('get:portfolio-item', function() {
-  client.getEntry('4hfdh7RvraSqMO8mUqwMaE')
-  .then(function (entry) {
-    // logs the entry metadata
-    console.log(entry.fields);
-    fs.writeFileSync(appPath + '/api/portfolio/single-item--2.json', JSON.stringify(entry.fields));
+gulp.task('get:homepage', function() {
 
-    // logs the field with ID title
-    //console.log(entry.fields.title);
-  })
+    client.getEntries({'content_type':'homepage'})
+      .then(function (entries) {
+          var dataObject = {};
+          //Get each item
+          for (var item = 0; item < entries.items.length; item++) {
+
+            var video = {
+              videoId: entries.items[item].fields.videoId,
+              videoImage: entries.items[item].fields.videoImage
+            }
+
+            dataObject.video = video;
+
+            var portfolioItems = [];
+
+            //get each featured portfolio
+            for(var portfolio = 0; portfolio < entries.items[item].fields.featuredPortfolio.length; portfolio++) {
+
+              var pageName = entries.items[item].fields.featuredPortfolio[portfolio].fields.text.toLowerCase().replace(/\s+/g, '-');
+
+              var portfolioItem = {
+                text: entries.items[item].fields.featuredPortfolio[portfolio].fields.text,
+                url: pageName + '.html',
+                location: entries.items[item].fields.featuredPortfolio[portfolio].fields.location,
+                heroImage: entries.items[item].fields.featuredPortfolio[portfolio].fields.heroImage
+              };
+              
+              portfolioItems.push(portfolioItem);
+
+            }
+            dataObject.portfolioItems = portfolioItems;
+            
+            //get the page title and format for url structure
+            fs.writeFileSync(appPath + '/data/index.json', JSON.stringify(dataObject));
+          }
+      })
+
 });
+
 
 function getDataForFileApi(file) {
   filename = file.relative.replace('.nunjucks', '');
-  //console.log(path.basename(filename));
-  //console.log(file);
-  //console.log(file.path);
-  //console.log(file.relative);
-  //console.log(file.base);
-  //console.log(file.contents);
-  //console.log(file.basename);
 
   return require('./src/api/' + filename + '.json');
 }
@@ -365,15 +416,13 @@ gulp.task('copy-scripts', function() {
     .pipe(gulp.dest(jsVendorDist));
 });
 
+gulp.task('copy-data', function() {
+  return gulp.src(mapsDataSrc)
+    .pipe(gulp.dest(jsDist));
+});
+
 function getDataForFile(file) {
   filename = file.relative.replace('.nunjucks', '');
-  //console.log(path.basename(filename));
-  //console.log(file);
-  //console.log(file.path);
-  //console.log(file.relative);
-  //console.log(file.base);
-  //console.log(file.contents);
-  //console.log(file.basename);
 
   return require('./src/data/' + filename + '.json');
 }
@@ -426,6 +475,7 @@ gulp.task('default', ['clean'], function (cb) {
       'images',
       'scripts',
       'copy-scripts',
+      'copy-data',
       'nunjucks'
     ], cb);
 });
