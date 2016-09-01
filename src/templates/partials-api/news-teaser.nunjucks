@@ -8,7 +8,7 @@
 
 		<div class="news-teaser_content">
 			<p class="news-teaser_copy">
-				{{article.copy}}
+				{{article.title}}
 			</p>
 			
 			{% for tag in article.tags %}

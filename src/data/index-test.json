@@ -1,0 +1,82 @@
+[  
+   {  
+      "title":"test news 1",
+      "image":{  
+         "sys":{  
+            "space":{  
+               "sys":{  
+                  "type":"Link",
+                  "linkType":"Space",
+                  "id":"k3gh61z1i0f4"
+               }
+            },
+            "id":"1FugfFHhW8y8aEyIgAW4oS",
+            "type":"Asset",
+            "createdAt":"2016-08-17T14:19:22.336Z",
+            "updatedAt":"2016-08-17T14:19:22.336Z",
+            "revision":1,
+            "locale":"en-US"
+         },
+         "fields":{  
+            "title":"Massive Dynamic Logo",
+            "description":"massive dynamic logo png",
+            "file":{  
+               "url":"//images.contentful.com/k3gh61z1i0f4/1FugfFHhW8y8aEyIgAW4oS/4268405b733c21151f936bff595e76d6/MassiveDynamic.png",
+               "details":{  
+                  "size":19826,
+                  "image":{  
+                     "width":320,
+                     "height":224
+                  }
+               },
+               "fileName":"MassiveDynamic.png",
+               "contentType":"image/png"
+            }
+         }
+      },
+      "bodytext":"some body text",
+      "url":"test-news-1.html",
+      "prevArticleUrl":null,
+      "nextArticleUrl":"test-news-2.html"
+   },
+   {  
+      "title":"test news 2",
+      "image":{  
+         "sys":{  
+            "space":{  
+               "sys":{  
+                  "type":"Link",
+                  "linkType":"Space",
+                  "id":"k3gh61z1i0f4"
+               }
+            },
+            "id":"1FugfFHhW8y8aEyIgAW4oS",
+            "type":"Asset",
+            "createdAt":"2016-08-17T14:19:22.336Z",
+            "updatedAt":"2016-08-17T14:19:22.336Z",
+            "revision":1,
+            "locale":"en-US"
+         },
+         "fields":{  
+            "title":"Massive Dynamic Logo",
+            "description":"massive dynamic logo png",
+            "file":{  
+               "url":"//images.contentful.com/k3gh61z1i0f4/1FugfFHhW8y8aEyIgAW4oS/4268405b733c21151f936bff595e76d6/MassiveDynamic.png",
+               "details":{  
+                  "size":19826,
+                  "image":{  
+                     "width":320,
+                     "height":224
+                  }
+               },
+               "fileName":"MassiveDynamic.png",
+               "contentType":"image/png"
+            }
+         }
+      },
+      "bodytext":"test news 2 bodytext",
+      "url":"test-news-2.html",
+      "prevArticleUrl":"test-news-1.html",
+      "nextArticleUrl":"test-news-2.html"
+   }
+]

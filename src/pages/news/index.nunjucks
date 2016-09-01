@@ -8,18 +8,13 @@
 		{{nav.active('news', 'true')}}
 
 	<main id="container">
-		{% for field in fields %}
-		 	{% if  field.id == 'page-intro--filter' %}
-		 		{% include "partials/page-intro--filter.nunjucks" %}
-		 	{% endif %}
-
-		 	{% if  field.id == 'articles' %}
-			 	<div class="news-teaser_wrapper js-filtered-content_wrapper">
-			 		{% for article in field.articles|sort(true, false, 'date') %}
-			 			{% include "partials/news-teaser.nunjucks" %}
-			 		{% endfor %}
-			 	</div>
-		 	{% endif %}
+		{% include "partials-api/page-intro--filter-news.nunjucks" %}
+		
+		{% for article in articles %}
+		 	<div class="news-teaser_wrapper js-filtered-content_wrapper">
+		 	{# |sort(true, false, 'date') #}
+		 		{% include "partials-api/news-teaser.nunjucks" %}
+		 	</div>
 
 		 	{% if  field.id == 'load-more' %}
 		 		{% include "partials/load-more.nunjucks" %}

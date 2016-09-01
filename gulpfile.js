@@ -272,6 +272,51 @@ gulp.task('get:homepage', function() {
 
 });
 
+gulp.task('get:news', function() {
+
+    client.getEntries({'content_type':'news'})
+      .then(function (entries) {
+          var dataObject = {};
+          var articles = [];
+          var nextArticleUrl, prevArticleUrl;
+          
+          //Get each item
+          for (var item = 0; item < entries.items.length; item++) {
+
+            if(articles[item - 1]) {
+              prevArticleUrl = articles[item - 1].url;
+            } else {
+              prevArticleUrl = null;
+            }
+
+            if(entries.items[item + 1]) {
+              nextArticleUrl = entries.items[item + 1].fields.title.toLowerCase().replace(/\s+/g, '-') + '.html';
+            } else {
+              nextArticleUrl = null;
+            }
+            
+            var newsItem = entries.items[item].fields;
+            var url = newsItem.title.toLowerCase().replace(/\s+/g, '-') + '.html';
+
+            var article = {
+              title: newsItem.title,
+              image: newsItem.image,
+              bodytext: newsItem.bodytext,
+              url: url,
+              prevArticleUrl: prevArticleUrl || null,
+              nextArticleUrl: nextArticleUrl || null
+            };
+
+            articles.push(article);
+          }
+          
+          dataObject.articles = articles;
+          fs.writeFileSync(appPath + '/data/news/index.json', JSON.stringify(dataObject));  
+          
+      })
+
+});
+
 
 function getDataForFileApi(file) {
   filename = file.relative.replace('.nunjucks', '');

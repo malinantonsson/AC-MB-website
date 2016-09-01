@@ -1,0 +1,14 @@
+<div class="page-intro page-intro--filter">
+	<div class="page-intro_container">
+			<div class="page-intro_headline-container">		
+				<h2 class="page-intro_headline">
+					News
+				</h2>
+			</div>
+
+		{% if  field.filters %}
+			{% include "partials-api/filter.nunjucks" %}
+		{% endif %}
+
+	</div>
+</div>
