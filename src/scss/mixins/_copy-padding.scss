@@ -5,3 +5,11 @@
 		padding: 3em 0;
 	}
 }
+
+@mixin copy-margin() {
+	margin: 2em 0;
+
+	@include mq(from, medium) {
+		margin: 3em 0;
+	}
+}

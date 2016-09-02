@@ -50,10 +50,12 @@
 @import 'project-info';
 @import 'projects-list';
 
+@import 'quote--article';
 @import 'quote--background';
 
 @import 'related-projects';
 
+@import 'social-share';
 @import 'side-nav';
 
 @import 'terms-and-condition-intro';
@@ -80,4 +82,14 @@ body {
 
 .component-copy-wrapper {
 	overflow: auto;
+}
+
+.article-content_wrapper {
+	margin-bottom: 2em;
+	
+	@include span-columns(12);
+
+	@include mq(from, medium) {
+		@include span-columns(8);
+	}
 }

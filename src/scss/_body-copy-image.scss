@@ -12,6 +12,13 @@
 	}
 }
 
+.component-wrapper .body-copy-image {
+	@include mq(from, medium) {
+		@include span-columns(8);
+		@include shift(4);
+	}
+}
+
 /* .component-wrapper & {
 	padding-top: 0;
 	background-color: #fff;

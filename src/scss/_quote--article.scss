@@ -1,0 +1,68 @@
+.quote--article {
+	padding: 2em 0;
+
+	display: none;
+	
+	@include mq(from, medium) {
+		padding: 4em 0;
+		display: block;
+
+		@include span-columns(4);
+	}
+
+	position: relative;
+
+	&:before {
+		display: block;
+		content: '';
+		height: 1px;
+		width: 100%;
+		background-color: $dark-gray;
+		position: absolute;
+	}
+
+	&:after {
+		display: block;
+		content: '';
+		height: 1px;
+		width: 100%;
+		background-color: $dark-gray;
+		position: absolute;
+	}
+}
+
+.article-content_wrapper .quote--article {
+	display: block;
+
+	margin: 0 1.5em;
+	padding: 0;
+
+	@include mq(from, medium) {
+		display: none;
+	}
+}
+
+.quote--article_wrapper {
+	@include container();
+	text-align: center;
+	
+	padding: 2em 0;
+	@include mq(from, medium) {
+		text-align: left;
+	}
+
+}
+
+.quote--article_quote {
+	@include mq(upto, medium) {
+		margin: 0 auto;
+	}
+}
+
+.quote--article_quote-by {
+	margin: 0;
+}
+
+.quote--article_wrapper {
+	//padding: 0;
+}

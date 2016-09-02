@@ -7,44 +7,48 @@
 		<!-- Creating the navigation with activePage = 'news' -->
 		{{nav.active('news', 'true')}}
 
-
-	  
-	 
-
-
 	<main id="container">
+
+		{% for field in fields %}
+			{% if  field.id == 'page-intro' %}
+				{% include "partials-api/page-intro--article.nunjucks" %}
+			{% endif %}
+		{% endfor %}
+
+		<div class="component-wrapper">
 		{% for field in fields %}
 
-		 	{% if  field.id == 'page-intro' %}
-		 		{% include "partials/page-intro--article.nunjucks" %}
-		 	{% endif %}
+			{% if  field.id == 'body-copy-image' %}
+				{% include "partials-api/body-copy-image.nunjucks" %}
+			{% endif %}
 
+			{% if  field.id == 'body-copy--quote' %}
+				{% include "partials-api/quote--article.nunjucks" %}
+			{% endif %}
+
+		{% endfor %}
+
+		<div class="article-content_wrapper">
+		{% for field in fields %}
+			
 		 	{% if  field.id == 'body-copy' %}
 		 		{% include "partials/body-copy.nunjucks" %}
 		 	{% endif %}
-	
-		 	{% if  field.id == 'full-width-image--slim' %}
-		 		{% include "partials/full-width-image--slim.nunjucks" %}
+
+		 	{% if  field.id == 'body-copy--quote' %}
+		 		{% include "partials-api/quote--article.nunjucks" %}
 		 	{% endif %}
-		 	{% if  field.id == 'quote--background' %}
-		 		{% include "partials/quote--background.nunjucks" %}
+
+		 	{% if  field.id == 'social-share' %}
+		 		{% include "partials-api/social-share.nunjucks" %}
 		 	{% endif %}
-		 	{% if  field.id == 'image-gallery' %}
-		 		{% include "partials/image-gallery.nunjucks" %}
-		 	{% endif %}
-		 	{% if  field.id == 'map' %}
-		 		{% include "partials/map.nunjucks" %}
-		 	{% endif %}
-		 	{% if  field.id == 'related-projects' %}
-		 		{% include "partials/related-projects.nunjucks" %}
-		 	{% endif %}
-		 	{% if  field.id == 'side-nav' %}
-		 		{% include "partials/side-nav.nunjucks" %}
-		 	{% endif %}
+		 	
 		{% endfor %}
+		</div>
+		</div>
 	</main>
 
-	{% include "partials/footer.nunjucks" %}
+	{% include "partials-api/footer.nunjucks" %}
 {% endblock %}
 
 

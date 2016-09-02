@@ -102,16 +102,22 @@
 		@include span-columns(12);
 
 		@include mq(from, medium) {
-			@include span-columns(3);
+			padding: 0 1.5em;
+			@include span-columns(4);
+			@include shift(0);
 		}
 	}
 
 	.page-intro_headline-container {
 		@include span-columns(12);
+		
+		//@include copy-padding();
+		
 
 		@include mq(from, medium) {
-			@include span-columns(7);
-			@include shift(1);
+			padding: 0 1.5em;
+			@include span-columns(8);
+			//@include shift(1);
 		}
 	}
 

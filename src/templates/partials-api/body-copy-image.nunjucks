@@ -1,3 +1,3 @@
 <section class="body-copy-image">
-	<img src={{bodyImage.fields.file.url}}  alt="" class="body-copy-image_image">
+	<img src="/{{field.url}}""  alt="" class="body-copy-image_image">
 </section>

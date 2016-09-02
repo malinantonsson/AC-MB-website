@@ -1,0 +1,12 @@
+<section class="quote--article">
+	<div class="quote--article_wrapper">
+
+		<p class="quote--article_quote">
+			{{field.quote}}
+		</p>
+
+		<p class="quote--article_quote-by">
+			{{field.quoteBy}}
+		</p>
+	</div>
+</section>

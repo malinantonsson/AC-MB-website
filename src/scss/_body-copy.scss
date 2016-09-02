@@ -1,5 +1,5 @@
 .body-copy {
-	@include copy-padding();
+	@include copy-margin();
 	color: $dark-gray;
 	@include component-wrapper()
 
@@ -68,5 +68,13 @@
 		@include mq(from, medium) {
 			max-width: 100%;
 		}
+	}
+}
+
+.quote--article + .body-copy {
+	margin-top: -2.5;
+
+	@include mq(from, medium) {
+		margin-top: -3.5em;
 	}
 }

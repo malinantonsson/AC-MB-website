@@ -114,6 +114,7 @@ a {
 }
 
 .full-width-image-quote_quote,
+.quote--article_quote,
 .quote--background_quote {
   @extend %paragraph-quote;
 
@@ -124,7 +125,8 @@ a {
   }
 }
 
-.full-width-image-quote_quote-by {
+.full-width-image-quote_quote-by,
+.quote--article_quote-by {
   @extend %paragraph-quote-by;
 
   @include mq(from, medium) {
