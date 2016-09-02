@@ -40,6 +40,8 @@
 
 .side-nav {
 	min-width: 250px;
+
+	display: none;
 	
 	@include mq(from, medium) {
 		clear: both;
@@ -47,6 +49,7 @@
 		position: absolute;
 	    top: 100%;
 	    transform: rotate(-90deg);
+	    display: block;
 	}
 
 	@include mq(from, xlarge) {
