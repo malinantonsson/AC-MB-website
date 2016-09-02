@@ -10,7 +10,7 @@
 	<main id="container">
 		{% include "partials-api/page-intro--article.nunjucks" %}
 
-		<div class="component-wrapper">
+		<div class="component-wrapper article-wrapper">
 				{% include "partials-api/body-copy-image.nunjucks" %}
 
 				{% if  quote %}

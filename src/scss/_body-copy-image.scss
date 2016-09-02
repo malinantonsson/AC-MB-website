@@ -12,7 +12,7 @@
 	}
 }
 
-.component-wrapper .body-copy-image {
+.article-wrapper .body-copy-image {
 	@include mq(from, medium) {
 		@include span-columns(8);
 		@include shift(4);

@@ -3,6 +3,8 @@
 
 
 {% block content %}
+	{% set image = bodyImage %}
+
 	{% import 'macros/navigation.nunjucks' as nav %}
 			<!-- Creating the navigation with activePage = 'portfolio' -->
 			{{nav.active('portfolio', 'false')}}
