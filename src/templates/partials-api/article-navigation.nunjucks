@@ -1,0 +1,9 @@
+<section class="article-navigation">
+	<a href="#" class="article-navigation_link article-navigation_link--prev">
+		Previous article
+	</a>
+
+	<a href="#" class="article-navigation_link article-navigation_link--prev">
+		Next article
+	</a>
+</section>

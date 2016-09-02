@@ -100,9 +100,10 @@
 .page-intro-article {
 	.page-intro_intro {
 		@include span-columns(12);
+		//padding: 0 1.5em;
 
 		@include mq(from, medium) {
-			padding: 0 1.5em;
+			padding: 0;
 			@include span-columns(4);
 			@include shift(0);
 		}

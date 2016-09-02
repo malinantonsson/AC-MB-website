@@ -16,36 +16,37 @@
 		{% endfor %}
 
 		<div class="component-wrapper">
-		{% for field in fields %}
+			{% for field in fields %}
 
-			{% if  field.id == 'body-copy-image' %}
-				{% include "partials-api/body-copy-image.nunjucks" %}
-			{% endif %}
+				{% if  field.id == 'body-copy-image' %}
+					{% include "partials-api/body-copy-image.nunjucks" %}
+				{% endif %}
 
-			{% if  field.id == 'body-copy--quote' %}
-				{% include "partials-api/quote--article.nunjucks" %}
-			{% endif %}
+				{% if  field.id == 'body-copy--quote' %}
+					{% include "partials-api/quote--article.nunjucks" %}
+				{% endif %}
 
-		{% endfor %}
+			{% endfor %}
 
-		<div class="article-content_wrapper">
-		{% for field in fields %}
-			
-		 	{% if  field.id == 'body-copy' %}
-		 		{% include "partials/body-copy.nunjucks" %}
-		 	{% endif %}
+			<div class="article-content_wrapper">
+			{% for field in fields %}
+				
+			 	{% if  field.id == 'body-copy' %}
+			 		{% include "partials/body-copy.nunjucks" %}
+			 	{% endif %}
 
-		 	{% if  field.id == 'body-copy--quote' %}
-		 		{% include "partials-api/quote--article.nunjucks" %}
-		 	{% endif %}
+			 	{% if  field.id == 'body-copy--quote' %}
+			 		{% include "partials-api/quote--article.nunjucks" %}
+			 	{% endif %}
 
-		 	{% if  field.id == 'social-share' %}
-		 		{% include "partials-api/social-share.nunjucks" %}
-		 	{% endif %}
-		 	
-		{% endfor %}
+			 	{% if  field.id == 'social-share' %}
+			 		{% include "partials-api/social-share.nunjucks" %}
+			 	{% endif %}
+			 	
+			{% endfor %}
+			</div>
 		</div>
-		</div>
+		{% include "partials-api/article-navigation.nunjucks" %}
 	</main>
 
 	{% include "partials-api/footer.nunjucks" %}

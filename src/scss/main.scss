@@ -19,6 +19,8 @@
 @import 'placeholders';
 
 /* components */
+@import 'article-navigation';
+
 @import 'background-video';
 @import 'body-copy--odd';
 @import 'body-copy';
@@ -86,7 +88,7 @@ body {
 
 .article-content_wrapper {
 	margin-bottom: 2em;
-	
+
 	@include span-columns(12);
 
 	@include mq(from, medium) {
