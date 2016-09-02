@@ -1,8 +1,11 @@
-<section class="news-teaser js-filter-item {% for tag in article.tags %} js-filter--{{ tag.id }} {% endfor %}">
+{% set tags = article.tags %}
+{% set tagsOther = article.tagsOther %}
+
+<section class="news-teaser js-filter-item{% for tag in tags %} js-filter--{{ tag.fields.location | lower }}{% endfor %}{% for tag in tagsOther %} js-filter--{{ tag.fields.attribute | lower }}{% endfor %}">
 	<a href={{article.url}} class="news-teaser_link">
 		<div class="news-teaser_date-wrapper">
 			<p class="news-teaser_date">
-				{{article.dateDisplay}}
+				{{article.date | date("DD MMMM YYYY") }}
 			</p>
 		</div>
 
@@ -10,12 +13,9 @@
 			<p class="news-teaser_copy">
 				{{article.title}}
 			</p>
+
 			
-			{% for tag in article.tags %}
-				<span class="news-teaser_tag">
-					{{ tag.label }}
-				</span>
-			{% endfor %}
+			{% include "partials-api/tags.nunjucks" %}
 		</div>
 	</a>
 </section>

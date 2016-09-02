@@ -1,19 +1,18 @@
 <div class="page-intro page-intro-article">
 	<div class="page-intro_container">
-		
-		
-		{% if  field.introCopy %}
+
+		{% if  date %}
 			<div class="page-intro_intro">
 				<p class="page-intro_intro-headline">
-					{{ field.introCopy|safe }} 
+					{{ date  | date("DD MMMM YYYY") }} 
 				</p>
 			</div>
 		{% endif %}
 
-		{% if  field.headline %}
+		{% if  title %}
 			<div class="page-intro_headline-container">		
 				<h2 class="page-intro_headline">
-					{{field.headline}} 
+					{{ title }} 
 				</h2>
 			</div>
 		{% endif %}

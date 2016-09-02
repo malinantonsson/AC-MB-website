@@ -10,9 +10,8 @@
 	<main id="container">
 		{% include "partials-api/page-intro--filter-news.nunjucks" %}
 		
-		{% for article in articles %}
+		{% for article in articles | sort(true, false, 'date')%}
 		 	<div class="news-teaser_wrapper js-filtered-content_wrapper">
-		 	{# |sort(true, false, 'date') #}
 		 		{% include "partials-api/news-teaser.nunjucks" %}
 		 	</div>
 

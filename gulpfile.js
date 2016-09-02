@@ -272,6 +272,8 @@ gulp.task('get:homepage', function() {
 
 });
 
+
+
 gulp.task('get:news', function() {
 
     client.getEntries({'content_type':'news'})
@@ -279,6 +281,20 @@ gulp.task('get:news', function() {
           var dataObject = {};
           var articles = [];
           var nextArticleUrl, prevArticleUrl;
+
+          var tags = [];
+
+          var addTags = function(tagGroup, attr) {
+            //console.log(tagGroup);
+            //console.log(attr);
+            for(var tag = 0; tag < tagGroup.length; tag++) {
+                //console.log(tagGroup[tag].fields[attr]);
+                var tagItem = tagGroup[tag].fields[attr];
+                if(tags.indexOf(tagItem) == -1) {
+                  tags.push(tagItem);
+                }
+            }
+          };
           
           //Get each item
           for (var item = 0; item < entries.items.length; item++) {
@@ -294,23 +310,49 @@ gulp.task('get:news', function() {
             } else {
               nextArticleUrl = null;
             }
+
+            console.log(entries.items[item].fields);
             
             var newsItem = entries.items[item].fields;
-            var url = newsItem.title.toLowerCase().replace(/\s+/g, '-') + '.html';
+            var urlTitle = newsItem.title.toLowerCase().replace(/\s+/g, '-');
+            var url = urlTitle + '.html';
 
             var article = {
+              date: newsItem.date,
               title: newsItem.title,
               image: newsItem.image,
-              bodytext: newsItem.bodytext,
+              bodycopy1: newsItem.bodycopy1,
               url: url,
+              fullUrl: 'http://www.meyerbergman.com/' + url,
+              quote: newsItem.quote,
+              quoteAuthor: newsItem.quoteAuthor,
+              bodycopy2: newsItem.bodycopy2,
+              tags: newsItem.tags,
+              tagsOther: newsItem.tagsOther,
               prevArticleUrl: prevArticleUrl || null,
               nextArticleUrl: nextArticleUrl || null
             };
+
+            addTags(newsItem.tags, 'location');
+            addTags(newsItem.tagsOther, 'attribute');
+
+            console.log(tags);
+
+            fs.writeFileSync(appPath + '/data/news/' + urlTitle + '.json', JSON.stringify(article)); 
+
+            //copy the article base template and create a new nunjucks file for each article 
+            fs.copy(appPath + '/templates/article-template.nunjucks', appPath + '/pages/news/' + urlTitle + '.nunjucks', { replace: true }, function (err) {
+              if (err) {
+                // i.e. file already exists or can't write to directory 
+                throw err;
+              }
+            });
 
             articles.push(article);
           }
           
           dataObject.articles = articles;
+          dataObject.tags = tags;
           fs.writeFileSync(appPath + '/data/news/index.json', JSON.stringify(dataObject));  
           
       })

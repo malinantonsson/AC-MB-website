@@ -1,0 +1,53 @@
+<!-- index.nunjucks -->
+{% extends "layout.nunjucks" %}
+
+
+{% block content %}
+	{% import 'macros/navigation.nunjucks' as nav %}
+		<!-- Creating the navigation with activePage = 'news' -->
+		{{nav.active('news', 'true')}}
+
+	<main id="container">
+		{% include "partials-api/page-intro--article.nunjucks" %}
+
+		<div class="component-wrapper">
+				{% include "partials-api/body-copy-image.nunjucks" %}
+
+				{% if  quote %}
+					{% include "partials-api/quote--article.nunjucks" %}
+				{% endif %}
+
+
+			<div class="article-content_wrapper">
+
+				{% if  bodycopy1 %}
+			 		{% set bodycopy = bodycopy1 %}
+			 		{% include "partials-api/body-copy.nunjucks" %}
+			 	{% endif %}
+
+			 	{% if  quote %}
+					{% include "partials-api/quote--article.nunjucks" %}
+				{% endif %}
+
+				{% if  bodycopy2 %}
+			 		{% set bodycopy = bodycopy2 %}
+			 		{% include "partials-api/body-copy.nunjucks" %}
+			 	{% endif %}
+
+			 	
+				{% include "partials-api/tags.nunjucks" %}
+				
+
+			 	
+			 	{% include "partials-api/social-share.nunjucks" %}
+			 	
+			</div>
+		</div>
+		{% include "partials-api/article-navigation.nunjucks" %}
+	</main>
+
+	{% include "partials-api/footer.nunjucks" %}
+{% endblock %}
+
+
+

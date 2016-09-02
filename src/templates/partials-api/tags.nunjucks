@@ -1,0 +1,13 @@
+<section class="tags">
+	{% for tag in tags %}
+		<span class="tags_tag">
+			{{ tag.fields.location }}
+		</span>
+	{% endfor %}
+
+	{% for tag in tagsOther %}
+		<span class="tags_tag">
+			{{ tag.fields.attribute }}
+		</span>
+	{% endfor %}
+</section>

@@ -1,9 +1,10 @@
 <section class="article-navigation">
-	<a href="#" class="article-navigation_link article-navigation_link--prev">
-		Previous article
+	<a {% if prevArticleUrl != null %} href="#" {% endif %}
+	class="article-navigation_link article-navigation_link--prev {% if prevArticleUrl == null %} is-disabled {% endif %}">
+		<  Previous article
 	</a>
 
-	<a href="#" class="article-navigation_link article-navigation_link--prev">
-		Next article
+	<a {% if nextArticleUrl != null %} href="#" {% endif %}class="article-navigation_link article-navigation_link--next {% if nextArticleUrl == null %} is-disabled {% endif %}">
+		Next article  >
 	</a>
 </section>

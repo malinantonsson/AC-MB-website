@@ -2,11 +2,13 @@
 	<div class="quote--article_wrapper">
 
 		<p class="quote--article_quote">
-			{{field.quote}}
+			{{ quote }}
 		</p>
 
-		<p class="quote--article_quote-by">
-			{{field.quoteBy}}
-		</p>
+		{% if  quoteAuthor %}
+			<p class="quote--article_quote-by">
+				{{ quoteAuthor }}
+			</p>
+		{% endif %}
 	</div>
 </section>

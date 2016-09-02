@@ -171,7 +171,8 @@ a {
   margin-bottom: 0;
 }
 
-.related-projects_project-location {
+.related-projects_project-location,
+.article-navigation_link {
   @extend %related-project-location;
   color: $dark-gray;
   font-family: "Cormorant-Italic", sans-serif;
@@ -216,7 +217,8 @@ a {
   color: $dark-gray;
 }
 
-.news-teaser_tag {
+.news-teaser_tag,
+.tags_tag {
   @extend %news-article-tag;
 
 }

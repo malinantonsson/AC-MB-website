@@ -1,0 +1,12 @@
+.tags {}
+
+.tags_tag {
+	background-color: $light-gray;
+	text-transform: uppercase;
+    padding: .5em;   
+    margin-right: 1em;
+}
+
+.article-content_wrapper .tags {
+	padding: 0 1.5em;
+}

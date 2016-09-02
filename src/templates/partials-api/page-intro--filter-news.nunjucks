@@ -6,9 +6,7 @@
 				</h2>
 			</div>
 
-		{% if  field.filters %}
-			{% include "partials-api/filter.nunjucks" %}
-		{% endif %}
-
+		
+		{% include "partials-api/filter--article-listing.nunjucks" %}
 	</div>
 </div>

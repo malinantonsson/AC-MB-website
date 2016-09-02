@@ -3,8 +3,7 @@
 		Share this article:
 	</p>
 
-	<a href="https://www.linkedin.com/shareArticle?mini=true&url=http://developer.linkedin.com&title=LinkedIn%20Developer%20Network
-&summary=My%20favorite%20developer%20program&source=LinkedIn" target="_blank" class="social-share_link">
+	<a href="https://www.linkedin.com/shareArticle?mini=true&url{{ url }}&title={% filter replace(' ', '%20') %}{{ title}}{% endfilter %}" target="_blank" class="social-share_link">
 		<svg class="social-share_icon social-share_icon_linkedin">
 		  <use xlink:href="/icons/sprite.svg#linkedin"></use>
 		</svg>

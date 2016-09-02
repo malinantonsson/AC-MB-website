@@ -1,0 +1,1 @@
+{% extends "article-base.nunjucks" %}
